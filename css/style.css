@@ -94,11 +94,10 @@ body{
     font-family: Radiance;
     background-image: url("gfx/artifactboard.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
 }
 .cardfont{
     font-family: Radiance Condensed;
 }
 .board{
-    background-image: url("gfx/artifactboard.png");
 }
