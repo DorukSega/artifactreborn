@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'Radiance Condensed';
+    src: url('fonts/Radiance-RegularCondensed.eot');
+    src: url('fonts/Radiance-RegularCondensed.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Radiance-RegularCondensed.woff2') format('woff2'),
+        url('fonts/Radiance-RegularCondensed.woff') format('woff'),
+        url('fonts/Radiance-RegularCondensed.ttf') format('truetype'),
+        url('fonts/Radiance-RegularCondensed.svg#Radiance-RegularCondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Radiance';
+    src: url('fonts/Radiance-Black.eot');
+    src: url('fonts/Radiance-Black.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Radiance-Black.woff2') format('woff2'),
+        url('fonts/Radiance-Black.woff') format('woff'),
+        url('fonts/Radiance-Black.ttf') format('truetype'),
+        url('fonts/Radiance-Black.svg#Radiance-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Radiance';
+    src: url('fonts/Radiance-Bold.eot');
+    src: url('fonts/Radiance-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Radiance-Bold.woff2') format('woff2'),
+        url('fonts/Radiance-Bold.woff') format('woff'),
+        url('fonts/Radiance-Bold.ttf') format('truetype'),
+        url('fonts/Radiance-Bold.svg#Radiance-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Radiance';
+    src: url('fonts/Radiance-Light.eot');
+    src: url('fonts/Radiance-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Radiance-Light.woff2') format('woff2'),
+        url('fonts/Radiance-Light.woff') format('woff'),
+        url('fonts/Radiance-Light.ttf') format('truetype'),
+        url('fonts/Radiance-Light.svg#Radiance-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Radiance';
+    src: url('fonts/Radiance-Regular.eot');
+    src: url('fonts/Radiance-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Radiance-Regular.woff2') format('woff2'),
+        url('fonts/Radiance-Regular.woff') format('woff'),
+        url('fonts/Radiance-Regular.ttf') format('truetype'),
+        url('fonts/Radiance-Regular.svg#Radiance-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Radiance';
+    src: url('fonts/Radiance-UltraLight.eot');
+    src: url('fonts/Radiance-UltraLight.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Radiance-UltraLight.woff2') format('woff2'),
+        url('fonts/Radiance-UltraLight.woff') format('woff'),
+        url('fonts/Radiance-UltraLight.ttf') format('truetype'),
+        url('fonts/Radiance-UltraLight.svg#Radiance-UltraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Radiance';
+    src: url('fonts/Radiance-Semibold.eot');
+    src: url('fonts/Radiance-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Radiance-Semibold.woff2') format('woff2'),
+        url('fonts/Radiance-Semibold.woff') format('woff'),
+        url('fonts/Radiance-Semibold.ttf') format('truetype'),
+        url('fonts/Radiance-Semibold.svg#Radiance-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body{
+    font-family: Radiance;
+    background-image: url("gfx/artifactboard.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cardfont{
+    font-family: Radiance Condensed;
+}
+.board{
+    background-image: url("gfx/artifactboard.png");
+}
