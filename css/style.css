@@ -89,15 +89,148 @@
     font-display: swap;
 }
 
-
 body{
     font-family: Radiance;
-    background-image: url("gfx/artifactboard.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
 }
 .cardfont{
     font-family: Radiance Condensed;
 }
 .board{
+    background-image: url("gfx/artifactboard.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0px; /* Header*/
+    left: 0px;
+    right: 0px;
+    bottom: 0px; /* Footer */
+}
+.p0board{
+    position: fixed;
+    display: block;
+    top: 58%;
+}
+.p1board{
+    position: fixed;
+    display: block;
+    top: 58%;
+}
+.combat1{
+    position: fixed;
+    display: block;
+    left: 2.5%;
+}
+.combat2{
+    position: fixed;
+    display: block;
+    left: 34.75%;
+}
+.combat3{
+    position: fixed;
+    display: block;
+    left: 67%;
+}
+.slot1{
+    position: absolute;
+}
+.slot2{
+    position: absolute;
+    left: 67.5px;
+}
+.slot3{
+    position: absolute;
+    left: 135px;
+}
+.slot4{
+    position: absolute;
+    left: 202.5px;
+}
+.slot5{
+    position: absolute;
+    left: 270px;
+}
+.slot6{
+    position: absolute;
+    left: 337.5px;
+}
+.slot7{
+    position: absolute;
+    left: 405px;
+}
+.cardbackground{
+    display: block;
+    border-radius: 2.5px;
+    background: #575756;
+    width: 58px;
+    height: 90px;
+    color: black;
+}
+.cardart{
+    position: absolute;
+    top:6px;
+    width: 58px;
+    height: 74px;
+}
+.cardname{
+    position: absolute;
+    font-size: 8px;
+    left: 10px;
+}
+.bottomofthecard{
+    position: absolute;
+    top:68px; 
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+.attackcontainer{
+    position: absolute;
+    top: 14px;
+    left: 6px;
+    text-shadow: 0 0 2px white;
+    text-align: center;
+}
+.armorcontainer{
+    position: absolute;
+    top: 14px;
+    left: 27.25px;
+    text-shadow: 0 0 2px white;
+    text-align: center;
+}
+.healthcontainer{
+    position: absolute;
+    top: 14px;
+    left: 50px;
+    text-shadow: 0 0 2px white;
+    text-align: center;
+}
+.varicon{
+    position: absolute;
+    white-space: nowrap;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.attack{
+    position: absolute;
+    text-align:center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.armor{
+    position: absolute;
+    text-align:center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.health{
+    position: absolute;
+    text-align:center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
