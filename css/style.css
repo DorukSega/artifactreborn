@@ -88,88 +88,169 @@
     font-style: normal;
     font-display: swap;
 }
+@font-face {
+    font-family: 'Artifact Numbers';
+    src: url('fonts/ArtifactNumbersBold.eot');
+    src: url('fonts/ArtifactNumbersBold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/ArtifactNumbersBold.woff2') format('woff2'),
+        url('fonts/ArtifactNumbersBold.woff') format('woff'),
+        url('fonts/ArtifactNumbersBold.ttf') format('truetype'),
+        url('fonts/ArtifactNumbersBold.svg#ArtifactNumbersBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
 
 body{
     font-family: Radiance;
 }
 .cardfont{
-    font-family: Radiance Condensed;
+    font-family: Radiance Condensed; 
+}
+.gamearea{
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;  
+    position: relative;
+    overflow: hidden;
 }
 .board{
-    background-image: url("gfx/artifactboard.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    
+}
+.boardbackground{
     position: fixed;
-    top: 0px; /* Header*/
-    left: 0px;
-    right: 0px;
-    bottom: 0px; /* Footer */
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    
+}
+.separator1{
+    position: fixed;
+    top: 21%;
+    left: 33.68%;
+    height: 50%;
+}
+.separator2{
+    position: fixed;
+    top: 21%;
+    left: 66.08%;
+    height: 50%;
 }
 .p0board{
     position: fixed;
-    display: block;
-    top: 58%;
+    width: 100%;
+    height: 90px;
+    top: 34%;
+    left: 0%;
 }
 .p1board{
     position: fixed;
-    display: block;
-    top: 58%;
+    width: 100%;
+    height: 90px;
+    top:51%;
+    left: 0%;
 }
 .combat1{
-    position: fixed;
-    display: block;
+    position:fixed;
     left: 2.5%;
 }
 .combat2{
     position: fixed;
-    display: block;
-    left: 38.25%;
+    left: 35%;
 }
 .combat3{
     position: fixed;
-    display: block;
-    left: 73.75%;
+    left: 67.25%;
 }
 .slot1{
     position: absolute;
 }
 .slot2{
     position: absolute;
-    left: 67.5px;
+    left: 85px;
 }
 .slot3{
     position: absolute;
-    left: 135px;
+    left: 170px;
 }
 .slot4{
     position: absolute;
-    left: 202.5px;
+    left: 255px;
 }
 .slot5{
     position: absolute;
-    left: 270px;
+    left: 340px;
 }
 .slot6{
     position: absolute;
-    left: 337.5px;
+    left: 425px;
 }
 .slot7{
     position: absolute;
-    left: 405px;
+    left: 510px;
+}
+.playerarea{
+    color: white;
+    font-size:24px;
+    text-shadow: 0px 0px 4px black;
+    width: 150px;
+    height: 37.5px;
+    text-align:center;
+    line-height: 37.5px;
+    border-style: solid;
+   
+}
+.Player1Area{
+    position: fixed;
+    bottom: 2.5%;
+    left: 2.5%;
+    background: linear-gradient(to left,#4088C3,#2F5571 );
+}
+.Player0Area{
+    position: fixed;
+    top: 2.5%;
+    right: 2.5%;
+    background: linear-gradient(to left,#C69B99,#7B5E5D );
+}
+.p1goldcontainer{
+    position: fixed;
+    bottom: 2.5%;
+    right: 2.5%;
+}
+.p0goldcontainer{
+    position: fixed;
+    top: 2.5%;
+    left: 2.5%;
+}
+.goldamount{
+    font-size: 38px;
+    font-weight: bold;
+    position: absolute;
+    text-align:center;
+    background: -webkit-linear-gradient(90deg,#FFCC00, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .cardbackground{
-    display: block;
     border-radius: 2.5px;
+    position: relative;
     background: #575756;
-    width: 58px;
-    height: 90px;
+    width: 77px;
+    height: 120px;
     color: black;
+    box-shadow:  -3px -4px 5px black;
 }
 .cardart{
     position: absolute;
     top:6px;
-    width: 58px;
-    height: 74px;
+    width: 77px;
+    height: 98px;
 }
 .cardname{
     position: absolute;
@@ -178,37 +259,34 @@ body{
 }
 .bottomofthecard{
     position: absolute;
-    top:68px; 
-    font-size: 14px;
+    top:98px; 
+    font-size: 18px;
     font-weight: bold;
-    
+    font-family:  Artifact Numbers;
 }
 .attackcontainer{
     position: absolute;
     top: 14px;
-    left: 6px;
-    text-shadow: 0 0 2px white;
+    left: 7px;
     text-align: center;
 }
 .armorcontainer{
     position: absolute;
     top: 14px;
-    left: 27.25px;
-    text-shadow: 0 0 2px white;
+    left: 35px;
     text-align: center;
 }
 .healthcontainer{
     position: absolute;
     top: 14px;
-    left: 50px;
-    text-shadow: 0 0 2px white;
+    left: 64px;
     text-align: center;
 }
 .varicon{
     position: absolute;
     white-space: nowrap;
-    width: 30px;
-    height: 30px;
+    width: 37px;
+    height: 37px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
