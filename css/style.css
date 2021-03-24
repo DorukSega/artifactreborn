@@ -138,18 +138,27 @@ body{
     left: 66.08%;
     height: 50%;
 }
+.player1towers{
+
+}
+.tower{
+    
+}
+.tower1{
+
+}
 .p0board{
     position: fixed;
     width: 100%;
-    height: 90px;
-    top: 34%;
+    height: 120px;
+    top: 36%;
     left: 0%;
 }
 .p1board{
     position: fixed;
     width: 100%;
-    height: 90px;
-    top:51%;
+    height: 120px;
+    top:52.2%;
     left: 0%;
 }
 .combat1{
