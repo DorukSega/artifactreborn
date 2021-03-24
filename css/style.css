@@ -108,6 +108,8 @@ body{
     font-family: Radiance Condensed; 
 }
 .gamearea{
+    user-drag: none;
+    -webkit-user-drag: none;
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
@@ -139,13 +141,94 @@ body{
     height: 50%;
 }
 .player1towers{
-
+    position: fixed;
+    bottom: 25%;
 }
-.tower{
+.player0towers{
+    position: fixed;
+    top: 15%;
+}
+.player1manapools{
+    position: fixed;
+    bottom: 29%;
+}
+.player0manapools{
+    position: fixed;
+    top: 15%;
+}
+.manapool1{
+    position: fixed;
+    left: 31.58%;
+}
+.manapool2{
+    position: fixed;
+    left: 64.02%;
+}
+.manapool{
+    text-align:center;
+    position:inherit;
+    height: 95px;
+    width: 95px;
+    background-color: #2F638E;
+    border-radius: 50%;
+    display: inline-block;
+    font-family:  Artifact Numbers;
+    font-size:40px;
+    color: white;
     
+    line-height: 95px;
+    text-align: center;
+}
+.manaamount{
+    background: -webkit-linear-gradient(90deg,#4088C3, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.outershell{
+    height: 120px;
+    width: 120px;
+    color: #9E9E9E;
+    font-size:48px;
+    background-color: #9E9E9E;
+    font-family:  Artifact Numbers;
+    background-image:linear-gradient(90deg, transparent 50%, #2D2D2D 0);
+    border-radius: 50%;
+    line-height: 95px;
+}
+.outershell::before {
+    content: "";
+    display: block;
+    margin-left: 50%;
+    height: 100%;
+    border-radius: 0 100% 100% 0 / 50%;
+    background-color: inherit;
+    transform-origin: left;
+    transform: rotate(.0turn);
+  }
+.tower{
+    text-align:center;
+    position:inherit;
+    height: 95px;
+    width: 95px;
+    background-color: #2D2D2D;
+    border-radius: 50%;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(12.5%, -112.5%);
 }
 .tower1{
-
+    position: fixed;
+    left: 14.75%;
+}
+.tower2{
+    position: fixed;
+    left: 47.25%;
+}
+.tower3{
+    position: fixed;
+    left: 79.40%;
 }
 .p0board{
     position: fixed;
@@ -209,7 +292,6 @@ body{
     text-align:center;
     line-height: 37.5px;
     border-style: solid;
-   
 }
 .Player1Area{
     position: fixed;
@@ -238,6 +320,7 @@ body{
     font-weight: bold;
     position: absolute;
     text-align:center;
+    font-family:  Artifact Numbers;
     background: -webkit-linear-gradient(90deg,#FFCC00, white);
     background-clip: text;
     -webkit-background-clip: text;
@@ -260,11 +343,6 @@ body{
     top:6px;
     width: 77px;
     height: 98px;
-}
-.cardname{
-    position: absolute;
-    font-size: 8px;
-    left: 10px;
 }
 .bottomofthecard{
     position: absolute;
@@ -320,4 +398,214 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.hand{
+    position: fixed;
+    bottom: 12%; /*12%*/
+    left: 45%;
+    z-index: 1;
+}
+.handslot1{
+    position: absolute;
+    z-index: 6;
+}
+.handslot2{
+    position: absolute;
+    left: 100px;
+    z-index: 7;
+}
+.handslot3{
+    position: absolute;
+    left: -100px;
+    z-index: 5;
+}
+.handslot4{
+    position: absolute;
+    z-index: 8;
+    left: 200px;
+}
+.handslot5{
+    position: absolute;
+    z-index: 4;
+    left: -200px;
+}
+.handslot6{
+    position: absolute;
+    z-index: 9;
+    left: 300px;
+}
+.handslot7{
+    position: absolute;
+    z-index: 3;
+    left: -300px;
+}
+.handslot8{
+    position: absolute;
+    z-index: 10;
+    left: 400px;
+}
+.handslot9{
+    position: absolute;
+    z-index: 2;
+    left: -400px;
+}
+.handslot10{
+    position: absolute;
+    z-index: 11;
+    left: 500px;
+}
+.handslot11{
+    position: absolute;
+    z-index: 1;
+    left: -500px;
+}
+.handslot12{
+    position: absolute;
+    z-index: 12;
+    left: 600px;
+}
+.handslot1:hover{
+    transform: translateY(-200px);
+    z-index: 13;
+}
+.handslot2:hover{
+    transform: translateY(-200px);
+    z-index: 13;
+}
+.handslot3:hover{
+    transform: translateY(-200px);
+    z-index: 13;
+}
+.handslot4:hover{
+    transform: translateY(-200px);
+    z-index: 13;
+}
+.handslot5:hover{
+    transform: translateY(-200px);
+    z-index: 13;
+}
+.handslot6:hover{
+    transform: translateY(-200px);
+    z-index: 13;
+}
+.handslot7:hover{
+    transform: translateY(-200px);
+    z-index: 13;
+}
+.handslot8:hover{
+    transform: translateY(-200px);
+    z-index: 13;
+}
+.handslot9:hover{
+    transform: translateY(-200px);
+    z-index: 13;
+}
+.handslot10:hover{
+    transform: translateY(-200px);
+    z-index: 13;
+}
+.handslot11:hover{
+    transform: translateY(-200px);
+    z-index: 13;
+}
+.handslot12:hover{
+    transform: translateY(-200px);
+    z-index: 13;
+}
+.handcardbackground{
+    border-radius: 4px;
+    position: relative;
+    background: #175D87;
+    background: -webkit-linear-gradient(90deg,#0D3653,#175D87);
+    box-shadow:  -3px -4px 5px black;
+    width: 172px;
+    height: 290px;
+    color: black;
+}
+.handcardart{
+    position: absolute;
+    top:25px;
+    left: 1px;
+    width: 170px;
+    height: 220px;
+}
+.handiconback{
+    position: absolute;
+    width: 24px;
+    height: 24px
+}
+.handicon{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 22px;
+    height: 22px
+}
+.handcardname{
+    position: absolute;
+    text-shadow: 0px 0px 4px black;
+    font-size: 22px;
+    top: -3px;
+    left: 30px;
+    color: #EAEAEA;
+    font-family: Radiance Condensed;
+}
+.handbottomofthecard{
+    position: absolute;
+    top:252px; 
+    left:  40px;
+    font-size: 24px;
+    text-shadow: 0px 0px 4px black;
+    color:#EAEAEA;
+    font-family: Radiance; 
+    font-weight: normal;
+    text-align: left;
+}
+.handattackcontainer{
+    position: absolute;
+    top: 14px;
+    left: 2px;
+}
+.handarmorcontainer{
+    position: absolute;
+    top: 14px;
+    left: 56px;
+}
+.handhealthcontainer{
+    position: absolute;
+    top: 14px;
+    left: 110px;
+}
+.handvaricon{
+    position: absolute;
+    white-space: nowrap;
+    width: 20px;
+    height: 20px;
+    top: 0.64px;
+    left: -21px;
+    transform: translate(-50%, -50%);
+}
+.handattack{
+    position: absolute;
+    text-align:right;
+    width: auto;
+    height: auto;
+    top: -14px;
+    left: -13px;
+}
+.handarmor{
+    position: absolute;
+    text-align:right;
+    width: auto;
+    height: auto;
+    top: -14px;
+    left: -13px;
+}
+.handhealth{
+    position: absolute;
+    text-align:right;
+    width: auto;
+    height: auto;
+    top: -14px;
+    left: -13px;
 }
