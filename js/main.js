@@ -1,6 +1,8 @@
 var isdeploying=false;
 var iscombating=false;
 var isshopping=false;
+var turn=0;
+document.addEventListener('contextmenu', event => event.preventDefault()) //disables right click
 function error(nmbr){
     console.log("Error "+nmbr);
 }
