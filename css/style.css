@@ -100,6 +100,15 @@
     font-style: normal;
     font-display: swap;
 }
+:root {
+    /* Card Colors */
+    --gray:  -webkit-linear-gradient(90deg,#5D6466,#5D6466); /* Also Colorless */
+    --blue:  -webkit-linear-gradient(90deg,#0D3653,#175D87);
+    --red:   -webkit-linear-gradient(90deg,#561926,#812739);
+    --green: -webkit-linear-gradient(90deg,#3F6232,#4B733C);
+    --black: -webkit-linear-gradient(90deg,#222026,#2D2A32);
+    --gold:  -webkit-linear-gradient(90deg,#6E5D17,#6C5D1B); /*Item Cards*/
+  }
 
 body{
     font-family: Radiance;
@@ -108,7 +117,7 @@ body{
     font-family: Radiance Condensed; 
 }
 .gamearea{
-    user-drag: none;
+    cursor: url("gfx/cursor.png"), auto;
     -webkit-user-drag: none;
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
@@ -516,7 +525,7 @@ body{
     border-radius: 4px;
     position: relative;
     background: #175D87;
-    background: -webkit-linear-gradient(90deg,#0D3653,#175D87);
+    background: var(--blue);
     box-shadow:  -3px -4px 5px black;
     width: 172px;
     height: 290px;
