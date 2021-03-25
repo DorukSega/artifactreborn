@@ -7,8 +7,7 @@ function error(nmbr){
     console.log("Error "+nmbr);
 }
 function load(){
-    //console.log(window.innerWidth)
-    //console.log(window.innerHeight)
+    
     
 }
 function gamestart() { 

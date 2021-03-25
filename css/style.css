@@ -119,9 +119,9 @@ body{
 .gamearea{
     cursor: url("gfx/cursor.png"), auto;
     -webkit-user-drag: none;
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
     user-select: none;
     -webkit-user-drag: none;
     -khtml-user-drag: none;
