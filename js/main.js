@@ -2,22 +2,62 @@ var isdeploying=false;
 var iscombating=false;
 var isshopping=false;
 var turn=0;
+//Player 0 Hand Card Slots
+var p0hslot1 ="";
+var p0hslot2="";
+var p0hslot3="";
+var p0hslot4="";
+var p0hslot5="";
+var p0hslot6="";
+var p0hslot7="";
+var p0hslot8="";
+var p0hslot9="";
+var p0hslot10="";
+var p0hslot11="";
+var p0hslot12="";
 document.addEventListener('contextmenu', event => event.preventDefault()) //disables right click
 function error(nmbr){
     console.log("Error "+nmbr);
 }
+var elem = document.documentElement;
+function gofullscreen() {
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.mozRequestFullScreen) { /* Firefox */
+        elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE/Edge */
+        elem = window.top.document.body; //To break out of frame in IE
+        elem.msRequestFullscreen();
+      }
+  }
 function load(){
+    
+    //$("iframe").css("width",window.innerWidth);
+    //$("iframe").css("height",window.innerHeight);
+    $(".cardbackground").show();
+    $(".handcardbackground").show();
+    $(".attackcontainer").show();
+    $(".armorcontainer").show();
+    $(".healthcontainer").show();
+    //$(".impshell").hide();
     //console.log(window.innerWidth)
     //console.log(window.innerHeight)
-    
 }
 function gamestart() { 
     //Shuffle Phase
     //Deploy Phase
     //Combat Phase
     //Shop Phase
-
+    
 }
+function aiversusgamerules() { 
+    //Add 3 gold at start
+    addgold(1,3);
+    addgold(0,3);
+    
+ }
 function getopponent(player){
     //Gets the id of opponent
     if (player==1){
@@ -37,6 +77,19 @@ function getgold(player){
     }
     else{
         error("player number input for getgold is wrong");
+        return 0;
+    }
+}
+function addgold(player,amount){
+    //adds gold via given player id
+    if ($.isNumeric(player)==true && $.isNumeric(amount)==true){
+        var goldamount = $(".p"+player+"goldcontainer").children(".goldamount").text();
+        var newamount = parseInt(goldamount) +parseInt(amount);
+        $(".p"+player+"goldcontainer").children(".goldamount").text(newamount)
+        return "Added "+(newamount) +" Gold";
+    }
+    else{
+        error("input for addgold is wrong");
         return 0;
     }
 }
@@ -83,12 +136,13 @@ function changeplayername(player,name){
     }
 }
 function gethandcardname(player,slot) { 
+    // Gets card name of hand cards
     if ($.isNumeric(player)==true && $.isNumeric(slot)==true){
         if (player==1){
             return $(".handslot"+slot).children(".handcardbackground").children(".handcardname").text()
         }
         if(player==0){
-            //Do this when p0 variables is added
+            return window["p0hslot"+slot];
         }
     }
     else{

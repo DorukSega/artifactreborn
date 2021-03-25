@@ -109,25 +109,15 @@
     --black: -webkit-linear-gradient(90deg,#222026,#2D2A32);
     --gold:  -webkit-linear-gradient(90deg,#6E5D17,#6C5D1B); /*Item Cards*/
   }
-
+  html{
+    height: 100%;
+    width: 100%;
+  }
 body{
     font-family: Radiance;
-}
-.cardfont{
-    font-family: Radiance Condensed; 
-}
-.gamearea{
-    cursor: url("gfx/cursor.png"), auto;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
-    user-select: none;
-    -webkit-user-drag: none;
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
-    position: relative;
+    white-space: nowrap;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 .boardbackground{
@@ -137,6 +127,22 @@ body{
     top: 0%;
     left: 0%;
     
+}
+.cardfont{
+    font-family: Radiance Condensed; 
+}
+.gamearea{
+    cursor: url("gfx/cursor.png"), auto;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    position: relative;
 }
 .separator1{
     position: fixed;
@@ -149,14 +155,6 @@ body{
     top: 21%;
     left: 66.08%;
     height: 50%;
-}
-.player1towers{
-    position: fixed;
-    bottom: 25%;
-}
-.player0towers{
-    position: fixed;
-    top: 15%;
 }
 .player1manapools{
     position: fixed;
@@ -185,7 +183,7 @@ body{
     font-family:  Artifact Numbers;
     font-size:40px;
     color: white;
-    
+    font-weight:bolder;
     line-height: 95px;
     text-align: center;
 }
@@ -194,6 +192,78 @@ body{
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.p0impcontainer{
+    position: fixed;
+    top: 27%;
+}
+.p1impcontainer{
+    position: fixed;
+    bottom: 34%;
+}
+.imp1{
+    position: absolute;
+    left: 258.5px;
+}
+.imp2{
+    position: absolute;
+    left: 343.5px;
+}
+.imp3{
+    position: absolute;
+    left: 173.5px;
+}
+.imp4{
+    position: absolute;
+    left: 428.5px;
+}
+.imp5{
+    position: absolute;
+    left: 88.5px;
+}
+.imp6{
+    position: absolute;
+    left: 513.5px;
+}
+.imp7{
+    position: absolute;
+    left: 3.5px;
+}
+.impart{
+    border-radius: 50%;
+    height: 51px;
+    width: 51px;
+    top: 50%;
+    left: 50%;
+    transform: translate(2px, 0.4px);
+}
+.impshell{
+    height: 66px;
+    width: 66px;
+    background-color: #787671;
+    box-shadow:  -5px -6px 5px black;
+    background: -webkit-linear-gradient(90deg,#56504F,#787671);
+    border-radius: 50%;
+    line-height: 95px;
+}
+.impshell2{
+    height: 55px;
+    width: 55px;
+    background-color: #C4D3CC;
+    box-shadow:  0px 0px 3px #56504F;
+    border-radius: 50%;
+    line-height: 95px;
+    top: 50%;
+    left: 50%;
+    transform: translate(5.75px, 5.75px);
+}
+.player1towers{
+    position: fixed;
+    bottom: 26%;
+}
+.player0towers{
+    position: fixed;
+    top: 13%;
 }
 .outershell{
     height: 120px;
@@ -221,6 +291,7 @@ body{
     position:inherit;
     height: 95px;
     width: 95px;
+    font-size:48px;
     background-color: #2D2D2D;
     border-radius: 50%;
     display: inline-block;
@@ -230,7 +301,7 @@ body{
 }
 .tower1{
     position: fixed;
-    left: 14.75%;
+    left: 282.5px;
 }
 .tower2{
     position: fixed;
@@ -240,6 +311,7 @@ body{
     position: fixed;
     left: 79.40%;
 }
+
 .p0board{
     position: fixed;
     width: 100%;
@@ -255,15 +327,15 @@ body{
     left: 0%;
 }
 .combat1{
-    position:fixed;
+    position:relative;
     left: 2.5%;
 }
 .combat2{
-    position: fixed;
+    position: relative;
     left: 35%;
 }
 .combat3{
-    position: fixed;
+    position: relative;
     left: 67.25%;
 }
 .slot1{
@@ -327,7 +399,7 @@ body{
 }
 .goldamount{
     font-size: 38px;
-    font-weight: bold;
+    font-weight:bolder;
     position: absolute;
     text-align:center;
     font-family:  Artifact Numbers;
@@ -358,7 +430,7 @@ body{
     position: absolute;
     top:98px; 
     font-size: 18px;
-    font-weight: bold;
+    font-weight:bolder;
     font-family:  Artifact Numbers;
 }
 .attackcontainer{

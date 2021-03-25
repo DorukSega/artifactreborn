@@ -1,0 +1,46 @@
+
+
+Heroes
+
+Keefe the Bold			6 1 11
+Legion Commander		6 1 8
+Luna					3   8
+
+4th Zeus				3   7
+5th Crystal Maiden		2   5
+6th Timbersaw			4 1 8
+
+
+Cards
+
+x2 Reckless Charge			
+x2 Duel
+x2 Thundergod's Wrath		6 mana, deal 4
+x2 Eclipse							deal 3
+x1 Frostbite				3 mana
+x1 Whirling Death			
+
+x2 Bronze Legionnaire		3 mana,	4 2 2
+x2 Legion Standard Bearer			0   5	
+x2 The Omexe Arena
+x2 Back For More			4 mana,			random slot
+x2 Time of Triumph							+4 to all
+
+x2 Cunning Plan				2 mana
+x2 Compel					3 mana
+x2 Thunderstorm				5 mana,     	Deal 4 piercing
+x2 Friendly Fire
+x2 Annihiation				7 mana	
+
+
+Items
+
+x2 Stonehall Cloak			9 gold			+4 Health
+x2 Blink Dagger				25 gold			"in another lane"
+x1 Phase Boots				16 gold			+4 Health
+x1 Orchid					22 gold
+
+
+
+
+
