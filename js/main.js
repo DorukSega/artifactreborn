@@ -15,7 +15,7 @@ var p0hslot9="";
 var p0hslot10="";
 var p0hslot11="";
 var p0hslot12="";
-document.addEventListener('contextmenu', event => event.preventDefault()) //disables right click
+//disables right click document.addEventListener('contextmenu', event => event.preventDefault()) 
 function error(nmbr){
     console.log("Error "+nmbr);
 }
