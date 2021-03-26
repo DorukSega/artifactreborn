@@ -1,0 +1,1026 @@
+{
+  "cards": [
+    {
+      "name": "Luna",
+      "attack": 3,
+      "armor": 0,
+      "health": 8,
+      "goldcost": 0,
+      "manacost": 0,
+      "signature": "",
+      "specialaction": "",
+      "id": 10006,
+      "color": "blue",
+      "bounty": 5,
+      "charges": 0,
+      "effectdesc": "",
+      "type": "hero",
+      "lore": "Once I was like Sorla Khan... a warlord that did as she pleased.  Strong and immortal I knew that no man or beast was my equal... until my hubris cost me everything.  It was there at my lowest that Selemene found me.  Tested me.  And showed me the moon lit path.  Much time has passed since that day, and I find purpose and pride in protecting the Nightsilver Woods with other members of the Dark Moon.  But word has spread of Sorla Khan's march, and while we have never met I understand her all too well.  And so I travel to Roseleaf to defeat her, and save her from herself. \u2014 <i>Luna, the Moon Rider<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": true,
+          "name": "LUCENT BEAM",
+          "effectdesc": "Round Start: Deal 1 piercing damage to a random enemy and add a charge to your Eclipse card."
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Melee Creep",
+      "attack": 1,
+      "armor": 0,
+      "health": 1,
+      "goldcost": 0,
+      "manacost": 0,
+      "signature": "",
+      "specialaction": "",
+      "id": 1098,
+      "color": "gray",
+      "bounty": 1,
+      "charges": 0,
+      "effectdesc": "",
+      "type": "creep",
+      "lore": "",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Keefe the Bold",
+      "attack": 6,
+      "armor": 1,
+      "health": 11,
+      "goldcost": 0,
+      "manacost": 0,
+      "signature": "",
+      "specialaction": "",
+      "id": 11003,
+      "color": "red",
+      "bounty": 5,
+      "charges": 0,
+      "effectdesc": "",
+      "type": "hero",
+      "lore": "Fighting is like crushing someone's skull with a tree trunk. That's an analogy! \u2014 <i>Keefe Treekiller, the Ogre Bruiser<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": true,
+          "turn": 3,
+          "mana": 1,
+          "effectdesc": "Active in 3 turns, 1 Mana: Each unit with Keefe the Bold as their combat target strikes itself with +2 attack."
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Legion Commander",
+      "attack": 6,
+      "armor": 1,
+      "health": 8,
+      "goldcost": 0,
+      "manacost": 0,
+      "signature": "",
+      "specialaction": "",
+      "id": 10069,
+      "color": "red",
+      "bounty": 5,
+      "charges": 0,
+      "effectdesc": "",
+      "type": "hero",
+      "lore": "I know these people think me a monster.  I don't blame them.  No one wants to be occupied, but it's in their best interests! If we weren't here in Roseleaf the Red Mist would have slaughtered them all... today the Vhoul see us as villains, but after we defeat Sorla Khan... The Bronze Legion will be heralded as the heroes we are. \u2014 <i>Tresdin, Legion Commander<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": true,
+          "name": "MOMENT OF COURAGE",
+          "effectdesc": "Whenever Legion Commander strikes a unit and survives, heal Legion Commander 3."
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Zeus",
+      "attack": 3,
+      "armor": 0,
+      "health": 7,
+      "goldcost": 0,
+      "manacost": 0,
+      "signature": "",
+      "specialaction": "",
+      "id": 10065,
+      "color": "blue",
+      "bounty": 5,
+      "charges": 0,
+      "effectdesc": "",
+      "type": "hero",
+      "lore": "I care little for the affairs of mortals.  I have no stake in the war between the Red Mist and the Bronze Legion, and the plight of the Vhoul does little to stir my blood.  What I DO care about however, is that charlatan Storm Spirit claiming my lightning as his own... and so I travel to Roseleaf; to prove that there is no god of lightning above me. \u2014 <i>Zeus, Lord of Heaven<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": true,
+          "name": "STATIC FIELD",
+          "effectdesc": "Whenever you play a spell or enchantment from this lane, deal 1 piercing damage to Zeus's adjacent enemies."
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Crystal Maiden",
+      "attack": 2,
+      "armor": 0,
+      "health": 5,
+      "goldcost": 0,
+      "manacost": 0,
+      "signature": "",
+      "specialaction": "",
+      "id": 10064,
+      "color": "blue",
+      "bounty": 5,
+      "charges": 0,
+      "effectdesc": "",
+      "type": "hero",
+      "lore": "'Warden of Icewrack.'  It's a fancy title.  In theory it means I'm responsible for maintaining law and order, collaborating with the Sapphire Conclave on magical crimes, and protecting the weak from all manners of nasty things.  In practice I help farmers fix fences.  So I decided to go on a little sabbatical.  Besides... I couldn't stay in Icewrack.  It's cold.  It's boring.  And I heard my sister was planning on visiting so I definitely had to get the hell outta there. \u2014 <i>Rylai, the Crystal Maiden<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": true,
+          "name": "ARCANE AURA",
+          "specialaction": "crosslane",
+          "effectdesc": "When you play a spell or enchantment from any lane, restore 2 Mana. 1 round cooldown. \nCross Lane."
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Timbersaw",
+      "attack": 4,
+      "armor": 1,
+      "health": 8,
+      "goldcost": 0,
+      "manacost": 0,
+      "signature": "",
+      "specialaction": "",
+      "id": 10022,
+      "color": "red",
+      "bounty": 5,
+      "charges": 0,
+      "effectdesc": "",
+      "type": "hero",
+      "lore": "I know they think I'm crazy... and that's ok... they didn't see what I saw... see what the trees did.  'Ohh it's nature, look at the beauty of the forest.'  Lies.  That's not a tranquil jungle... that's a sleeping army.  And unless we are prepared when that forest starts to march it will be the end of everybody. \u2014 <i>Rizzrack, the Timbersaw<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "specialaction": "crosslane",
+          "name": "Active in 3 turns, 1 Mana: Move up to range 5. Deal 1 damage to each enemy passed on the way.\nCross Lane",
+          "active": true,
+          "turn": 3,
+          "mana": 1,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Reckless Charge",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 0,
+      "manacost": 2,
+      "signature": "Keefe the Bold",
+      "specialaction": "quickcast",
+      "id": 11004,
+      "color": "red",
+      "bounty": 0,
+      "charges": 0,
+      "effectdesc": "Swap caster up to range 1. It taunts. \nQuickcast",
+      "type": "spell",
+      "lore": "Life is a series of people trying to kill you. Kill them first. \u2014 <i>Keefe imparts wisdom to his 4 year old daughter<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Duel",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 0,
+      "manacost": 2,
+      "signature": "Legion Commander",
+      "specialaction": "",
+      "id": 10341,
+      "color": "red",
+      "bounty": 0,
+      "charges": 0,
+      "effectdesc": "Caster battles another hero. Give the winner +1 attack permanently.",
+      "type": "spell",
+      "lore": "How many more of our people need to die?  Let's just end this here and now. \u2014 <i>Legion Commander, The battle of Roseleaf<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Thundergod's Wrath",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 0,
+      "manacost": 6,
+      "signature": "Zeus",
+      "specialaction": "crosslane",
+      "id": 10278,
+      "color": "blue",
+      "bounty": 0,
+      "charges": 0,
+      "effectdesc": "Deal 4 piercing damage to each enemy hero in all lanes.  \nCross Lane",
+      "type": "spell",
+      "lore": "The full brunt of my fury is something beautiful and terrible to behold. \u2014 <i>Zeus, Angry God<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Eclipse",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 0,
+      "manacost": 5,
+      "signature": "Luna",
+      "specialaction": "charges",
+      "id": 10007,
+      "color": "blue",
+      "bounty": 0,
+      "charges": 1,
+      "effectdesc": "Repeat one time for each charge: Deal 3 piercing damage to a random enemy.  \nCharges: 1",
+      "type": "spell",
+      "lore": "Selemene has rewarded my faith in her with terrible power, and I have taken a vow never to misuse it. \u2014 <i>Luna, Servant of Selemene<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Frostbite",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 0,
+      "manacost": 2,
+      "signature": "Crystal Maiden",
+      "specialaction": "",
+      "id": 10277,
+      "color": "blue",
+      "bounty": 0,
+      "charges": 0,
+      "effectdesc": "Deal 2 damage to a unit. Disarm and root it.",
+      "type": "spell",
+      "lore": "Unlike Lina, I like to try to find solutions that don't involve killing everyone. \u2014 <i>Crystal Maiden, Less Destructive Sister<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Whirling Death",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 0,
+      "manacost": 2,
+      "signature": "Timbersaw",
+      "specialaction": "",
+      "id": 10296,
+      "color": "red",
+      "bounty": 0,
+      "charges": 0,
+      "effectdesc": "Deal 2 damage to the caster's adjacent enemies and give them -2 attack.",
+      "type": "spell",
+      "lore": "I was nervous about following the Society of Likeminded Keenfolk to Roseleaf... Sniper had a lot of rules.  Rules like 'we can't stop to cut down every tree'.  But when he saw the Treants marching towards us, he quickly made an exception. \u2014 <i>Timbersaw, Crazed Lumberjack<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Bronze Legionnaire",
+      "attack": 4,
+      "armor": 2,
+      "health": 2,
+      "goldcost": 0,
+      "manacost": 3,
+      "signature": "",
+      "specialaction": "",
+      "id": 10104,
+      "color": "red",
+      "bounty": 0,
+      "charges": 0,
+      "effectdesc": "",
+      "type": "creep",
+      "lore": "The Red Mist Horde is on the march, looting and destroying every city that stands between them and our great capital of Stonehall.  If we wish to protect our home...if we wish to stop these monsters... we must be willing to do whatever it takes. \u2014 <i>Decius, Bronze Legionnaire<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Legion Standard Bearer",
+      "attack": 0,
+      "armor": 0,
+      "health": 5,
+      "goldcost": 0,
+      "manacost": 3,
+      "signature": "",
+      "specialaction": "",
+      "id": 10104,
+      "color": "red",
+      "bounty": 0,
+      "charges": 0,
+      "effectdesc": "Legion Standard Bearer's allied neighbors have +3 Attack.",
+      "type": "creep",
+      "lore": "As a boy I dreamed of being a member of the Stonehall Elite... to be trained by Belasanno himself in the ways of war... but the sad truth is that I have no gift for combat.   I am no soldier.  But I am a believer.  In our emperor.  In our country.  In our mission.  I may not be a swordsman, but I am proud to carry the bullsnake into battle. \u2014 <i>Pololo, Standard Bearer of the Bronze Legion<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "The Omexe Arena",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 0,
+      "manacost": 3,
+      "signature": "",
+      "specialaction": "",
+      "id": 10104,
+      "color": "red",
+      "bounty": 0,
+      "charges": 0,
+      "effectdesc": "Enchant Tower\n\nAura: Allied heroes in the center slot have rapid deployment.",
+      "type": "enchantment",
+      "lore": "The Omexe Arena is where I made a name for myself.  I was its champion, and no one was my equal. \u2014 <i>Bradwarden reflects on his glory days<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Back For More",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 0,
+      "manacost": 4,
+      "signature": "",
+      "specialaction": "",
+      "id": 10618,
+      "color": "red",
+      "bounty": 0,
+      "charges": 0,
+      "effectdesc": "Deploy one of your heroes at random from the Fountain to the random slot.",
+      "type": "spell",
+      "lore": "",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Time of Triumph",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 0,
+      "manacost": 9,
+      "signature": "",
+      "specialaction": "",
+      "id": 10425,
+      "color": "red",
+      "bounty": 0,
+      "charges": 0,
+      "effectdesc": "Give your heroes +4 attack, +4 armor, +4 health, +4 Cleave, +4 Retaliate, and +4 Siege permanently.",
+      "type": "spell",
+      "lore": "I've written a lot of books about Axe, the most popular of which is easily 'The Roshan Expedition'.  Personally I think, 'Red Mist, Red Passion' is better, but people heard 'erotic thriller' and never gave it a chance. \u2014 <i>Goodkind, Literary Icon<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Cunning Plan",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 0,
+      "manacost": 2,
+      "signature": "",
+      "specialaction": "",
+      "id": 10411,
+      "color": "blue",
+      "bounty": 0,
+      "charges": 0,
+      "effectdesc": "Swap a unit to another slot.",
+      "type": "spell",
+      "lore": "Mireska likes the long con.  Me?  I like to shake things up and see what happens. \u2014 <i>Meepo, Impulsive Criminal<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Compel",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 0,
+      "manacost": 3,
+      "signature": "",
+      "specialaction": "",
+      "id": 10391,
+      "color": "blue",
+      "bounty": 0,
+      "charges": 0,
+      "effectdesc": "Choose a unit. Choose a combat target for it. Draw a card.",
+      "type": "spell",
+      "lore": "Some are fit to rule.  Most live to obey. \u2014 <i>Kanna, Cult of Personality<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Thunderstorm",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 0,
+      "manacost": 5,
+      "signature": "",
+      "specialaction": "",
+      "id": 10412,
+      "color": "blue",
+      "bounty": 0,
+      "charges": 0,
+      "effectdesc": "Deal 4 piercing damage to each enemy.",
+      "type": "spell",
+      "lore": "Zeus destroyed a building so I destroyed an army... I thought the matter was settled but then he decided to go throw a temper tantrum and crater a city. \u2014 <i>Storm Spirit, Sore Loser <\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Annihilation",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 0,
+      "manacost": 7,
+      "signature": "",
+      "specialaction": "",
+      "id": 10315,
+      "color": "blue",
+      "bounty": 0,
+      "charges": 0,
+      "effectdesc": "Slay each unit on both teams.",
+      "type": "spell",
+      "lore": "It is wise to fear the power of the Ancients... \u2014 <i>Kanna, Seeker of Matricide<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Stonehall Cloak",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 9,
+      "manacost": 1,
+      "signature": "",
+      "specialaction": "",
+      "id": 10205,
+      "color": "gold",
+      "bounty": 0,
+      "charges": 0,
+      "effectdesc": "+4 health After Combat: Increase health by 1.",
+      "type": "item",
+      "lore": "The bullsnake is a fitting symbol for Stonehall. They conquer. They occupy. They move on. \u2014 <i>Jolixia, The Card Faun<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Blink Dagger",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 25,
+      "manacost": 1,
+      "signature": "",
+      "specialaction": "turn",
+      "id": 10206,
+      "color": "gold",
+      "bounty": 0,
+      "charges": 0,
+      "turn": 2,
+      "mana": 1,
+      "effectdesc": "+2 attack \nActive 2 turns, 1 Mana: Move this hero to a slot in a another lane",
+      "type": "item",
+      "lore": "For years Axe has yearned to trade out his blink dagger for a blink axe, and for years Goodkind has had to remind him that blink axes don't exist. \u2014 <i>Jolixia, The Card Faun<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Phase Boots",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 16,
+      "manacost": 1,
+      "signature": "",
+      "specialaction": "turn",
+      "id": 10203,
+      "color": "gold",
+      "bounty": 0,
+      "charges": 0,
+      "turn": 2,
+      "mana": 1,
+      "effectdesc": "+4 health\n\nActive 2 turns, 1 Mana: Swap this hero to another slot.",
+      "type": "item",
+      "lore": "To many this pair of boots seems like a lesser magical item... but in the right hands these can turn the tide of any battle. \u2014 <i>Jolixia, The Card Faun<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Orchid",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 22,
+      "manacost": 1,
+      "signature": "",
+      "specialaction": "turn",
+      "id": 10727,
+      "color": "gold",
+      "bounty": 0,
+      "charges": 0,
+      "turn": 3,
+      "mana": 1,
+      "effectdesc": "+2 armor\n\nActive 3 turns, 1 Mana: Silence an enemy and give it -3 armor.",
+      "type": "item",
+      "lore": "To many this pair of boots seems like a lesser magical item... but in the right hands these can turn the tide of any battle. \u2014 <i>Jolixia, The Card Faun<\/i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    }
+  ]
+}
