@@ -41,6 +41,10 @@ function load(){
     $(".attackcontainer").show();
     $(".armorcontainer").show();
     $(".healthcontainer").show();
+    $(".handattackcontainer").show();
+    $(".handarmorcontainer").show();
+    $(".handhealthcontainer").show();
+    $(".handicon").show();
     //$(".impshell").hide();
     //console.log(window.innerWidth)
     //console.log(window.innerHeight)
