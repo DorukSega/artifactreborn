@@ -288,7 +288,7 @@
       "color": "red",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "Swap caster up to range 1. It taunts. :bond: Up to range 2.\nQuickcast",
+      "effectdesc": "Swap caster up to range 1. It taunts. &#128279; Up to range 2.\nQuickcast",
       "type": "spell",
       "lore": "Life is a series of people trying to kill you. Kill them first. \u2014 <i>Keefe imparts wisdom to his 4 year old daughter<\/i>",
       "abilities": [
@@ -327,7 +327,7 @@
       "color": "red",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "Caster battles another hero. :bond: Give the winner +2 attack permanently.",
+      "effectdesc": "Caster battles another hero. &#128279; Give the winner +2 attack permanently.",
       "type": "spell",
       "lore": "How many more of our people need to die?  Let's just end this here and now. \u2014 <i>Legion Commander, The battle of Roseleaf<\/i>",
       "abilities": [
@@ -405,7 +405,7 @@
       "color": "blue",
       "bounty": 0,
       "charges": 1,
-      "effectdesc": "Repeat one time for each charge: Deal 2 piercing damage to a random enemy. :bond: Deal +1 damage in Luna's lane. \nCharges: 1",
+      "effectdesc": "Repeat one time for each charge: Deal 2 piercing damage to a random enemy. &#128279; Deal +1 damage in Luna's lane. \nCharges: 1",
       "type": "spell",
       "lore": "Selemene has rewarded my faith in her with terrible power, and I have taken a vow never to misuse it. \u2014 <i>Luna, Servant of Selemene<\/i>",
       "abilities": [
@@ -444,7 +444,7 @@
       "color": "blue",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "Deal 2 damage to a unit. Disarm it. :bond: Root it.",
+      "effectdesc": "Deal 2 damage to a unit. Disarm it. &#128279; Root it.",
       "type": "spell",
       "lore": "Unlike Lina, I like to try to find solutions that don't involve killing everyone. \u2014 <i>Crystal Maiden, Less Destructive Sister<\/i>",
       "abilities": [
@@ -483,7 +483,7 @@
       "color": "red",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "Deal 2 damage to the caster's adjacent enemies and give them -1 attack. :bond: If owner is the caster give -3 attack instead.",
+      "effectdesc": "Deal 2 damage to the caster's adjacent enemies and give them -1 attack. &#128279; If owner is the caster give -3 attack instead.",
       "type": "spell",
       "lore": "I was nervous about following the Society of Likeminded Keenfolk to Roseleaf... Sniper had a lot of rules.  Rules like 'we can't stop to cut down every tree'.  But when he saw the Treants marching towards us, he quickly made an exception. \u2014 <i>Timbersaw, Crazed Lumberjack<\/i>",
       "abilities": [
@@ -602,7 +602,7 @@
       "charges": 0,
       "effectdesc": "After Combat: Slay Cursed Satyr. Active 0 CD, 1 Mana: Choose a blocked unit. It battles the unit blocking it.",
       "type": "creep",
-      "lore": "LORE HERE",
+      "lore": "I'm not proud of what I've done, we were children playing games... how could I've expected what would come, what she was willing to awaken.  Death is coming for us all now... but it is most certainly coming for me first. \u2014 <i>Giamma, the Cursed Satyr<\/i>",
       "abilities": [
         {
           "type": "passive",
@@ -797,7 +797,7 @@
       "charges": 0,
       "effectdesc": "Deal 2 damage to each enemy.",
       "type": "spell",
-      "lore": "LORE HERE",
+      "lore": "Our defenses are strong, but not impenetrable... Fortunately our towers tend to ward off all but the most determined. \u2014 <i>Prellex, Defender of the Radiant<\/i>",
       "abilities": [
         {
           "type": "passive",
@@ -836,7 +836,7 @@
       "charges": 0,
       "effectdesc": "Choose two enemies. They battle each other.",
       "type": "spell",
-      "lore": "LORE HERE",
+      "lore": "Friends always let you down. \u2014 <i>Drow Ranger, Force Unto Herself<\/i>",
       "abilities": [
         {
           "type": "passive",
