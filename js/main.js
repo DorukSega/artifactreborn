@@ -15,6 +15,11 @@ var p0hslot9="";
 var p0hslot10="";
 var p0hslot11="";
 var p0hslot12="";
+var cards;
+var jsonreq= $.getJSON("cards.json", function(result) {
+     cards = result["cards"];
+});
+
 //disables right click document.addEventListener('contextmenu', event => event.preventDefault()) 
 function error(nmbr){
     console.log("Error "+nmbr);
@@ -31,11 +36,11 @@ function gofullscreen() {
         elem = window.top.document.body; //To break out of frame in IE
         elem.msRequestFullscreen();
       }
-  }
+}
 function load(){
-    
-    //$("iframe").css("width",window.innerWidth);
-    //$("iframe").css("height",window.innerHeight);
+    addtomodifierbycords(0,2,1,"health",1)
+    console.log(gethealthbycords(0,2,1));
+    aiversusgamerules() //for now
     $(".cardbackground").show();
     $(".handcardbackground").show();
     $(".attackcontainer").show();
@@ -49,7 +54,8 @@ function load(){
     //console.log(window.innerWidth)
     //console.log(window.innerHeight)
 }
-function gamestart() { 
+function gamelogic() { 
+
     //Shuffle Phase
     //Deploy Phase
     //Combat Phase
@@ -60,8 +66,9 @@ function aiversusgamerules() {
     //Add 3 gold at start
     addgold(1,3);
     addgold(0,3);
-    
  }
+
+
 function getopponent(player){
     //Gets the id of opponent
     if (player==1){
@@ -72,6 +79,11 @@ function getopponent(player){
         error("player number input for getopponent is wrong");
         return 0;
     }
+}
+function gettarget(player,combat,slot){
+    //Gets target card on board as element
+    var element = getelementbycords(getopponent(player),combat,slot); 
+    return element;
 }
 function getgold(player){
     //gets gold via given player id
@@ -110,10 +122,10 @@ function gettowerhealth(player,combat){
 }
 function getelementbycords(player,combat,slot) { 
     //returns element directly, will be user to turn variables into one quickly. 
-    //var element = getelementbycords(player,combat,slot); for other functions
+    //var element = getelementbycords(player,combat,slot); //for other functions
     if ($.isNumeric(player)==true && $.isNumeric(combat)==true && $.isNumeric(slot)==true){
         var element = $(".p"+player+"board").children(".combat"+combat).children(".slot"+slot).children(".cardbackground");
-        return element
+        return element;
     }else{
         error("input for getelementbycords is wrong");
         return 0;
@@ -190,3 +202,131 @@ function getcardadjent(slotnumber) {
        return 0;
    }
  }
+ function getmodifierbycords(player,combat,slot,modifier) {
+    //gets modifier by given cords
+    var element = getelementbycords(player,combat,slot);
+    var modifieramount= element.children(".bottomofthecard").children("."+modifier+"container").children("."+modifier).text();
+    return modifieramount;
+ }
+ function changemodifierbycords(player,combat,slot,modifier,amount) {
+    //changes modifier by given cords
+    var element = getelementbycords(player,combat,slot);
+    element.children(".bottomofthecard").children("."+modifier+"container").children("."+modifier).text(amount);
+ }
+ function addtomodifierbycords(player,combat,slot,modifier,amount) {
+    //adds to modifier by given cords
+    var element = getelementbycords(player,combat,slot);
+    element.children(".bottomofthecard").children("."+modifier+"container").children("."+modifier).text(parseInt(getmodifierbycords(player,combat,slot,modifier))+parseInt(amount));
+ }
+ function getattackbycords(player,combat,slot) { 
+    return getmodifierbycords(player,combat,slot,"attack");
+  }
+  function getarmorbycords(player,combat,slot) { 
+    return getmodifierbycords(player,combat,slot,"armor");
+  }
+  function gethealthbycords(player,combat,slot) { 
+    return getmodifierbycords(player,combat,slot,"health");
+  }
+ function getsomethingbyname(name,something) {
+    //gets something by given name
+    var i =0;
+    do {
+        if(cards[i]["name"]==name){
+            return cards[i][something];
+        }
+        i = i + 1;
+      } while (i < cards.length);
+ }
+ function getdatabyid(id) {
+    //gets data by given id
+    var i =0;
+    do {
+        if(cards[i]["id"]==id){
+            return cards[i];
+        }
+        i = i + 1;
+      } while (i < cards.length);
+ }
+ function getdatabyname(name) {
+    //gets data by given name
+    var i =0;
+    do {
+        if(cards[i]["name"]==name){
+            return cards[i];
+        }
+        i = i + 1;
+      } while (i < cards.length);
+ }
+ function getcolorbyname(name) {
+    //gets color by given name
+    return getsomethingbyname(name,"color");
+ }
+ function getattackbyname(name) {
+    //gets attack by given name
+    return getsomethingbyname(name,"attack");
+ }
+ function getarmorbyname(name) {
+    //gets armor by given name
+    return getsomethingbyname(name,"armor");
+ }
+ function gethealthbyname(name) {
+    //gets health by given name
+    return getsomethingbyname(name,"health");
+ }
+ function getgoldcostbyname(name) {
+    //gets goldcost by given name
+    return getsomethingbyname(name,"goldcost");
+ }
+ function getmanacostbyname(name) {
+    //gets manacost by given name
+    return getsomethingbyname(name,"manacost");
+ }
+ function getsignaturebyname(name) {
+    //gets signature by given name
+    return getsomethingbyname(name,"signature");
+ }
+ function getspecialactionbyname(name) {
+    //gets special action by given name
+    return getsomethingbyname(name,"specialaction");
+ }
+ function getidbyname(name) {
+    //gets id by given name
+    return getsomethingbyname(name,"id");
+ }
+ function getbountybyname(name) {
+    //gets bounty by given name
+    return getsomethingbyname(name,"bounty");
+ }
+ function getchargesbyname(name) {
+    //gets charges by given name
+    return getsomethingbyname(name,"charges");
+ }
+ function geteffectdescbyname(name) {
+    //gets effectdesc by given name
+    return getsomethingbyname(name,"effectdesc");
+ }
+ function gettypebyname(name) {
+    //gets type by given name
+    return getsomethingbyname(name,"type");
+ }
+ function getlorebyname(name) {
+    //gets lore by given name
+    return getsomethingbyname(name,"lore");
+ }
+ function getabilitiesbyname(name) {
+    //gets abilities by given name
+    // it also deletes unactive ones
+    var abilities =getsomethingbyname(name,"abilities");
+    var newabilities=[];
+    var i =0;
+    var a =0;
+    do {
+        if(abilities[i]["active"]==true){
+            newabilities[a]=abilities[i];
+            a=a+1
+        }
+        i = i + 1;
+      } while (i < abilities.length);
+    return newabilities;
+ }
+ 
