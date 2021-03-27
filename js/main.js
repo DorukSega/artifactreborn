@@ -39,7 +39,8 @@ function gofullscreen() {
 }
 function load(){
     addtomodifierbycords(0,2,1,"health",1)
-    console.log(gethealthbycords(0,2,1));
+    addtomodifierbycords(0,2,1,"armor",1)
+    console.log(getnamebycords(0,2,1));
     aiversusgamerules() //for now
     $(".cardbackground").show();
     $(".handcardbackground").show();
@@ -202,6 +203,17 @@ function getcardadjent(slotnumber) {
        return 0;
    }
  }
+ function getidbycords(player,combat,slot){
+    var element = getelementbycords(player,combat,slot);
+    var id= element.children(".cardart").attr("src");
+    id = id.replace("css/card_art/full_art/","");
+    id = id.replace(".png","")
+    return id;
+ }
+ function getnamebycords(player,combat,slot){
+    return getnamebyid(getidbycords(player,combat,slot));
+ }
+ 
  function getmodifierbycords(player,combat,slot,modifier) {
     //gets modifier by given cords
     var element = getelementbycords(player,combat,slot);
@@ -227,6 +239,41 @@ function getcardadjent(slotnumber) {
   function gethealthbycords(player,combat,slot) { 
     return getmodifierbycords(player,combat,slot,"health");
   }
+  function getotalhealthbycords(player,combat,slot) { // this is health plus armor
+    return parseInt(gethealthbycords(player,combat,slot))+parseInt(getarmorbycords(player,combat,slot));
+  }
+  function changeattackbycords(player,combat,slot,amount){
+    changemodifierbycords(player,combat,slot,"attack",amount);
+  }
+  function addtoattackbycords(player,combat,slot,amount){
+    addtomodifierbycords(player,combat,slot,"attack",amount);
+  }
+  function changearmorbycords(player,combat,slot,amount){
+    changemodifierbycords(player,combat,slot,"armor",amount);
+  }
+  function addtoarmorbycords(player,combat,slot,amount){
+    addtomodifierbycords(player,combat,slot,"armor",amount);
+  }
+  function changehealthbycords(player,combat,slot,amount){
+    changemodifierbycords(player,combat,slot,"health",amount);
+  }
+  function addtohealthbycords(player,combat,slot,amount){
+    addtomodifierbycords(player,combat,slot,"health",amount);
+  }
+  function dodamage(player,combat,slot,amount){
+    var amnt=amount
+    if (amnt>getarmorbycords(player,combat,slot)){
+        amnt=parseInt(amnt)-parseInt(getarmorbycords(player,combat,slot))
+        changearmorbycords(player,combat,slot,0)
+        changehealthbycords(player,combat,slot,parseInt(gethealthbycords(player,combat,slot))-parseInt(amnt));
+        if (gethealthbycords(player,combat,slot)<=0){
+            //add killcard here
+        }
+    }
+    else{
+        changearmorbycords(player,combat,slot,parseInt(getarmorbycords(player,combat,slot))-parseInt(amnt));
+    }
+  }
  function getsomethingbyname(name,something) {
     //gets something by given name
     var i =0;
@@ -243,6 +290,16 @@ function getcardadjent(slotnumber) {
     do {
         if(cards[i]["id"]==id){
             return cards[i];
+        }
+        i = i + 1;
+      } while (i < cards.length);
+ }
+ function getnamebyid(id) {
+    //gets name by given id
+    var i =0;
+    do {
+        if(cards[i]["id"]==id){
+            return cards[i]["name"];
         }
         i = i + 1;
       } while (i < cards.length);
