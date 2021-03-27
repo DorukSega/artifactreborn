@@ -822,21 +822,21 @@
       ]
     },
     {
-      "name": "Annihilation",
+      "name": "Friendly Fire",
       "attack": 0,
       "armor": 0,
       "health": 0,
       "goldcost": 0,
-      "manacost": 8,
+      "manacost": 5,
       "signature": "",
       "specialaction": "",
-      "id": 10315,
+      "id": XXXXX, //needs ID !!!
       "color": "blue",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "Slay each unit on both teams.",
+      "effectdesc": "Choose two enemies. They battle each other.",
       "type": "spell",
-      "lore": "It is wise to fear the power of the Ancients... \u2014 <i>Kanna, Seeker of Matricide<\/i>",
+      "lore": "LORE?",
       "abilities": [
         {
           "type": "passive",
@@ -861,21 +861,21 @@
       ]
     },
     {
-      "name": "Friendly Fire",
+      "name": "Annihilation",
       "attack": 0,
       "armor": 0,
       "health": 0,
       "goldcost": 0,
-      "manacost": 5,
+      "manacost": 8,
       "signature": "",
       "specialaction": "",
-      "id": XXXXX, //needs ID !!!
+      "id": 10315,
       "color": "blue",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "Choose two enemies. They battle each other.",
+      "effectdesc": "Slay each unit on both teams.",
       "type": "spell",
-      "lore": "LORE?",
+      "lore": "It is wise to fear the power of the Ancients... \u2014 <i>Kanna, Seeker of Matricide<\/i>",
       "abilities": [
         {
           "type": "passive",
