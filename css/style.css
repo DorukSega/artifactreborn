@@ -595,7 +595,7 @@ body{
     z-index: 13;
 }
 .handcardbackground{
-    border-radius: 4px;
+    border-radius: 5px;
     position: relative;
     background: #175D87;
     background: var(--blue);
