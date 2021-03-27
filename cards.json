@@ -366,7 +366,7 @@
       "color": "blue",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "Deal 3 piercing damage to each enemy hero in all lanes. Deal +2 damage in Zeus' lane. \nCross Lane",
+      "effectdesc": "Deal 3 piercing damage to each enemy hero in all lanes. &#128279; Deal +2 damage in Zeus' lane. \nCross Lane",
       "type": "spell",
       "lore": "The full brunt of my fury is something beautiful and terrible to behold. \u2014 <i>Zeus, Angry God<\/i>",
       "abilities": [
