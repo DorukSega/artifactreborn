@@ -836,7 +836,7 @@
       "charges": 0,
       "effectdesc": "Choose two enemies. They battle each other.",
       "type": "spell",
-      "lore": "LORE HERE",
+      "lore": "Friends always let you down. \u2014 <i>Drow Ranger, Force Unto Herself<\/i>",
       "abilities": [
         {
           "type": "passive",
