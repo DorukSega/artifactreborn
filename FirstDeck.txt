@@ -13,12 +13,12 @@ Luna					3   8
 
 Cards
 
-x2 Reckless Charge			
-x2 Duel
-x2 Thundergod's Wrath		6 mana, deal 4
-x2 Eclipse							deal 3
-x1 Frostbite				3 mana
-x1 Whirling Death			
+x2 Reckless Charge					:bond: Deal +1 damage in Luna's lane.
+x2 Duel								:bond: Give the winner +2 attack permanently
+x2 Thundergod's Wrath		6 mana, :bond: Deal 2 more damage in Zeus' lane
+x2 Eclipse							:bond: Deal +1 damage in Luna's lane
+x1 Frostbite				3 mana	:bond: Root it
+x1 Whirling Death					-1 attack. :bond: If owner is the caster give -3 attack instead
 
 x2 Bronze Legionnaire		3 mana,	4 2 2
 x2 Legion Standard Bearer			0   5	
