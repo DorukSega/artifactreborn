@@ -493,106 +493,66 @@ body{
 }
 .handslot2{
     position: absolute;
-    left: 100px;
+    left: 5em;
     z-index: 7;
 }
 .handslot3{
     position: absolute;
-    left: -100px;
+    left: -5em;
     z-index: 5;
 }
 .handslot4{
     position: absolute;
     z-index: 8;
-    left: 200px;
+    left: 10em;
 }
 .handslot5{
     position: absolute;
     z-index: 4;
-    left: -200px;
+    left: -10em;
 }
 .handslot6{
     position: absolute;
     z-index: 9;
-    left: 300px;
+    left: 15em;
 }
 .handslot7{
     position: absolute;
     z-index: 3;
-    left: -300px;
+    left: -15em;
 }
 .handslot8{
     position: absolute;
     z-index: 10;
-    left: 400px;
+    left: 20em;
 }
 .handslot9{
     position: absolute;
     z-index: 2;
-    left: -400px;
+    left: -20em;
 }
 .handslot10{
     position: absolute;
     z-index: 11;
-    left: 500px;
+    left: 25em;
 }
 .handslot11{
     position: absolute;
     z-index: 1;
-    left: -500px;
+    left: -25em;
 }
 .handslot12{
     position: absolute;
     z-index: 12;
-    left: 600px;
+    left: 30em;
 }
-.handslot1:hover{
-    transform: translateY(-200px);
+.handslot1:hover,.handslot2:hover,.handslot3:hover,.handslot4:hover,.handslot5:hover,
+.handslot6:hover,.handslot7:hover,.handslot8:hover,.handslot9:hover,.handslot10:hover,
+.handslot11:hover,.handslot12:hover{
     z-index: 13;
 }
-.handslot2:hover{
-    transform: translateY(-200px);
-    z-index: 13;
-}
-.handslot3:hover{
-    transform: translateY(-200px);
-    z-index: 13;
-}
-.handslot4:hover{
-    transform: translateY(-200px);
-    z-index: 13;
-}
-.handslot5:hover{
-    transform: translateY(-200px);
-    z-index: 13;
-}
-.handslot6:hover{
-    transform: translateY(-200px);
-    z-index: 13;
-}
-.handslot7:hover{
-    transform: translateY(-200px);
-    z-index: 13;
-}
-.handslot8:hover{
-    transform: translateY(-200px);
-    z-index: 13;
-}
-.handslot9:hover{
-    transform: translateY(-200px);
-    z-index: 13;
-}
-.handslot10:hover{
-    transform: translateY(-200px);
-    z-index: 13;
-}
-.handslot11:hover{
-    transform: translateY(-200px);
-    z-index: 13;
-}
-.handslot12:hover{
-    transform: translateY(-200px);
-    z-index: 13;
+.handcardbackground:hover{
+    bottom: 12em;
 }
 .handcardbackground{
     border-radius: 5px;
@@ -603,6 +563,7 @@ body{
     width: 172px;
     height: 290px;
     color: black;
+    
 }
 .handcardart{
     position: absolute;

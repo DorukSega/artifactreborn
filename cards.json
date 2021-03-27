@@ -103,7 +103,7 @@
         },
         {
           "type": "active",
-          "name": "",
+          "name": "STOP HITTIN' YOURSELF",
           "active": true,
           "turn": 3,
           "mana": 1,
@@ -261,11 +261,11 @@
         {
           "type": "active",
           "specialaction": "crosslane",
-          "name": "Active in 3 turns, 1 Mana: Move up to range 5. Deal 1 damage to each enemy passed on the way.\nCross Lane",
+          "name": "TIMBER CHAIN",
           "active": true,
           "turn": 3,
           "mana": 1,
-          "effectdesc": ""
+          "effectdesc": "Active in 3 turns, 1 Mana: Move up to range 5. Deal 1 damage to each enemy passed on the way.\nCross Lane"
         },
         {
           "type": "continuous",
