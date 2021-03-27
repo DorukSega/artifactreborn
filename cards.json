@@ -588,21 +588,21 @@
       ]
     },
     {
-      "name": "The Omexe Arena",
-      "attack": 0,
+      "name": "Cursed Satyr",
+      "attack": 4,
       "armor": 0,
-      "health": 0,
+      "health": 3,
       "goldcost": 0,
-      "manacost": 3,
+      "manacost": 4,
       "signature": "",
       "specialaction": "",
-      "id": 10104,
+      "id": 10114,
       "color": "red",
-      "bounty": 0,
+      "bounty": 1,
       "charges": 0,
-      "effectdesc": "Enchant Tower\n\nAura: Allied hero in improvement corresponding slot has rapid deployment.",
-      "type": "enchantment",
-      "lore": "The Omexe Arena is where I made a name for myself.  I was its champion, and no one was my equal. \u2014 <i>Bradwarden reflects on his glory days<\/i>",
+      "effectdesc": "After Combat: Slay Cursed Satyr. Active 0 CD, 1 Mana: Choose a blocked unit. It battles the unit blocking it.",
+      "type": "creep",
+      "lore": "LORE HERE",
       "abilities": [
         {
           "type": "passive",
@@ -612,11 +612,11 @@
         },
         {
           "type": "active",
-          "name": "",
-          "active": false,
+          "name": "Cursed Action",
+          "active": true,
           "turn": 0,
-          "mana": 0,
-          "effectdesc": ""
+          "mana": 1,
+          "effectdesc": "Active 0 CD, 1 Mana: Choose a blocked unit. It battles the unit blocking it."
         },
         {
           "type": "continuous",
@@ -783,21 +783,21 @@
       ]
     },
     {
-      "name": "Thunderstorm",
+      "name": "Tower Barrage",
       "attack": 0,
       "armor": 0,
       "health": 0,
       "goldcost": 0,
-      "manacost": 5,
+      "manacost": 3,
       "signature": "",
       "specialaction": "",
-      "id": 10412,
+      "id": 10402,
       "color": "blue",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "Deal 4 piercing damage to each enemy.",
+      "effectdesc": "Deal 2 damage to each enemy.",
       "type": "spell",
-      "lore": "Zeus destroyed a building so I destroyed an army... I thought the matter was settled but then he decided to go throw a temper tantrum and crater a city. \u2014 <i>Storm Spirit, Sore Loser <\/i>",
+      "lore": "LORE HERE",
       "abilities": [
         {
           "type": "passive",
@@ -830,13 +830,13 @@
       "manacost": 5,
       "signature": "",
       "specialaction": "",
-      "id": XXXXX, //needs ID !!!
+      "id": 10360,
       "color": "blue",
       "bounty": 0,
       "charges": 0,
       "effectdesc": "Choose two enemies. They battle each other.",
       "type": "spell",
-      "lore": "LORE?",
+      "lore": "LORE HERE",
       "abilities": [
         {
           "type": "passive",

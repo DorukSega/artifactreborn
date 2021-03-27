@@ -22,15 +22,15 @@ x1 Whirling Death
 
 x2 Bronze Legionnaire		3 mana,	4 2 2
 x2 Legion Standard Bearer			0   5	
-x2 The Omexe Arena
+x2 Cursed Satyr							
 x2 Back For More			4 mana,			random slot
 x2 Time of Triumph							+4 to all
 
 x2 Cunning Plan				2 mana
 x2 Compel					3 mana
-x2 Thunderstorm				5 mana,     	Deal 4 piercing
+x2 Tower Barrage			3 mana
 x2 Friendly Fire
-x2 Annihiation				7 mana	
+x2 Annihiation				8 mana	
 
 
 Items
