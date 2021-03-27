@@ -588,6 +588,45 @@
       ]
     },
     {
+      "name": "The Omexe Arena",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 0,
+      "manacost": 3,
+      "signature": "",
+      "specialaction": "",
+      "id": 10183,
+      "color": "red",
+      "bounty": 0,
+      "charges": 0,
+      "effectdesc": "Enchant Lane. Aura: Nearest ally hero has rapid deployment.",
+      "type": "imp",
+      "lore": "The Omexe Arena is where I made a name for myself.  I was its champion, and no one was my equal. — <i>Bradwarden reflects on his glory days</i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
       "name": "Cursed Satyr",
       "attack": 4,
       "armor": 0,
