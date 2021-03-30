@@ -2,6 +2,7 @@ var isdeploying=false;
 var iscombating=false;
 var isshopping=false;
 var turn=0;
+var shoplevel=0;
 //Player 0 Hand Card Slots
 var p0hslot1 ="";
 var p0hslot2="";
@@ -38,10 +39,10 @@ function gofullscreen() {
       }
 }
 function load(){
-    addtomodifierbycords(0,2,1,"health",1)
-    addtomodifierbycords(0,2,1,"armor",1)
-    console.log(getnamebycords(0,2,1));
+    //modifycardcolor(1,1,1,"blue");
+    console.log(getcolorbycords(1,1,1))
     aiversusgamerules() //for now
+    
     $(".cardbackground").show();
     $(".handcardbackground").show();
     $(".attackcontainer").show();
@@ -51,6 +52,7 @@ function load(){
     $(".handarmorcontainer").show();
     $(".handhealthcontainer").show();
     $(".handicon").show();
+    getlastopenhandslot()
     //$(".impshell").hide();
     //console.log(window.innerWidth)
     //console.log(window.innerHeight)
@@ -65,6 +67,7 @@ function gamelogic() {
 }
 function aiversusgamerules() { 
     //Add 3 gold at start
+    modifyalltowerhealth(40);
     addgold(1,3);
     addgold(0,3);
  }
@@ -121,6 +124,74 @@ function gettowerhealth(player,combat){
         return 0;
     }
 }
+function modifytowerhealth(player,combat,amount){
+    //modifies tower health via given player id and combat number
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true){
+       $(".player"+player+"towers").children(".tower"+combat).children(".outershell").children(".tower").text(amount);
+    }
+    else{
+        error("input for gettowerhealth is wrong");
+        return 0;
+    }
+}
+function addtowerhealth(player,combat,amount){
+    //adds tower health via given player id and combat number
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true){
+       $(".player"+player+"towers").children(".tower"+combat).children(".outershell").children(".tower").text(parseInt(amount)+parseInt(gettowerhealth(player,combat)));
+    }
+    else{
+        error("input for gettowerhealth is wrong");
+        return 0;
+    }
+}
+function modifyalltowerhealth(amount){
+    //modifies tower health via given number
+    modifytowerhealth(1,1,amount);
+    modifytowerhealth(1,2,amount);
+    modifytowerhealth(1,3,amount);
+    modifytowerhealth(2,1,amount);
+    modifytowerhealth(2,1,amount);
+    modifytowerhealth(2,1,amount);
+}
+
+function getlastopenhandslot(){
+    if ($(".handcardbackground:hidden").length){
+        var a=12
+    $(".handcardbackground:hidden").parent().each(function(i,val) {
+        var id = val.className.replace("handslot", "");
+        if (id>a){
+        }
+        else{
+            a=id
+        }
+    });
+    return a;
+    }
+    else{
+        return "none";
+    }
+}
+function getemptycardslots(){
+    //this doesnt work. suppose to return emptycardslots
+    var slotnmbrs= [];
+    var combatnmbrs=[];
+    var playernmbrs=[];
+    var i;
+    $(".cardbackground:hidden").parent().each(function(i,val) {
+        slotnmbrs[i]=val.className;
+    });
+    $(".cardbackground:hidden").parent().parent().each(function(i,val) {
+        combatnmbrs[i]=val.className;
+        
+    });
+    $(".cardbackground:hidden").parent().parent().parent().each(function(i,val) {
+        playernmbrs[i]=val.className;
+        console.log(i);
+    });
+    //console.log(playernmbrs);
+    //console.log(combatnmbrs);
+    return slotnmbrs;
+}
 function getelementbycords(player,combat,slot) { 
     //returns element directly, will be user to turn variables into one quickly. 
     //var element = getelementbycords(player,combat,slot); //for other functions
@@ -166,27 +237,7 @@ function gethandcardname(player,slot) {
         error("slot input for gethandcardname is wrong");
     }
  }
-function getemptycardslots(){
-    //this doesnt work. suppose to return emptycardslots
-    var slotnmbrs= [];
-    var combatnmbrs=[];
-    var playernmbrs=[];
-    var i;
-    $(".cardbackground:hidden").parent().each(function(i,val) {
-        slotnmbrs[i]=val.className;
-    });
-    $(".cardbackground:hidden").parent().parent().each(function(i,val) {
-        combatnmbrs[i]=val.className;
-        
-    });
-    $(".cardbackground:hidden").parent().parent().parent().each(function(i,val) {
-        playernmbrs[i]=val.className;
-        console.log(i);
-    });
-    //console.log(playernmbrs);
-    //console.log(combatnmbrs);
-    return slotnmbrs;
-}
+
 function getcardadjent(slotnumber) {
     //gets slot numbers of given slot's adjents 
    if (slotnumber>1 & slotnumber<7 ){
@@ -230,6 +281,46 @@ function getcardadjent(slotnumber) {
     var element = getelementbycords(player,combat,slot);
     element.children(".bottomofthecard").children("."+modifier+"container").children("."+modifier).text(parseInt(getmodifierbycords(player,combat,slot,modifier))+parseInt(amount));
  }
+ function getcolorbycords(player,combat,slot) { 
+    return getcolorbyname(getnamebycords(player,combat,slot));
+  }
+  function modifycardcolor(player,combat,slot,color) { 
+    var element = getelementbycords(player,combat,slot);
+    var color2=getComputedStyle(document.documentElement).getPropertyValue('--'+color)
+    console.log()
+    element.css("background",color2);
+  }
+  //cords
+  function getmanacostbycords(player,combat,slot) {
+    //gets manacost by given cords
+    return getmanacostbyname(getnamebycords(player,combat,slot));
+ }
+ function getsignaturebycords(player,combat,slot) {
+    //gets signature by given cords
+    return getsignaturebyname(getnamebycords(player,combat,slot));
+ }
+ function getspecialactionbycords(player,combat,slot) {
+    //gets special action by given cords
+    return getspecialactionbyname(getnamebycords(player,combat,slot));
+ }
+ function getbountybycords(player,combat,slot) {
+    //gets bounty by given cords
+    return getbountybyname(getnamebycords(player,combat,slot));
+ }
+ function getchargesbycords(player,combat,slot) {
+    //gets charges by given cords
+    return getchargesbyname(getnamebycords(player,combat,slot));
+ }
+ function geteffectdescbycords(player,combat,slot) {
+    //gets effectdesc by given cords
+    return geteffectdescbyname(getnamebycords(player,combat,slot));
+ }
+  function getgoldcostbycords(player,combat,slot) { 
+    return getgoldcostbyname(getnamebycords(player,combat,slot));
+   }
+  function gettypebycords(player,combat,slot) { 
+    return gettypebyname(getnamebycords(player,combat,slot));
+  }
  function getattackbycords(player,combat,slot) { 
     return getmodifierbycords(player,combat,slot,"attack");
   }
@@ -365,6 +456,14 @@ function getcardadjent(slotnumber) {
  function gettypebyname(name) {
     //gets type by given name
     return getsomethingbyname(name,"type");
+ }
+ function checkifherobyname(name){
+     if(gettypebyname(name)=="hero"){
+         return true;
+     }
+     else{
+         return false;
+     }
  }
  function getlorebyname(name) {
     //gets lore by given name

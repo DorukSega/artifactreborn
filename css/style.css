@@ -414,7 +414,7 @@ body{
 .cardbackground{
     border-radius: 2.5px;
     position: relative;
-    background: #575756;
+    background: var(--gray);
     width: 77px;
     height: 120px;
     color: black;
@@ -571,6 +571,27 @@ body{
     left: 1px;
     width: 170px;
     height: 220px;
+}
+.abilities{
+    position: absolute;
+    top: 190px;
+    left: 10px;
+}
+.secondab{
+    position: absolute;
+    left: 58px;
+}
+.abiconback{
+    position: absolute;
+    width: 48px;
+    height: 48px
+}
+.abicon{
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 42px;
+    height: 42px
 }
 .handiconback{
     position: absolute;
