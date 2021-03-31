@@ -21,6 +21,7 @@
           "type": "passive",
           "active": true,
           "name": "LUCENT BEAM",
+          "id": 10489,
           "effectdesc": "Round Start: Deal 1 piercing damage to a random enemy and add a charge to your Eclipse card."
         },
         {
@@ -105,6 +106,7 @@
           "type": "active",
           "name": "STOP HITTIN' YOURSELF",
           "active": true,
+          "id": 11011,
           "turn": 3,
           "mana": 1,
           "effectdesc": "Active in 3 turns, 1 Mana: Each unit with Keefe the Bold as their combat target strikes itself with +2 attack."
@@ -137,6 +139,7 @@
         {
           "type": "passive",
           "active": true,
+          "id": 10520,
           "name": "MOMENT OF COURAGE",
           "effectdesc": "Whenever Legion Commander strikes a unit and survives, heal Legion Commander 3."
         },
@@ -176,6 +179,7 @@
         {
           "type": "passive",
           "active": true,
+          "id": 10519,
           "name": "STATIC FIELD",
           "effectdesc": "Whenever you play a spell or enchantment from this lane, deal 1 piercing damage to Zeus's adjacent enemies."
         },
@@ -215,6 +219,7 @@
         {
           "type": "passive",
           "active": true,
+          "id": 10518,
           "name": "ARCANE AURA",
           "specialaction": "crosslane",
           "effectdesc": "When you play a spell or enchantment from any lane, restore 2 Mana. 1 round cooldown. \nCross Lane."
@@ -263,6 +268,7 @@
           "specialaction": "crosslane",
           "name": "TIMBER CHAIN",
           "active": true,
+          "id": 10498,
           "turn": 3,
           "mana": 1,
           "effectdesc": "Active in 3 turns, 1 Mana: Move up to range 5. Deal 1 damage to each enemy passed on the way.\nCross Lane"

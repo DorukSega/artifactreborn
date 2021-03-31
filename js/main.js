@@ -44,14 +44,14 @@ function load(){
     aiversusgamerules() //for now
     
     $(".cardbackground").show();
-    $(".handcardbackground").show();
+    //$(".handcardbackground").show();
     $(".attackcontainer").show();
     $(".armorcontainer").show();
     $(".healthcontainer").show();
-    $(".handattackcontainer").show();
-    $(".handarmorcontainer").show();
-    $(".handhealthcontainer").show();
-    $(".handicon").show();
+    //$(".handattackcontainer").show();
+    //$(".handarmorcontainer").show();
+    //$(".handhealthcontainer").show();
+    //$(".handicon").show();
     getlastopenhandslot()
     //$(".impshell").hide();
     //console.log(window.innerWidth)
@@ -153,7 +153,46 @@ function modifyalltowerhealth(amount){
     modifytowerhealth(2,1,amount);
     modifytowerhealth(2,1,amount);
 }
+function drawcard(name){
+    var slot = getlastopenhandslot();
+    if (checkcardexists(name)==true){
+        if (slot!="none" ){
+        
+            var element = gethandcardfromslot(slot);
+            var mainid= getidbyname(name);
+            var color =getcolorbyname(name);
+            var colored=getComputedStyle(document.documentElement).getPropertyValue('--'+color)
+            var type= gettypebyname(name)
+            element.children(".handcardart").attr("src","css/card_art/full_art/"+mainid+".png");
+            element.children(".handcardname").text(name)
+            element.css("background",colored);
+            if (type=="hero"){
 
+            }
+            else if(type=="creep"){
+
+            }
+            else if(type=="spell"){
+
+            }
+            else if(type=="imp"){
+
+            }
+            else if(type=="item"){
+
+            }
+            else{
+                error("cards.json for "+name+" has a false \"type\"");
+            }
+        }
+        else{
+            error("Hand is full"); //maybe storage system here
+        }
+    }
+    else{
+        error("card called "+ name +" doesnt exist");
+    }
+}
 function getlastopenhandslot(){
     if ($(".handcardbackground:hidden").length){
         var a=12
@@ -171,6 +210,17 @@ function getlastopenhandslot(){
         return "none";
     }
 }
+function gethandcardfromslot(slot) { 
+    //returns element directly, will be user to turn variables into one quickly. 
+    //var element = gethandcardfromslot(slot); //for other functions which are for player 1
+    if ($.isNumeric(slot)==true){
+        var element = $(".handslot"+slot).children(".handcardbackground");
+        return element;
+    }else{
+        error("input for gethandcardfromslot is wrong");
+        return 0;
+    }
+ }
 function getemptycardslots(){
     //this doesnt work. suppose to return emptycardslots
     var slotnmbrs= [];
@@ -237,7 +287,22 @@ function gethandcardname(player,slot) {
         error("slot input for gethandcardname is wrong");
     }
  }
-
+ function checkcardexists(name){
+    var i =0;
+    var data="";
+    do {
+        if(cards[i]["name"]==name){
+            data= cards[i];
+        }
+        i = i + 1;
+      } while (i < cards.length);
+    if (data==""){
+        return false;
+    }
+    else{
+        return true;
+    } 
+}
 function getcardadjent(slotnumber) {
     //gets slot numbers of given slot's adjents 
    if (slotnumber>1 & slotnumber<7 ){
@@ -287,7 +352,6 @@ function getcardadjent(slotnumber) {
   function modifycardcolor(player,combat,slot,color) { 
     var element = getelementbycords(player,combat,slot);
     var color2=getComputedStyle(document.documentElement).getPropertyValue('--'+color)
-    console.log()
     element.css("background",color2);
   }
   //cords
