@@ -21,6 +21,7 @@ var jsonreq= $.getJSON("cards.json", function(result) {
      cards = result["cards"];
 });
 
+
 //disables right click document.addEventListener('contextmenu', event => event.preventDefault()) 
 function error(nmbr){
     console.log("Error "+nmbr);
@@ -42,7 +43,15 @@ function load(){
     //modifycardcolor(1,1,1,"blue");
     console.log(getcolorbycords(1,1,1))
     aiversusgamerules() //for now
-    
+    drawcard("Legion Standard Bearer");
+    drawcard("Cursed Satyr");
+    drawcard("Back For More");
+    drawcard("Keefe the Bold");
+    drawcard("Timbersaw");
+    drawcard("Crystal Maiden");
+    drawcard("The Omexe Arena");
+    drawcard("Stonehall Cloak");
+    //drawcard("Keefe the Bold");
     $(".cardbackground").show();
     //$(".handcardbackground").show();
     $(".attackcontainer").show();
@@ -157,7 +166,6 @@ function drawcard(name){
     var slot = getlastopenhandslot();
     if (checkcardexists(name)==true){
         if (slot!="none" ){
-        
             var element = gethandcardfromslot(slot);
             var mainid= getidbyname(name);
             var color =getcolorbyname(name);
@@ -165,21 +173,115 @@ function drawcard(name){
             var type= gettypebyname(name)
             element.children(".handcardart").attr("src","css/card_art/full_art/"+mainid+".png");
             element.children(".handcardname").text(name)
+            element.children(".handcardname").css("font-size",(22-(name.length*0.3))+"px"); //auto scales font size
             element.css("background",colored);
+            element.show();
+            element.children(".handcardart").css("height","220px");
             if (type=="hero"){
-
+                element.children(".handicon").attr("src","css/card_art/hero_icons/"+mainid+".png");
+                element.children(".handicon").show();
+                element.children(".handiconback").show();
+                element.children(".handiconback").css("height","24px");
+                element.children(".handiconback").attr("src","css/gfx/GreyCircle.png");
+                // >> attack armor health <<
+                var attack = getattackbyname(name);
+                var armor = getarmorbyname(name);
+                var health = gethealthbyname(name);
+                element.children(".handbottomofthecard").children(".handattackcontainer").children(".handattack").text(attack);
+                element.children(".handbottomofthecard").children(".handattackcontainer").show();
+                if (armor!=0){
+                    element.children(".handbottomofthecard").children(".handarmorcontainer").children(".handarmor").text(armor);
+                    element.children(".handbottomofthecard").children(".handarmorcontainer").show();
+                }
+                element.children(".handbottomofthecard").children(".handhealthcontainer").children(".handhealth").text(health);
+                element.children(".handbottomofthecard").children(".handhealthcontainer").show();
+                // Abilities
+                var abilities = getabilitiesbyname(name)
+                if (abilities.length==1){
+                    var ab1id =abilities[0]['id'];
+                    element.children(".abilities").children(".firstab").children(".abicon").attr("src","css/card_art/mini_icons/"+ab1id+".png");
+                    element.children(".abilities").children(".firstab").show();
+                }
+                else if (abilities.length==2){
+                    var ab1id =abilities[0]['id'];
+                    var ab2id =abilities[1]['id'];
+                    element.children(".abilities").children(".firstab").children(".abicon").attr("src","css/card_art/mini_icons/"+ab1id+".png");
+                    element.children(".abilities").children(".secondab").children(".abicon").attr("src","css/card_art/mini_icons/"+ab2id+".png");
+                    element.children(".abilities").children(".firstab").show();
+                    element.children(".abilities").children(".secondab").show();
+                } 
             }
             else if(type=="creep"){
-
+                element.children(".handiconback").show();
+                element.children(".handcardeffect").show();
+                element.children(".handcardeffect").text(geteffectdescbyname(name))
+                element.children(".handiconback").css("height","37px");
+                element.children(".handiconback").css("top","-8px");
+                element.children(".handcardmanacost").css("font-size",31+"px");
+                element.children(".handcardmanacost").text(getmanacostbyname(name));
+                element.children(".handcardmanacost").show();
+                element.children(".handiconback").attr("src","css/gfx/mana_bg_small.png");
+                element.children(".handcardeffect").css("background-image","url(gfx/cardcreep_translucent.png);");
+                // >> attack armor health <<
+                var attack = getattackbyname(name);
+                var armor = getarmorbyname(name);
+                var health = gethealthbyname(name);
+                element.children(".handbottomofthecard").children(".handattackcontainer").children(".handattack").text(attack);
+                element.children(".handbottomofthecard").children(".handattackcontainer").show();
+                if (armor!=0){
+                    element.children(".handbottomofthecard").children(".handarmorcontainer").children(".handarmor").text(armor);
+                    element.children(".handbottomofthecard").children(".handarmorcontainer").show();
+                }
+                element.children(".handbottomofthecard").children(".handhealthcontainer").children(".handhealth").text(health);
+                element.children(".handbottomofthecard").children(".handhealthcontainer").show();
             }
             else if(type=="spell"){
-
+                element.children(".handiconback").show();
+                element.children(".handcardeffect").show();
+                element.children(".handcardeffect").text(geteffectdescbyname(name));
+                element.children(".handcardeffect").css("height","100px");
+                element.children(".handcardart").css("height","153px"); 
+                element.children(".handcardeffect").css("background-image","url(gfx/cardspell_opaque.png);");
+                element.children(".handcardeffect").css("bottom","14px");
+                element.children(".handiconback").css("height","37px");
+                element.children(".handiconback").css("top","-8px");
+                element.children(".handcardmanacost").css("font-size",31+"px");
+                element.children(".handcardmanacost").text(getmanacostbyname(name));
+                element.children(".handcardmanacost").show();
+                element.children(".handiconback").attr("src","css/gfx/mana_bg_small.png");
+                
             }
             else if(type=="imp"){
-
+                element.children(".handiconback").show();
+                element.children(".handcardeffect").show();
+                element.children(".handcardeffect").text(geteffectdescbyname(name));
+                element.children(".handcardeffect").css("height","100px");
+                element.children(".handcardart").css("height","153px"); 
+                element.children(".handcardeffect").css("background-image","url(gfx/cardspell_opaque.png);");
+                element.children(".handcardeffect").css("bottom","14px");
+                element.children(".handiconback").css("height","37px");
+                element.children(".handiconback").css("top","-8px");
+                element.children(".handcardmanacost").css("font-size",31+"px");
+                element.children(".handcardmanacost").text(getmanacostbyname(name));
+                element.children(".handcardmanacost").show();
+                element.children(".handiconback").attr("src","css/gfx/mana_bg_small.png");
             }
             else if(type=="item"){
-
+                element.children(".handiconback").show();
+                element.children(".handcardeffect").show();
+                element.children(".handcardeffect").text(geteffectdescbyname(name));
+                element.children(".handcardeffect").css("height","100px");
+                element.children(".handcardart").css("height","153px"); 
+                element.children(".handcardeffect").css("background-image","url(gfx/carditem_back.png);");
+                element.children(".handcardeffect").css("bottom","14px");
+                element.children(".handiconback").css("height","37px");
+                element.children(".handiconback").css("top","-8px");
+                element.children(".handcardmanacost").css("font-size",31+"px");
+                element.children(".handcardmanacost").text(getmanacostbyname(name));
+                element.children(".handcardmanacost").show();
+                element.children(".handiconback").attr("src","css/gfx/mana_bg_small.png");
+                element.children(".handcardgoldcost").show();
+                element.children(".handcardgoldcost").text(getgoldcostbyname(name));
             }
             else{
                 error("cards.json for "+name+" has a false \"type\"");
@@ -197,7 +299,7 @@ function getlastopenhandslot(){
     if ($(".handcardbackground:hidden").length){
         var a=12
     $(".handcardbackground:hidden").parent().each(function(i,val) {
-        var id = val.className.replace("handslot", "");
+        var id = parseInt(val.className.replace("handslot", ""));
         if (id>a){
         }
         else{

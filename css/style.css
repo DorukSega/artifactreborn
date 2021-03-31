@@ -115,7 +115,6 @@
   }
 body{
     font-family: Radiance;
-    white-space: nowrap;
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -596,7 +595,55 @@ body{
 .handiconback{
     position: absolute;
     width: 24px;
-    height: 24px
+    height: 24px;
+}
+.handcardmanacost{
+    position: absolute;
+    display: inline-block;
+    font-family:  Artifact Numbers;
+    line-height: 22px;
+    text-align:center;
+    height: 24px;
+    width: 37px;
+    left: -7px;
+    color: white;
+    text-shadow: 0px 0px 4px black;
+    font-size: 36px;
+}
+.handcardgoldcost{
+    position: absolute;
+    display: inline-block;
+    background-image: url(gfx/cardstat_goldcost.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 36px;
+    width: 36px;
+    top:160px;
+    left: 36%;
+    z-index: 1;
+    font-size: 20px;
+    align-items: center;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 4px black;
+}
+.handcardeffect{
+    background-image: url(gfx/cardcreep_translucent.png);
+    position: absolute;
+    bottom: 45px;
+    width: 100%;
+    height: 100px;
+    background-repeat: no-repeat;
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-shadow: 0px 0px 4px black;
+    text-align: center;
 }
 .handicon{
     position: absolute;
@@ -606,10 +653,12 @@ body{
     height: 22px
 }
 .handcardname{
+    white-space: nowrap;
     position: absolute;
+    margin-right: 20px;
     text-shadow: 0px 0px 4px black;
     font-size: 22px;
-    top: -3px;
+    top: 1px;
     left: 30px;
     color: #EAEAEA;
     font-family: Radiance Condensed;
