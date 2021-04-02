@@ -20,8 +20,10 @@ var cards;
 var jsonreq= $.getJSON("cards.json", function(result) {
      cards = result["cards"];
 });
-
-
+$('body').imagesLoaded( function() {
+    $(".gamearea").show();
+    $(".loading").hide();
+  });
 //disables right click document.addEventListener('contextmenu', event => event.preventDefault()) 
 function error(nmbr){
     console.log("Error "+nmbr);
