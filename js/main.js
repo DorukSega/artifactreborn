@@ -17,13 +17,10 @@ var p0hslot10="";
 var p0hslot11="";
 var p0hslot12="";
 var cards;
+var handcardamount=12; //for future, different rules and so on
 var jsonreq= $.getJSON("cards.json", function(result) {
      cards = result["cards"];
 });
-$('body').imagesLoaded( function() {
-    $(".gamearea").show();
-    $(".loading").hide();
-  });
 //disables right click document.addEventListener('contextmenu', event => event.preventDefault()) 
 function error(nmbr){
     console.log("Error "+nmbr);
@@ -53,6 +50,7 @@ function load(){
     drawcard("Crystal Maiden");
     drawcard("The Omexe Arena");
     drawcard("Stonehall Cloak");
+    //undrawcard(2);
     //drawcard("Keefe the Bold");
     $(".cardbackground").show();
     //$(".handcardbackground").show();
@@ -170,13 +168,12 @@ function drawcard(name){
         if (slot!="none" ){
             var element = gethandcardfromslot(slot);
             var mainid= getidbyname(name);
-            var color =getcolorbyname(name);
-            var colored=getComputedStyle(document.documentElement).getPropertyValue('--'+color)
-            var type= gettypebyname(name)
+            modifyhandcardcolor(slot,getcolorbyname(name));
+            var type= gettypebyname(name);
             element.children(".handcardart").attr("src","css/card_art/full_art/"+mainid+".png");
-            element.children(".handcardname").text(name)
+            element.children(".handcardname").text(name);
             element.children(".handcardname").css("font-size",(22-(name.length*0.3))+"px"); //auto scales font size
-            element.css("background",colored);
+            
             element.show();
             element.children(".handcardart").css("height","220px");
             if (type=="hero"){
@@ -297,6 +294,50 @@ function drawcard(name){
         error("card called "+ name +" doesnt exist");
     }
 }
+function modifyhandcardcolor(slot,color){
+    var element = gethandcardfromslot(slot);
+    var colored=getComputedStyle(document.documentElement).getPropertyValue('--'+color);
+    element.css("background",colored);
+}
+function undrawcard(slot) { 
+    //undraws cards, use for playing a card
+    //might wanna find a way to make them go 11 9 7 5 3 1 2 4 6 8 10 12
+    if (parseInt(slot)!=handcardamount){
+        i=parseInt(slot);
+        while (i<handcardamount) {
+            var card1 = gethandcardfromslot(i+1);
+            var card2 = gethandcardfromslot(i);
+            card2.html(card1.html());
+            modifyhandcardcolor( i , getcolorbyname( gethandcardname(1,i+1) ) );
+            i= i+1;
+        }
+        clearcard(getlastopenhandslot()-1);
+    }
+    else{
+        clearcard(slot)
+    }
+ }
+ function clearcard(slot){
+    var element = gethandcardfromslot(slot);
+    element.hide();
+    element.children(".abilities").children(".firstab").hide();
+    element.children(".abilities").children(".secondab").hide();
+    element.children(".handiconback").hide();
+    element.children(".handcardmanacost").hide();
+    element.children(".handcardgoldcost").hide();
+    element.children(".handcardeffect").hide();
+    element.children(".handicon").hide();
+    element.children(".handbottomofthecard").children(".handattackcontainer").hide();
+    element.children(".handbottomofthecard").children(".handarmorcontainer").hide();
+    element.children(".handbottomofthecard").children(".handhealthcontainer").hide();
+ }
+ function movehandcard(from,to){
+    var card1 = gethandcardfromslot(from);
+    var card2 = gethandcardfromslot(to);
+    card2.html(card1.html());
+    modifyhandcardcolor( to , getcolorbyname( gethandcardname(1,from) ) );
+    clearcard(from);
+ }
 function getlastopenhandslot(){
     if ($(".handcardbackground:hidden").length){
         var a=12

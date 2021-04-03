@@ -557,7 +557,7 @@ body{
     border-radius: 5px;
     position: relative;
     background: #175D87;
-    background: var(--blue);
+    background: var(--gold);
     box-shadow:  -3px -4px 5px black;
     width: 172px;
     height: 290px;
