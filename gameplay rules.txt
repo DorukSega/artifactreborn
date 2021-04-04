@@ -1,0 +1,20 @@
+
+---work in progress---
+
+MOST OF THE RULES:
+https://telegra.ph/Artifact-is-dead-long-live-Artifact-Reborn-03-13
+
+
+ADDITIONAL RULES:
+
+- Day and Night cycle every round. Draw 2 cards day, 1 night.
+
+- After an enemy Tower is destroyed, instead of a Melee Creep (2 2), a Mega Creep (4 4) will start spawning for you in that lane. (maybe: all Melee Creeps get +2 +2 and become Mega Creeps for the Night)
+
+- Hero signature cards have additional "Bond" abilities that only triggers while their owner is in play/in that lane/is the caster.
+
+- Tower HP to 60, stats increased accordingly, armor back to how it worked in 1.0. (maybe: Ancient HP 90)
+
+- Tower Enchantments now called Lane Enchantments and can both affect the whole lane or nearest slot(s) (so be consious where you play them!).
+
+---work in progress---

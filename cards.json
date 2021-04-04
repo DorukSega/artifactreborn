@@ -80,7 +80,7 @@
     },
     {
       "name": "Luna",
-      "attack": 3,
+      "attack": 4,
       "armor": 0,
       "health": 8,
       "goldcost": 0,
@@ -122,7 +122,7 @@
       "name": "Keefe the Bold",
       "attack": 8,
       "armor": 1,
-      "health": 15,
+      "health": 14,
       "goldcost": 0,
       "manacost": 0,
       "signature": "",
@@ -283,7 +283,7 @@
       "name": "Timbersaw",
       "attack": 6,
       "armor": 1,
-      "health": 11,
+      "health": 12,
       "goldcost": 0,
       "manacost": 0,
       "signature": "",
@@ -304,13 +304,12 @@
         },
         {
           "type": "active",
-          "specialaction": "crosslane",
           "name": "TIMBER CHAIN",
           "active": true,
           "id": 10498,
           "turn": 3,
           "mana": 1,
-          "effectdesc": "Active in 3 turns, 1 Mana: Move up to range 5. Deal 1 damage to each enemy passed on the way."
+          "effectdesc": "Active in 3 turns, 1 Mana: Move to another slot. Deal 2 damage to each enemy passed on the way."
         },
         {
           "type": "continuous",
@@ -556,7 +555,7 @@
     },
     {
       "name": "Bronze Legionnaire",
-      "attack": 5,
+      "attack": 4,
       "armor": 2,
       "health": 3,
       "goldcost": 0,
