@@ -1,6 +1,84 @@
 {
   "cards": [
     {
+      "name": "Melee Creep",
+      "attack": 2,
+      "armor": 0,
+      "health": 2,
+      "goldcost": 0,
+      "manacost": 0,
+      "signature": "",
+      "specialaction": "",
+      "id": 1098,
+      "color": "gray",
+      "bounty": 1,
+      "charges": 0,
+      "effectdesc": "",
+      "type": "creep",
+      "lore": "",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Mega Creep",
+      "attack": 4,
+      "armor": 0,
+      "health": 4,
+      "goldcost": 0,
+      "manacost": 0,
+      "signature": "",
+      "specialaction": "",
+      "id": 10990,
+      "color": "gray",
+      "bounty": 1,
+      "charges": 0,
+      "effectdesc": "",
+      "type": "creep",
+      "lore": "",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
       "name": "Luna",
       "attack": 3,
       "armor": 0,
@@ -41,49 +119,10 @@
       ]
     },
     {
-      "name": "Melee Creep",
-      "attack": 2,
-      "armor": 0,
-      "health": 2,
-      "goldcost": 0,
-      "manacost": 0,
-      "signature": "",
-      "specialaction": "",
-      "id": 1098,
-      "color": "gray",
-      "bounty": 1,
-      "charges": 0,
-      "effectdesc": "",
-      "type": "creep",
-      "lore": "",
-      "abilities": [
-        {
-          "type": "passive",
-          "active": false,
-          "name": "",
-          "effectdesc": ""
-        },
-        {
-          "type": "active",
-          "name": "",
-          "active": false,
-          "turn": 0,
-          "mana": 0,
-          "effectdesc": ""
-        },
-        {
-          "type": "continuous",
-          "active": false,
-          "name": "",
-          "effectdesc": ""
-        }
-      ]
-    },
-    {
       "name": "Keefe the Bold",
-      "attack": 6,
+      "attack": 8,
       "armor": 1,
-      "health": 11,
+      "health": 15,
       "goldcost": 0,
       "manacost": 0,
       "signature": "",
@@ -121,9 +160,9 @@
     },
     {
       "name": "Legion Commander",
-      "attack": 6,
+      "attack": 8,
       "armor": 1,
-      "health": 8,
+      "health": 11,
       "goldcost": 0,
       "manacost": 0,
       "signature": "",
@@ -161,9 +200,9 @@
     },
     {
       "name": "Zeus",
-      "attack": 3,
+      "attack": 5,
       "armor": 0,
-      "health": 7,
+      "health": 10,
       "goldcost": 0,
       "manacost": 0,
       "signature": "",
@@ -201,9 +240,9 @@
     },
     {
       "name": "Crystal Maiden",
-      "attack": 2,
+      "attack": 3,
       "armor": 0,
-      "health": 5,
+      "health": 7,
       "goldcost": 0,
       "manacost": 0,
       "signature": "",
@@ -242,9 +281,9 @@
     },
     {
       "name": "Timbersaw",
-      "attack": 4,
+      "attack": 6,
       "armor": 1,
-      "health": 8,
+      "health": 11,
       "goldcost": 0,
       "manacost": 0,
       "signature": "",
@@ -271,7 +310,7 @@
           "id": 10498,
           "turn": 3,
           "mana": 1,
-          "effectdesc": "Active in 3 turns, 1 Mana: Move up to range 5. Deal 1 damage to each enemy passed on the way.\nCross Lane"
+          "effectdesc": "Active in 3 turns, 1 Mana: Move up to range 5. Deal 1 damage to each enemy passed on the way."
         },
         {
           "type": "continuous",
@@ -372,7 +411,7 @@
       "color": "blue",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "Deal 3 piercing damage to each enemy hero in all lanes. &#128279; Deal +2 damage in Zeus' lane. \nCross Lane",
+      "effectdesc": "Deal 4 piercing damage to each enemy hero in all lanes. &#128279; Deal +1 damage in Zeus' lane. \nCross Lane",
       "type": "spell",
       "lore": "The full brunt of my fury is something beautiful and terrible to behold. \u2014 <i>Zeus, Angry God<\/i>",
       "abilities": [
@@ -489,7 +528,7 @@
       "color": "red",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "Deal 2 damage to the caster's adjacent enemies and give them -1 attack. &#128279; If owner is the caster give -3 attack instead.",
+      "effectdesc": "Deal 2 damage to the caster's adjacent enemies and give them -2 attack. &#128279; Give -3 attack instead if owner is the caster.",
       "type": "spell",
       "lore": "I was nervous about following the Society of Likeminded Keenfolk to Roseleaf... Sniper had a lot of rules.  Rules like 'we can't stop to cut down every tree'.  But when he saw the Treants marching towards us, he quickly made an exception. \u2014 <i>Timbersaw, Crazed Lumberjack<\/i>",
       "abilities": [
@@ -517,9 +556,9 @@
     },
     {
       "name": "Bronze Legionnaire",
-      "attack": 4,
+      "attack": 5,
       "armor": 2,
-      "health": 2,
+      "health": 3,
       "goldcost": 0,
       "manacost": 3,
       "signature": "",
@@ -558,16 +597,16 @@
       "name": "Legion Standard Bearer",
       "attack": 0,
       "armor": 0,
-      "health": 5,
+      "health": 6,
       "goldcost": 0,
-      "manacost": 3,
+      "manacost": 4,
       "signature": "",
       "specialaction": "",
       "id": 10087,
       "color": "red",
       "bounty": 1,
       "charges": 0,
-      "effectdesc": "Legion Standard Bearer's allied neighbors have +3 Attack.",
+      "effectdesc": "Legion Standard Bearer's allied neighbors have +4 Attack.",
       "type": "creep",
       "lore": "As a boy I dreamed of being a member of the Stonehall Elite... to be trained by Belasanno himself in the ways of war... but the sad truth is that I have no gift for combat.   I am no soldier.  But I am a believer.  In our emperor.  In our country.  In our mission.  I may not be a swordsman, but I am proud to carry the bullsnake into battle. \u2014 <i>Pololo, Standard Bearer of the Bronze Legion<\/i>",
       "abilities": [
@@ -840,7 +879,7 @@
       "color": "blue",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "Deal 2 damage to each enemy.",
+      "effectdesc": "Deal 3 damage to each enemy.",
       "type": "spell",
       "lore": "Our defenses are strong, but not impenetrable... Fortunately our towers tend to ward off all but the most determined. \u2014 <i>Prellex, Defender of the Radiant<\/i>",
       "abilities": [
@@ -949,7 +988,7 @@
       "attack": 0,
       "armor": 0,
       "health": 0,
-      "goldcost": 9,
+      "goldcost": 12,
       "manacost": 1,
       "signature": "",
       "specialaction": "",
@@ -957,7 +996,7 @@
       "color": "gold",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "+4 health After Combat: Increase health by 1.",
+      "effectdesc": "+4 Health After Combat: Increase health by 2.",
       "type": "item",
       "lore": "The bullsnake is a fitting symbol for Stonehall. They conquer. They occupy. They move on. \u2014 <i>Jolixia, The Card Faun<\/i>",
       "abilities": [
@@ -1080,7 +1119,7 @@
       "charges": 0,
       "turn": 3,
       "mana": 1,
-      "effectdesc": "+2 armor\n\nActive 3 turns, 1 Mana: Silence an enemy and give it -3 armor.",
+      "effectdesc": "+2 armor\n\nActive 3 turns, 1 Mana: Silence an enemy and give it -2 armor.",
       "type": "item",
       "lore": "To many this pair of boots seems like a lesser magical item... but in the right hands these can turn the tide of any battle. \u2014 <i>Jolixia, The Card Faun<\/i>",
       "abilities": [
