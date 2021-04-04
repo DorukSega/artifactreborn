@@ -18,10 +18,22 @@ var p0hslot11="";
 var p0hslot12="";
 var cards;
 var handcardamount=12; //for future, different rules and so on
+//this is a json call for chrome and edge since they can keep up
 var jsonreq= $.getJSON("cards.json", function(result) {
-     cards = result["cards"];
+    cards = result["cards"];
 });
-//disables right click document.addEventListener('contextmenu', event => event.preventDefault())
+//This here is a sync call because mozilla cant keep up
+var xmlhttp = new XMLHttpRequest();
+var url = "cards.json";
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var result = JSON.parse(this.responseText);
+        cards = result["cards"];
+    }
+};
+xmlhttp.open("GET", url, false);
+xmlhttp.send();
+//document.addEventListener('contextmenu', event => event.preventDefault()); //disables right click
 function error(nmbr){
     console.log("Error "+nmbr);
 }
@@ -40,7 +52,7 @@ function gofullscreen() {
 }
 function load(){
     //modifycardcolor(1,1,1,"blue");
-    console.log(getcolorbycords(1,1,1))
+    //console.log(getcolorbycords(1,1,1))
     aiversusgamerules() //for now
     drawcard("Legion Standard Bearer");
     drawcard("Cursed Satyr");
@@ -145,9 +157,9 @@ function placecard(player,combat,slot,name){
 }
 //for zoom
 $(document).ready(function() {
-    $(".c1").zoomTarget();
-    $(".c2").zoomTarget();
-    $(".c3").zoomTarget();
+   // $(".c1").zoomTarget();
+   // $(".c2").zoomTarget();
+   // $(".c3").zoomTarget();
 });
 function getopponent(player){
     //Gets the id of opponent
