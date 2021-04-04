@@ -51,8 +51,6 @@ function gofullscreen() {
       }
 }
 function load(){
-    //modifycardcolor(1,1,1,"blue");
-    //console.log(getcolorbycords(1,1,1))
     aiversusgamerules() //for now
     drawcard("Legion Standard Bearer");
     drawcard("Cursed Satyr");
