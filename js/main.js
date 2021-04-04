@@ -21,7 +21,7 @@ var handcardamount=12; //for future, different rules and so on
 var jsonreq= $.getJSON("cards.json", function(result) {
      cards = result["cards"];
 });
-//disables right click document.addEventListener('contextmenu', event => event.preventDefault()) 
+//disables right click document.addEventListener('contextmenu', event => event.preventDefault())
 function error(nmbr){
     console.log("Error "+nmbr);
 }
@@ -50,13 +50,26 @@ function load(){
     drawcard("Crystal Maiden");
     drawcard("The Omexe Arena");
     drawcard("Stonehall Cloak");
+    drawcard("Luna");
+    placecard(1,1,1,"Luna");
+    placecard(1,1,3,"Timbersaw");
+    placecard(1,1,2,"Melee Creep");
+    placecard(1,1,5,"Legion Standard Bearer");
+    placecard(1,1,7,"Crystal Maiden");
+    placecard(1,1,6,"Melee Creep");
+    placecard(0,1,1,"Melee Creep");
+    placecard(0,1,3,"Luna");
+    placecard(0,1,4,"Melee Creep");
+    placecard(0,1,5,"Keefe the Bold");
+    placecard(0,1,6,"Melee Creep");
+    placecard(0,1,7,"Melee Creep");
     //undrawcard(2);
     //drawcard("Keefe the Bold");
-    $(".cardbackground").show();
+    //$(".cardbackground").show();
     //$(".handcardbackground").show();
-    $(".attackcontainer").show();
-    $(".armorcontainer").show();
-    $(".healthcontainer").show();
+    //$(".attackcontainer").show();
+    //$(".armorcontainer").show();
+    //$(".healthcontainer").show();
     //$(".handattackcontainer").show();
     //$(".handarmorcontainer").show();
     //$(".handhealthcontainer").show();
@@ -76,12 +89,66 @@ function gamelogic() {
 }
 function aiversusgamerules() { 
     //Add 3 gold at start
-    modifyalltowerhealth(40);
+    modifyalltowerhealth(60);
     addgold(1,3);
     addgold(0,3);
  }
-
-
+function placecard(player,combat,slot,name){
+    var element = getelementbycords(player,combat,slot);
+    if (checkcardexists(name)==true){
+            var mainid= getidbyname(name);
+            modifycardcolor(player,combat,slot,getcolorbyname(name))
+            var type= gettypebyname(name);
+            element.children(".cardart").attr("src","css/card_art/full_art/"+mainid+".png");
+            element.show();
+            //element.children(".cardart").css("height","98px");
+            // >> attack armor health <<
+            var attack = getattackbyname(name);
+            var armor = getarmorbyname(name);
+            var health = gethealthbyname(name);
+            element.children(".bottomofthecard").children(".attackcontainer").children(".attack").text(attack);
+            element.children(".bottomofthecard").children(".attackcontainer").show();
+            if (armor!=0){
+                element.children(".bottomofthecard").children(".armorcontainer").children(".armor").text(armor);
+                element.children(".bottomofthecard").children(".armorcontainer").show();
+            }
+            element.children(".bottomofthecard").children(".healthcontainer").children(".health").text(health);
+            element.children(".bottomofthecard").children(".healthcontainer").show();
+            // Abilities
+            var abilities = getabilitiesbyname(name)
+            if (abilities.length==1){
+                var ab1id =abilities[0]['id'];
+                element.children(".cardabilities").children(".cardfirstab").children(".cardabicon").attr("src","css/card_art/mini_icons/"+ab1id+".png");
+                element.children(".cardabilities").children(".cardfirstab").show();
+            }
+            else if (abilities.length==2){
+                var ab1id =abilities[0]['id'];
+                var ab2id =abilities[1]['id'];
+                element.children(".cardabilities").children(".cardfirstab").children(".cardabicon").attr("src","css/card_art/mini_icons/"+ab1id+".png");
+                element.children(".cardabilities").children(".cardsecondab").children(".cardabicon").attr("src","css/card_art/mini_icons/"+ab2id+".png");
+                element.children(".cardabilities").children(".cardfirstab").show();
+                element.children(".cardabilities").children(".cardsecondab").show();
+            } 
+            //these can be used later
+            if (type=="hero"){
+                
+            }
+            else if(type=="creep"){
+            }
+            else{
+                error("cards.json for "+name+" has a false \"type\"");
+            }
+    }
+    else{
+        error("card called "+ name +" doesnt exist");
+    }
+}
+//for zoom
+$(document).ready(function() {
+    $(".c1").zoomTarget();
+    $(".c2").zoomTarget();
+    $(".c3").zoomTarget();
+});
 function getopponent(player){
     //Gets the id of opponent
     if (player==1){
@@ -158,9 +225,9 @@ function modifyalltowerhealth(amount){
     modifytowerhealth(1,1,amount);
     modifytowerhealth(1,2,amount);
     modifytowerhealth(1,3,amount);
-    modifytowerhealth(2,1,amount);
-    modifytowerhealth(2,1,amount);
-    modifytowerhealth(2,1,amount);
+    modifytowerhealth(0,1,amount);
+    modifytowerhealth(0,2,amount);
+    modifytowerhealth(0,3,amount);
 }
 function drawcard(name){
     var slot = getlastopenhandslot();
@@ -198,16 +265,16 @@ function drawcard(name){
                 var abilities = getabilitiesbyname(name)
                 if (abilities.length==1){
                     var ab1id =abilities[0]['id'];
-                    element.children(".abilities").children(".firstab").children(".abicon").attr("src","css/card_art/mini_icons/"+ab1id+".png");
-                    element.children(".abilities").children(".firstab").show();
+                    element.children(".handabilities").children(".handfirstab").children(".handabicon").attr("src","css/card_art/mini_icons/"+ab1id+".png");
+                    element.children(".handabilities").children(".handfirstab").show();
                 }
                 else if (abilities.length==2){
                     var ab1id =abilities[0]['id'];
                     var ab2id =abilities[1]['id'];
-                    element.children(".abilities").children(".firstab").children(".abicon").attr("src","css/card_art/mini_icons/"+ab1id+".png");
-                    element.children(".abilities").children(".secondab").children(".abicon").attr("src","css/card_art/mini_icons/"+ab2id+".png");
-                    element.children(".abilities").children(".firstab").show();
-                    element.children(".abilities").children(".secondab").show();
+                    element.children(".handabilities").children(".handfirstab").children(".handabicon").attr("src","css/card_art/mini_icons/"+ab1id+".png");
+                    element.children(".handabilities").children(".handsecondab").children(".handabicon").attr("src","css/card_art/mini_icons/"+ab2id+".png");
+                    element.children(".handabilities").children(".handfirstab").show();
+                    element.children(".handabilities").children(".handsecondab").show();
                 } 
             }
             else if(type=="creep"){
@@ -320,8 +387,8 @@ function undrawcard(slot) {
  function clearcard(slot){
     var element = gethandcardfromslot(slot);
     element.hide();
-    element.children(".abilities").children(".firstab").hide();
-    element.children(".abilities").children(".secondab").hide();
+    element.children(".handabilities").children(".handfirstab").hide();
+    element.children(".handabilities").children(".handsecondab").hide();
     element.children(".handiconback").hide();
     element.children(".handcardmanacost").hide();
     element.children(".handcardgoldcost").hide();
