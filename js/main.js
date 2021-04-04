@@ -67,9 +67,9 @@ function load(){
     placecard(1,1,5,"Legion Standard Bearer");
     placecard(1,1,7,"Crystal Maiden");
     placecard(0,1,3,"Keefe the Bold");
-    placecard(0,1,4,"Melee Creep");
+    placecard(0,1,4,"Melee Creep 0");
     placecard(0,1,5,"Luna");
-    placecard(0,1,6,"Melee Creep");
+    placecard(0,1,6,"Melee Creep 0");
     //undrawcard(2);
     //drawcard("Keefe the Bold");
     //$(".cardbackground").show();

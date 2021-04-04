@@ -40,6 +40,45 @@
       ]
     },
     {
+      "name": "Melee Creep 0",
+      "attack": 2,
+      "armor": 0,
+      "health": 2,
+      "goldcost": 0,
+      "manacost": 0,
+      "signature": "",
+      "specialaction": "",
+      "id": 1526,
+      "color": "gray",
+      "bounty": 1,
+      "charges": 0,
+      "effectdesc": "",
+      "type": "creep",
+      "lore": "",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
       "name": "Mega Creep",
       "attack": 4,
       "armor": 0,
