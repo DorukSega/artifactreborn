@@ -566,7 +566,7 @@
       "color": "red",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "Deal 2 damage to the caster's adjacent enemies and give them -2 attack. &#128279; Give -3 attack instead if owner is the caster.",
+      "effectdesc": "Deal 2 damage to the caster's adjacent enemies and give them -2 attack. &#128279; Give them -3 attack instead.",
       "type": "spell",
       "lore": "I was nervous about following the Society of Likeminded Keenfolk to Roseleaf... Sniper had a lot of rules.  Rules like 'we can't stop to cut down every tree'.  But when he saw the Treants marching towards us, he quickly made an exception. \u2014 <i>Timbersaw, Crazed Lumberjack<\/i>",
       "abilities": [
@@ -715,7 +715,7 @@
       "armor": 0,
       "health": 3,
       "goldcost": 0,
-      "manacost": 4,
+      "manacost": 3,
       "signature": "",
       "specialaction": "",
       "id": 10114,
