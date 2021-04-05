@@ -17,7 +17,7 @@
     <div class="gamearea" id="gamearea">
         <div class="hand">
             <div class="handslot1">
-                <div class="handcardbackground" style="display: none;">
+                <div class="handcardbackground" draggable="true" ondragstart="drag(event)" style="display: none;">
                     <img src="css/gfx/loadingcardinner.png" class="handcardart">
                     <div class="handcardname">Loading</div>
                     <div class="handabilities">
@@ -510,7 +510,7 @@
                             </div>
                         </div>
                     <div class="slot1">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground"  ondrop="drop(event)" ondragover="allowDrop(event)" style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -521,7 +521,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -539,7 +539,7 @@
                         </div>
                     </div>
                     <div class="slot2">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -550,7 +550,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -568,7 +568,7 @@
                         </div>
                     </div>
                     <div class="slot3">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -579,7 +579,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -597,7 +597,7 @@
                         </div>
                     </div>
                     <div class="slot4">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -608,7 +608,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -626,7 +626,7 @@
                         </div>
                     </div>
                     <div class="slot5">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -637,7 +637,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -655,7 +655,7 @@
                         </div>
                     </div>
                     <div class="slot6">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -666,7 +666,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -684,7 +684,7 @@
                         </div>
                     </div>
                     <div class="slot7">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -695,7 +695,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -766,7 +766,7 @@
                         </div>
                     </div>
                     <div class="slot1">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -777,7 +777,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -793,12 +793,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cardart">
+                        <div class="cardart" style="display: none;">
                                 
                         </div>
                     </div>
                     <div class="slot2">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -809,7 +809,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -827,7 +827,7 @@
                         </div>
                     </div>
                     <div class="slot3">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -838,7 +838,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -856,7 +856,7 @@
                         </div>
                     </div>
                     <div class="slot4">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -867,7 +867,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -885,7 +885,7 @@
                         </div>
                     </div>
                     <div class="slot5">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -896,7 +896,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -914,7 +914,7 @@
                         </div>
                     </div>
                     <div class="slot6">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -925,7 +925,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -943,7 +943,7 @@
                         </div>
                     </div>
                     <div class="slot7">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -954,7 +954,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1025,7 +1025,7 @@
                         </div>
                     </div>
                     <div class="slot1">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1036,7 +1036,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1052,12 +1052,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cardart">
+                        <div class="cardart" style="display: none;">
                                 
                         </div>
                     </div>
                     <div class="slot2">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1068,7 +1068,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1086,7 +1086,7 @@
                         </div>
                     </div>
                     <div class="slot3">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1097,7 +1097,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1115,7 +1115,7 @@
                         </div>
                     </div>
                     <div class="slot4">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1126,7 +1126,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1144,7 +1144,7 @@
                         </div>
                     </div>
                     <div class="slot5">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1155,7 +1155,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1173,7 +1173,7 @@
                         </div>
                     </div>
                     <div class="slot6">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1184,7 +1184,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1202,7 +1202,7 @@
                         </div>
                     </div>
                     <div class="slot7">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1213,7 +1213,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1300,7 +1300,7 @@
                         </div>
                     </div>
                     <div class="slot1">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1311,7 +1311,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1329,7 +1329,7 @@
                         </div>
                     </div>
                     <div class="slot2">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1340,7 +1340,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1358,7 +1358,7 @@
                         </div>
                     </div>
                     <div class="slot3">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1369,7 +1369,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1387,7 +1387,7 @@
                         </div>
                     </div>
                     <div class="slot4">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1398,7 +1398,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1416,7 +1416,7 @@
                         </div>
                     </div>
                     <div class="slot5">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1427,7 +1427,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1445,7 +1445,7 @@
                         </div>
                     </div>
                     <div class="slot6">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1456,7 +1456,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1474,7 +1474,7 @@
                         </div>
                     </div>
                     <div class="slot7">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1485,7 +1485,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1556,7 +1556,7 @@
                         </div>
                     </div>
                     <div class="slot1">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1567,7 +1567,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1583,12 +1583,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cardart">
+                        <div class="cardart" style="display: none;">
                                 
                         </div>
                     </div>
                     <div class="slot2">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1599,7 +1599,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1617,7 +1617,7 @@
                         </div>
                     </div>
                     <div class="slot3">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1628,7 +1628,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1646,7 +1646,7 @@
                         </div>
                     </div>
                     <div class="slot4">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1657,7 +1657,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1675,7 +1675,7 @@
                         </div>
                     </div>
                     <div class="slot5">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1686,7 +1686,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1704,7 +1704,7 @@
                         </div>
                     </div>
                     <div class="slot6">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1715,7 +1715,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1733,7 +1733,7 @@
                         </div>
                     </div>
                     <div class="slot7">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1744,7 +1744,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1815,7 +1815,7 @@
                         </div>
                     </div>
                     <div class="slot1">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1826,7 +1826,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1842,12 +1842,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cardart">
+                        <div class="cardart" style="display: none;">
                                 
                         </div>
                     </div>
                     <div class="slot2">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1858,7 +1858,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1876,7 +1876,7 @@
                         </div>
                     </div>
                     <div class="slot3">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1887,7 +1887,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1905,7 +1905,7 @@
                         </div>
                     </div>
                     <div class="slot4">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1916,7 +1916,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1934,7 +1934,7 @@
                         </div>
                     </div>
                     <div class="slot5">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1945,7 +1945,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1963,7 +1963,7 @@
                         </div>
                     </div>
                     <div class="slot6">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -1974,7 +1974,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">
@@ -1992,7 +1992,7 @@
                         </div>
                     </div>
                     <div class="slot7">
-                        <div class="cardbackground" style="display: none;">
+                        <div class="cardbackground" ondrop="drop(event)" ondragover="allowDrop(event)"  style="display: none;">
                             <div class="cardabilities">
                                 <div class="cardfirstab" style="display: none;">
                                     <img src="css/gfx/ability_border_active.png" class="cardabiconback" >
@@ -2003,7 +2003,7 @@
                                     <img src="css/card_art/mini_icons/10489.png" class="cardabicon" >
                                 </div>
                             </div>
-                            <img src="css/gfx/loadingcardinner.png" class="cardart">
+                            <img src="css/gfx/loadingcardinner.png" class="cardart" style="display: none;">
                             <div class="bottomofthecard">
                                 <div class="attackcontainer" style="display: none;">
                                     <img src="css/gfx/cardstat_attack.png" class="varicon">

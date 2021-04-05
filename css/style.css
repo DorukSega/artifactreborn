@@ -132,7 +132,12 @@ body{
 }
 .gamearea{
     cursor: url("gfx/cursor.png"), auto;
-    -webkit-user-drag: none;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+img{
     -webkit-user-select: none;  
     -moz-user-select: none;     
     -ms-user-select: none;      
@@ -140,8 +145,7 @@ body{
     -webkit-user-drag: none;
     -khtml-user-drag: none;
     -moz-user-drag: none;
-    -o-user-drag: none;
-    position: relative;
+    -o-user-drag: none; 
 }
 .separator1{
     position: fixed;
@@ -442,6 +446,7 @@ body{
     position: relative;
     background-color: #5D6466;
     background: var(--gray);
+    background-size:cover;
     width: 77px;
     height: 120px;
     color: black;

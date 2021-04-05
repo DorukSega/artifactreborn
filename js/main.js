@@ -38,8 +38,8 @@ xmlhttp.send();
 function error(nmbr){
     console.log("Error "+nmbr);
 }
-var elem = document.documentElement;
 function gofullscreen() {
+    var elem = document.documentElement;
     if (elem.requestFullscreen) {
         elem.requestFullscreen();
       } else if (elem.mozRequestFullScreen) { /* Firefox */
@@ -62,7 +62,7 @@ function load(){
     drawcard("The Omexe Arena");
     drawcard("Stonehall Cloak");
     drawcard("Luna");
-    placecard(1,1,2,"Timbersaw");
+    placecard(1,1,1,"Timbersaw");
     placecard(1,1,3,"Luna");
     placecard(1,1,4,"Melee Creep");
     placecard(1,1,5,"Legion Standard Bearer");
@@ -72,6 +72,7 @@ function load(){
     placecard(0,1,5,"Luna");
     placecard(0,1,6,"Melee Creep 0");
     //$(".cardbackground").show();
+    //$(".cardart").show();
     //$(".handcardbackground").show();
     //$(".attackcontainer").show();
     //$(".armorcontainer").show();
@@ -127,12 +128,50 @@ function isthereacard(player,combat,slot) {
         return true;
     }
  }
+
+ function allowDrop(ev) {
+    ev.preventDefault();
+  }
+  function drag(ev) {
+    var card = $(ev.target);
+    var cardtype =gettypebyname(card.children(".handcardname").text());
+    var img = new Image();
+    ev.dataTransfer.setDragImage(img, 50, 50);
+    ev.dataTransfer.setData("sender", card.children(".handcardname").text());
+  }
+  function drop(ev) {
+    ev = ev || window.event;
+    var sender = ev.dataTransfer.getData("sender");
+    var target = $(ev.target || ev.srcElement).parent();
+    var combat = $(ev.target || ev.srcElement).parent().parent().parent().attr("class").replace("combat","");
+    var slot = $(ev.target || ev.srcElement).parent().parent().attr("class").replace("slot","");
+    ev.preventDefault();
+    // deploy creep or hero
+    if (getactivecolors(1,combat).includes(getcolorbyname(sender))==true && (gettypebyname(sender)=="creep"||gettypebyname(sender)=="hero")){
+        placecard(1,combat,slot,sender);
+    }
+    else if(getactivecolors(1,combat).includes(getcolorbyname(sender))==true && gettypebyname(sender)=="spell"){
+        //spellcodehere
+    }
+    else if(gettypebyname(getnamebycords(1,combat,slot))=="hero" && gettypebyname(sender)=="item"){
+        //additem bla bla
+    }
+    else if(getactivecolors(1,combat).includes(getcolorbyname(sender))==true && gettypebyname(sender)=="imp"){
+        //addtowerimp
+    }
+
+  }
+function makecarddroppable(player,combat,slot){
+    var element = gettarget(player,combat,slot);
+
+}
 function placecard(player,combat,slot,name){
     var element = getelementbycords(player,combat,slot);
     if (checkcardexists(name)==true){
             var mainid= getidbyname(name);
             modifycardcolor(player,combat,slot,getcolorbyname(name))
             var type= gettypebyname(name);
+            element.children(".cardart").show();
             element.children(".cardart").attr("src","css/card_art/full_art/"+mainid+".png");
             element.show();
             //element.children(".cardart").css("height","98px");
@@ -145,6 +184,9 @@ function placecard(player,combat,slot,name){
             if (armor!=0){
                 element.children(".bottomofthecard").children(".armorcontainer").children(".armor").text(armor);
                 element.children(".bottomofthecard").children(".armorcontainer").show();
+            }
+            else{
+                element.children(".bottomofthecard").children(".armorcontainer").hide();
             }
             element.children(".bottomofthecard").children(".healthcontainer").children(".health").text(health);
             element.children(".bottomofthecard").children(".healthcontainer").show();
@@ -162,6 +204,10 @@ function placecard(player,combat,slot,name){
                 element.children(".cardabilities").children(".cardsecondab").children(".cardabicon").attr("src","css/card_art/mini_icons/"+ab2id+".png");
                 element.children(".cardabilities").children(".cardfirstab").show();
                 element.children(".cardabilities").children(".cardsecondab").show();
+            }
+            else{
+                element.children(".cardabilities").children(".cardfirstab").hide();
+                element.children(".cardabilities").children(".cardsecondab").hide();
             } 
             //these can be used later
             if (type=="hero"){
@@ -180,11 +226,28 @@ function placecard(player,combat,slot,name){
 function killcard(player,combat,slot){
     var element = getelementbycords(player,combat,slot);
     element.hide();
+    changeattackbycords(player,combat,slot,0);
+    changearmorbycords(player,combat,slot,0);
+    changehealthbycords(player,combat,slot,0);
     element.children(".cardabilities").children(".cardfirstab").hide();
     element.children(".cardabilities").children(".cardsecondab").hide();
     element.children(".cardbottomofthecard").children(".cardattackcontainer").hide();
     element.children(".cardbottomofthecard").children(".cardarmorcontainer").hide();
     element.children(".cardbottomofthecard").children(".cardhealthcontainer").hide();
+}
+function highlightslot(player,combat,slot){
+    if (isthereacard(player,combat,slot)==false){
+        var element = getelementbycords(player,combat,slot);
+        element.show();
+        element.css("background-image","url(css/gfx/card_highlight.png)");
+    }
+}
+function unhighlightslot(player,combat,slot){
+    if (isthereacard(player,combat,slot)==false){
+        var element = getelementbycords(player,combat,slot);
+        element.hide();
+        element.css("background-image","");
+    }
 }
 //for zoom
 $(document).ready(function() {
