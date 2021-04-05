@@ -1,6 +1,7 @@
 var isdeploying=false;
 var iscombating=false;
 var isshopping=false;
+var currentphase="";
 var turn=0;
 var shoplevel=0;
 //Player 0 Hand Card Slots
@@ -70,7 +71,6 @@ function load(){
     placecard(0,1,4,"Melee Creep 0");
     placecard(0,1,5,"Luna");
     placecard(0,1,6,"Melee Creep 0");
-    //undrawcard(2);
     //drawcard("Keefe the Bold");
     //$(".cardbackground").show();
     //$(".handcardbackground").show();
@@ -81,6 +81,7 @@ function load(){
     //$(".handarmorcontainer").show();
     //$(".handhealthcontainer").show();
     //$(".handicon").show();
+    console.log(getactivecolors(1,1));
     getlastopenhandslot()
     //$(".impshell").hide();
     //console.log(window.innerWidth)
@@ -99,6 +100,31 @@ function aiversusgamerules() {
     modifyalltowerhealth(60);
     addgold(1,3);
     addgold(0,3);
+    modifyallmanapools(3,3); //mana's
+ }
+ function restart(){
+
+ }
+ function reload(){
+    location.reload();
+}
+function isthereacard(player,combat,slot) { 
+    var element = getelementbycords(player,combat,slot);
+    if ($(element).is(":hidden")){
+        return false;
+    }
+    else{
+        return true;
+    }
+ }
+ function isthereatargetcard(player,combat,slot) { 
+    var element = gettarget(player,combat,slot);
+    if ($(element).is(":hidden")){
+        return false;
+    }
+    else{
+        return true;
+    }
  }
 function placecard(player,combat,slot,name){
     var element = getelementbycords(player,combat,slot);
@@ -150,12 +176,25 @@ function placecard(player,combat,slot,name){
         error("card called "+ name +" doesnt exist");
     }
 }
+function killcard(player,combat,slot){
+    var element = getelementbycords(player,combat,slot);
+    element.hide();
+    element.children(".cardabilities").children(".cardfirstab").hide();
+    element.children(".cardabilities").children(".cardsecondab").hide();
+    element.children(".cardbottomofthecard").children(".cardattackcontainer").hide();
+    element.children(".cardbottomofthecard").children(".cardarmorcontainer").hide();
+    element.children(".cardbottomofthecard").children(".cardhealthcontainer").hide();
+}
 //for zoom
 $(document).ready(function() {
    // $(".c1").zoomTarget();
    // $(".c2").zoomTarget();
    // $(".c3").zoomTarget();
 });
+function getRndInteger(min, max) {
+    var maxreal = parseInt(max) + 1  
+    return Math.floor(Math.random() * (maxreal - parseInt(min))) + parseInt(min);
+  }
 function getopponent(player){
     //Gets the id of opponent
     if (player==1){
@@ -164,6 +203,24 @@ function getopponent(player){
         return 1;
     } else {
         error("player number input for getopponent is wrong");
+        return 0;
+    }
+}
+function getactivecolors(player,combat){
+    var colors =[];
+    var a = 0;
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true){
+        $(".p"+player+"board").children(".combat"+combat).children("[class^=slot]").each(function(i,val) {
+            var slot = parseInt(val.className.replace("slot", ""));
+            if(isthereacard(player,combat,slot)==true && getcolorbycords(player,combat,slot)!="gray" && colors.includes(getcolorbycords(player,combat,slot))==false){
+                colors[a] = getcolorbycords(player,combat,slot);
+                a = a+1;
+            }
+        });
+        return colors;
+    }
+    else{
+        error("input for getactivecolors is wrong");
         return 0;
     }
 }
@@ -193,6 +250,163 @@ function addgold(player,amount){
     }
     else{
         error("input for addgold is wrong");
+        return 0;
+    }
+}
+function getmanapoolactivemana(player,pool){
+    //gets activemana via given values
+    if ($.isNumeric(player)==true && $.isNumeric(pool)==true){
+        var manatext = $(".player"+player+"manapools").children(".manapool"+pool).children(".manapool").children(".manaamount").text();
+        var manadata=manatext.split("/");
+        var activemana= manadata[0];
+        var manalimit= manadata[1];
+        return activemana;
+    }
+    else{
+        error("input for getmanapoolactivemana is wrong");
+        return 0;
+    }
+}
+function getmanapoolmanalimit(player,pool){
+    //gets manalimit via given values
+    if ($.isNumeric(player)==true && $.isNumeric(pool)==true){
+        var manatext = $(".player"+player+"manapools").children(".manapool"+pool).children(".manapool").children(".manaamount").text();
+        var manadata=manatext.split("/");
+        var activemana= manadata[0];
+        var manalimit= manadata[1];
+        return manalimit;
+    }
+    else{
+        error("input for getmanapoolmanalimit is wrong");
+        return 0;
+    }
+}
+function addtomanapoolactivemana(player,pool,amount){
+    if ($.isNumeric(player)==true && $.isNumeric(pool)==true && $.isNumeric(amount)==true){
+        var manatext = $(".player"+player+"manapools").children(".manapool"+pool).children(".manapool").children(".manaamount").text();
+        var manadata=manatext.split("/");
+        var activemana= manadata[0];
+        var manalimit= manadata[1];
+        activemana = parseInt(activemana)+ parseInt(amount);
+        $(".player"+player+"manapools").children(".manapool"+pool).children(".manapool").children(".manaamount").text(activemana+"/"+manalimit);
+    }
+    else{
+        error("input for addtomanapoolactivemana is wrong");
+        return 0;
+    }
+}
+function addtomanapoolmanalimit(player,pool,amount){
+    if ($.isNumeric(player)==true && $.isNumeric(pool)==true && $.isNumeric(amount)==true){
+        var manatext = $(".player"+player+"manapools").children(".manapool"+pool).children(".manapool").children(".manaamount").text();
+        var manadata=manatext.split("/");
+        var activemana= manadata[0];
+        var manalimit= manadata[1];
+        manalimit = parseInt(manalimit)+ parseInt(amount);
+        $(".player"+player+"manapools").children(".manapool"+pool).children(".manapool").children(".manaamount").text(activemana+"/"+manalimit);
+    }
+    else{
+        error("input for addtomanapoolmanalimit is wrong");
+        return 0;
+    }
+}
+function modifymanapoolactivemana(player,pool,amount){
+    if ($.isNumeric(player)==true && $.isNumeric(pool)==true && $.isNumeric(amount)==true){
+        var manatext = $(".player"+player+"manapools").children(".manapool"+pool).children(".manapool").children(".manaamount").text();
+        var manadata=manatext.split("/");
+        var activemana= manadata[0];
+        var manalimit= manadata[1];
+        activemana = amount;
+        $(".player"+player+"manapools").children(".manapool"+pool).children(".manapool").children(".manaamount").text(activemana+"/"+manalimit);
+    }
+    else{
+        error("input for modifymanapoolactivemana is wrong");
+        return 0;
+    }
+}
+function modifymanapoolmanalimit(player,pool,amount){
+    if ($.isNumeric(player)==true && $.isNumeric(pool)==true && $.isNumeric(amount)==true){
+        var manatext = $(".player"+player+"manapools").children(".manapool"+pool).children(".manapool").children(".manaamount").text();
+        var manadata=manatext.split("/");
+        var activemana= manadata[0];
+        var manalimit= manadata[1];
+        manalimit = amount;
+        $(".player"+player+"manapools").children(".manapool"+pool).children(".manapool").children(".manaamount").text(activemana+"/"+manalimit);
+    }
+    else{
+        error("input for modifymanapoolmanalimit is wrong");
+        return 0;
+    }
+}
+function modifyallmanapools(active,limit){
+    if ($.isNumeric(active)==true && $.isNumeric(limit)==true){
+        modifymanapoolactivemana(0,1,active);
+        modifymanapoolactivemana(0,2,active);
+        modifymanapoolactivemana(1,1,active);
+        modifymanapoolactivemana(1,2,active);
+        modifymanapoolmanalimit(0,1,limit);
+        modifymanapoolmanalimit(0,2,limit);
+        modifymanapoolmanalimit(1,1,limit);
+        modifymanapoolmanalimit(1,2,limit);
+    }
+    else{
+        error("input for modifyallmanapools is wrong");
+        return 0;
+    }
+}
+function getmanabycombat(player,combat){
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true){
+        if(combat==1){
+           return getmanapoolactivemana(player,1);
+        }
+        else if(combat==2){
+            return parseInt(getmanapoolactivemana(player,1))+parseInt(getmanapoolactivemana(player,2));
+        }
+        else if(combat==3){
+            return getmanapoolactivemana(player,2);
+        }
+
+    }
+    else{
+        error("input for usemana is wrong");
+        return 0;
+    }
+}
+function usemana(player,combat,amount){
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true && $.isNumeric(amount)==true){
+        //have a check for gamemode here 
+        if(combat==1){
+            addtomanapoolactivemana(player,1,-parseInt(amount));
+        }
+        else if(combat==2){
+            if (parseInt(amount) % 2 === 0 && parseInt(amount)< parseInt(getmanapoolactivemana(player,1)) && parseInt(amount) < parseInt(getmanapoolactivemana(player,2))){
+                var amntdivided= parseInt(amount)/2;
+                addtomanapoolactivemana(player,1,-parseInt(amntdivided));
+                addtomanapoolactivemana(player,2,-parseInt(amntdivided));
+            }
+            else{
+                if(parseInt(amount)< parseInt(getmanapoolactivemana(player,1)) && parseInt(amount) < parseInt(getmanapoolactivemana(player,2))){
+                    addtomanapoolactivemana(player,getRndInteger(1, 2),-parseInt(amount));
+                }
+                else if(parseInt(amount)< parseInt(getmanapoolactivemana(player,1))){
+                    addtomanapoolactivemana(player,1,-parseInt(amount));
+                }
+                else if(parseInt(amount)< parseInt(getmanapoolactivemana(player,2))){
+                    addtomanapoolactivemana(player,2,-parseInt(amount));
+                }
+                else{
+                    amount = parseInt(amount) - parseInt(getmanapoolactivemana(player,1));
+                    modifymanapoolactivemana(player,1,0);
+                    addtomanapoolactivemana(player,2,-parseInt(amount));
+                }
+            }
+        }
+        else if(combat==3){
+            addtomanapoolactivemana(player,2,-parseInt(amount));
+        }
+
+    }
+    else{
+        error("input for usemana is wrong");
         return 0;
     }
 }
@@ -538,6 +752,9 @@ function getcardadjent(slotnumber) {
        return 0;
    }
  }
+ function getabilitiesbycords(player,combat,slot){
+    return getabilitiesbyname(getnamebycords(player,combat,slot));
+ }
  function getidbycords(player,combat,slot){
     var element = getelementbycords(player,combat,slot);
     var id= element.children(".cardart").attr("src");
@@ -548,7 +765,13 @@ function getcardadjent(slotnumber) {
  function getnamebycords(player,combat,slot){
     return getnamebyid(getidbycords(player,combat,slot));
  }
- 
+ function getmodifierbycordstarget(player,combat,slot){
+    //gets target modifier by given cords
+    var element = gettarget(player,combat,slot);
+    var modifieramount= element.children(".bottomofthecard").children("."+modifier+"container").children("."+modifier).text();
+    return modifieramount;
+    
+ }
  function getmodifierbycords(player,combat,slot,modifier) {
     //gets modifier by given cords
     var element = getelementbycords(player,combat,slot);
