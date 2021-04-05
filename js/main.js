@@ -71,6 +71,7 @@ function load(){
     placecard(0,1,4,"Melee Creep 0");
     placecard(0,1,5,"Luna");
     placecard(0,1,6,"Melee Creep 0");
+    //$(".handcardbackground").attr("draggable","true");
     //$(".cardbackground").show();
     //$(".cardart").show();
     //$(".handcardbackground").show();
@@ -159,11 +160,15 @@ function isthereacard(player,combat,slot) {
     else if(getactivecolors(1,combat).includes(getcolorbyname(sender))==true && gettypebyname(sender)=="imp"){
         //addtowerimp
     }
-
+    
   }
-function makecarddroppable(player,combat,slot){
-    var element = gettarget(player,combat,slot);
-
+function makecarddraggable(slot){
+    var element = gethandcardfromslot(slot);
+    element.attr("draggable","true");
+}
+function makecardundraggable(slot){
+    var element = gethandcardfromslot(slot);
+    element.attr("draggable","false");
 }
 function placecard(player,combat,slot,name){
     var element = getelementbycords(player,combat,slot);
