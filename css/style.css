@@ -245,6 +245,7 @@ body{
     background: -webkit-linear-gradient(90deg,#56504F,#787671);
     border-radius: 50%;
     line-height: 95px;
+    opacity: 10%;
 }
 .impshell2{
     height: 55px;
