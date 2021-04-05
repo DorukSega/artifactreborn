@@ -239,7 +239,7 @@
     },
     {
       "name": "Zeus",
-      "attack": 5,
+      "attack": 4,
       "armor": 0,
       "health": 10,
       "goldcost": 0,
