@@ -71,7 +71,6 @@ function load(){
     placecard(0,1,4,"Melee Creep 0");
     placecard(0,1,5,"Luna");
     placecard(0,1,6,"Melee Creep 0");
-    //drawcard("Keefe the Bold");
     //$(".cardbackground").show();
     //$(".handcardbackground").show();
     //$(".attackcontainer").show();
@@ -81,8 +80,6 @@ function load(){
     //$(".handarmorcontainer").show();
     //$(".handhealthcontainer").show();
     //$(".handicon").show();
-    console.log(getactivecolors(1,1));
-    getlastopenhandslot()
     //$(".impshell").hide();
     //console.log(window.innerWidth)
     //console.log(window.innerHeight)
@@ -96,7 +93,7 @@ function gamelogic() {
     
 }
 function aiversusgamerules() { 
-    //Add 3 gold at start
+    handcardamount=12;
     modifyalltowerhealth(60);
     addgold(1,3);
     addgold(0,3);
@@ -107,6 +104,10 @@ function aiversusgamerules() {
  }
  function reload(){
     location.reload();
+}
+function decodedeck(input){
+    var data = CArtifactDeckDecoder.ParseDeck(input);
+    return data;
 }
 function isthereacard(player,combat,slot) { 
     var element = getelementbycords(player,combat,slot);
