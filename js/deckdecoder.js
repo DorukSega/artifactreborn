@@ -1,3 +1,4 @@
+//credit to think artifact and kollieflower
 CArtifactDeckDecoder = (() => {
     const DeckCodePrefix = "RTFACT";
     const VersionToMatch = 2;

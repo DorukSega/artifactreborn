@@ -1,3 +1,4 @@
+var gamename="Artifact_Reborn";
 var isdeploying=false;
 var iscombating=false;
 var isshopping=false;
@@ -19,6 +20,8 @@ var p0hslot11="";
 var p0hslot12="";
 var cards;
 var handcardamount=12; //for future, different rules and so on
+var towerimps=7;
+var errorcount=0;
 //this is a json call for chrome and edge since they can keep up
 var jsonreq= $.getJSON("cards.json", function(result) {
     cards = result["cards"];
@@ -35,9 +38,16 @@ xmlhttp.onreadystatechange = function() {
 xmlhttp.open("GET", url, false);
 xmlhttp.send();
 //document.addEventListener('contextmenu', event => event.preventDefault()); //disables right click
-function error(nmbr){
-    console.log("Error "+nmbr);
+function error(input){
+    errorcount=errorcount+1;
+    console.log("%c["+errorcount+"]%c["+gamename+"_Error]"+"%c > "+"%c" + input, 'color: #00128F','color: #128F00','color: #0600B2', 'color: #CF5353');
 }
+//for zoom
+$(document).ready(function() {
+    // $(".c1").zoomTarget();
+    // $(".c2").zoomTarget();
+    // $(".c3").zoomTarget();
+ });
 function gofullscreen() {
     var elem = document.documentElement;
     if (elem.requestFullscreen) {
@@ -52,6 +62,7 @@ function gofullscreen() {
       }
 }
 function load(){
+    console.log("%c["+gamename+"]",'color: #128F00') //posts game name I guess
     aiversusgamerules() //for now
     drawcard("Legion Standard Bearer");
     drawcard("Cursed Satyr");
@@ -134,31 +145,44 @@ function isthereacard(player,combat,slot) {
     ev.preventDefault();
   }
   function drag(ev) {
+    ev = ev || window.event;
     var card = $(ev.target);
-    var cardtype =gettypebyname(card.children(".handcardname").text());
+    var cardslot = $(ev.target || ev.srcElement).parent().attr("class").replace("handslot","");
+    //var cardtype =gettypebyname(card.children(".handcardname").text());
     var img = new Image();
     ev.dataTransfer.setDragImage(img, 50, 50);
     ev.dataTransfer.setData("sender", card.children(".handcardname").text());
+    ev.dataTransfer.setData("senderslot", cardslot);
   }
   function drop(ev) {
     ev = ev || window.event;
     var sender = ev.dataTransfer.getData("sender");
+    var senderslot = ev.dataTransfer.getData("senderslot");
     var target = $(ev.target || ev.srcElement).parent();
     var combat = $(ev.target || ev.srcElement).parent().parent().parent().attr("class").replace("combat","");
     var slot = $(ev.target || ev.srcElement).parent().parent().attr("class").replace("slot","");
     ev.preventDefault();
     // deploy creep or hero
-    if (getactivecolors(1,combat).includes(getcolorbyname(sender))==true && (gettypebyname(sender)=="creep"||gettypebyname(sender)=="hero")){
+    
+    if (getactivecolors(1,combat).includes(getcolorbyname(sender))==true && ((gettypebyname(sender)=="creep" && getmanabycombat(1,combat)>=getmanacostbyname(sender)) || gettypebyname(sender)=="hero")){
+        if(gettypebyname(sender)=="creep"){
+            usemana(1,combat,getmanacostbyname(sender));
+        }
+        undrawcard(senderslot);
         placecard(1,combat,slot,sender);
     }
-    else if(getactivecolors(1,combat).includes(getcolorbyname(sender))==true && gettypebyname(sender)=="spell"){
+    else if(getactivecolors(1,combat).includes(getcolorbyname(sender))==true && gettypebyname(sender)=="spell" && getmanabycombat(1,combat)>=getmanacostbyname(sender)){
         //spellcodehere
+        usemana(1,combat,getmanacostbyname(sender));
     }
-    else if(gettypebyname(getnamebycords(1,combat,slot))=="hero" && gettypebyname(sender)=="item"){
+    else if(gettypebyname(getnamebycords(1,combat,slot))=="hero" && gettypebyname(sender)=="item" && getmanabycombat(1,combat)>=getmanacostbyname(sender)){
         //additem bla bla
+        usemana(1,combat,getmanacostbyname(sender));
     }
-    else if(getactivecolors(1,combat).includes(getcolorbyname(sender))==true && gettypebyname(sender)=="imp"){
-        //addtowerimp
+    else if(getactivecolors(1,combat).includes(getcolorbyname(sender))==true && gettypebyname(sender)=="imp" && getmanabycombat(1,combat)>=getmanacostbyname(sender)){
+        usemana(1,combat,getmanacostbyname(sender));
+        undrawcard(senderslot);
+        addtowerimp(1,combat,sender);
     }
     
   }
@@ -254,12 +278,6 @@ function unhighlightslot(player,combat,slot){
         element.css("background-image","");
     }
 }
-//for zoom
-$(document).ready(function() {
-   // $(".c1").zoomTarget();
-   // $(".c2").zoomTarget();
-   // $(".c3").zoomTarget();
-});
 function getRndInteger(min, max) {
     var maxreal = parseInt(max) + 1  
     return Math.floor(Math.random() * (maxreal - parseInt(min))) + parseInt(min);
@@ -479,6 +497,25 @@ function usemana(player,combat,amount){
         return 0;
     }
 }
+function changetowertype(player,combat,type) { 
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true && (type=="defense" || type=="ancient")){
+        $(".player"+player+"towers").children(".tower"+combat).attr("id",type);
+    }
+    else{
+        error("input for changetowertype is wrong");
+        return 0;
+    }
+ }
+function gettowertype(player,combat) { 
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true){
+        var towertype = $(".player"+player+"towers").children(".tower"+combat).attr("id");
+        return towertype;
+    }
+    else{
+        error("input for gettowertype is wrong");
+        return 0;
+    }
+ }
 function gettowerhealth(player,combat){
     //gets tower health via given player id and combat number
     if ($.isNumeric(player)==true && $.isNumeric(combat)==true){
@@ -695,15 +732,82 @@ function undrawcard(slot) {
     modifyhandcardcolor( to , getcolorbyname( gethandcardname(1,from) ) );
     clearcard(from);
  }
-function getlastopenhandslot(){
-    if ($(".handcardbackground:hidden").length){
-        var a=12
-    $(".handcardbackground:hidden").parent().each(function(i,val) {
-        var id = parseInt(val.className.replace("handslot", ""));
-        if (id>a){
+ function getopentowerimpslot(player,combat){
+    //using regex for slot
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true){
+        var element = $(".combat"+combat).children(".p"+player+"impcontainer").children("[class^=imp]").children(".impshell:hidden"); 
+        if (element.length){
+            var a=towerimps;
+            element.parent().each(function(i,val) {
+                var id = parseInt(val.className.replace("imp", ""));
+                if (id<=a){
+                    a=id;
+                }
+            });
+            return a;
         }
         else{
-            a=id
+            return "none";
+        }
+    }
+    else{
+        error("input for getopentowerimpslot is wrong");
+        return 0;
+    }
+}
+function addtowerimp(player,combat,name){
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true){
+        $(".combat"+combat).children(".p"+player+"impcontainer").children(".imp"+getopentowerimpslot(player,combat)).children(".impshell").children(".impshell2").children(".impart").attr("src","css/card_art/mini_icons/"+getidbyname(name)+".png")
+        $(".combat"+combat).children(".p"+player+"impcontainer").children(".imp"+getopentowerimpslot(player,combat)).children(".impshell").show(); 
+    }
+    else{
+        error("input for addtowerimp is wrong");
+        return 0;
+    }
+}
+function removetowerimp(player,combat,slot){
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true && $.isNumeric(slot)==true){
+        $(".combat"+combat).children(".p"+player+"impcontainer").children(".imp"+slot).children(".impshell").hide(); 
+    }
+    else{
+        error("input for removetowerimp is wrong");
+        return 0;
+    }
+}
+function gettowerimpname(player,combat,slot){
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true && $.isNumeric(slot)==true){
+        var id = $(".combat"+combat).children(".p"+player+"impcontainer").children(".imp"+slot).children(".impshell").children(".impshell2").children(".impart").attr("src").replace("css/card_art/mini_icons/","").replace(".png","")
+        return getnamebyid(id);
+    }
+    else{
+        error("input for gettowerimp is wrong");
+        return 0;
+    }
+}
+function gettowerimps(player,combat){
+    //gets tower imps as an array
+    //reminder next time you use .each, after each is set you cant use jquery on val
+    var towerimps=[];
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true){
+        $(".combat"+combat).children(".p"+player+"impcontainer").children("[class^=imp]").children(".impshell:visible").children(".impshell2").children(".impart").each(function(i,val) {
+                var towerid = val.getAttribute('src').replace("css/card_art/mini_icons/","").replace(".png","")
+                var towername = getnamebyid(towerid);
+                towerimps[i]=towername;
+        });
+        return towerimps;
+    }
+    else{
+        error("input for gettowerimps is wrong");
+        return 0;
+    }
+}
+function getlastopenhandslot(){
+    if ($(".handcardbackground:hidden").length){
+        var a=handcardamount;
+    $(".handcardbackground:hidden").parent().each(function(i,val) {
+        var id = parseInt(val.className.replace("handslot", ""));
+        if (id<=a){
+            a=id;
         }
     });
     return a;
