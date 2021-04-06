@@ -97,23 +97,12 @@ function load(){
     //console.log(window.innerWidth)
     //console.log(window.innerHeight)
 }
-function gamelogic() { 
-
-    //Shuffle Phase
-    //Deploy Phase
-    //Combat Phase
-    //Shop Phase
-    
-}
 function aiversusgamerules() { 
     handcardamount=12;
     modifyalltowerhealth(60);
     addgold(1,3);
     addgold(0,3);
     modifyallmanapools(3,3); //mana's
- }
- function restart(){
-
  }
  function reload(){
     location.reload();
@@ -140,7 +129,6 @@ function isthereacard(player,combat,slot) {
         return true;
     }
  }
-
  function allowDrop(ev) {
     ev.preventDefault();
   }
@@ -155,16 +143,15 @@ function isthereacard(player,combat,slot) {
     ev.dataTransfer.setData("senderslot", cardslot);
   }
   function drop(ev) {
+    ev.preventDefault();
     ev = ev || window.event;
     var sender = ev.dataTransfer.getData("sender");
     var senderslot = ev.dataTransfer.getData("senderslot");
     var target = $(ev.target || ev.srcElement).parent();
     var combat = $(ev.target || ev.srcElement).parent().parent().parent().attr("class").replace("combat","");
     var slot = $(ev.target || ev.srcElement).parent().parent().attr("class").replace("slot","");
-    ev.preventDefault();
-    // deploy creep or hero
-    
     if (getactivecolors(1,combat).includes(getcolorbyname(sender))==true && ((gettypebyname(sender)=="creep" && getmanabycombat(1,combat)>=getmanacostbyname(sender)) || gettypebyname(sender)=="hero")){
+        // deploy creep or hero
         if(gettypebyname(sender)=="creep"){
             usemana(1,combat,getmanacostbyname(sender));
         }
