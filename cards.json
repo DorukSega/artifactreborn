@@ -139,7 +139,7 @@
           "active": true,
           "name": "LUCENT BEAM",
           "id": 10489,
-          "effectdesc": "Round Start: Deal 1 piercing damage to a random enemy and add a charge to your Eclipse card."
+          "effectdesc": "Round Start: Deal 2 damage to a random enemy and add a charge to your Eclipse card."
         },
         {
           "type": "active",
@@ -159,7 +159,7 @@
     },
     {
       "name": "Keefe the Bold",
-      "attack": 8,
+      "attack": 7,
       "armor": 1,
       "health": 14,
       "goldcost": 0,
@@ -1034,7 +1034,7 @@
       "color": "gold",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "+4 Health After Combat: Increase health by 2.",
+      "effectdesc": "+3 Health After Combat: Increase health by 2.",
       "type": "item",
       "lore": "The bullsnake is a fitting symbol for Stonehall. They conquer. They occupy. They move on. \u2014 <i>Jolixia, The Card Faun<\/i>",
       "abilities": [
