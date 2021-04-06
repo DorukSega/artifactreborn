@@ -681,7 +681,7 @@
       "specialaction": "",
       "id": 10183,
       "color": "red",
-      "bounty": 0,
+      "bounty": 2,
       "charges": 0,
       "effectdesc": "Enchant Lane. Aura: Nearest ally hero has rapid deployment.",
       "type": "imp",
@@ -703,9 +703,9 @@
         },
         {
           "type": "continuous",
-          "active": false,
-          "name": "",
-          "effectdesc": ""
+          "active": true,
+          "name": "Omexe Effect",
+          "effectdesc": "Aura: Nearest ally hero has rapid deployment."
         }
       ]
     },
@@ -817,6 +817,45 @@
           "turn": 0,
           "mana": 0,
           "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
+      "name": "Messenger Rookery",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 0,
+      "manacost": 1,
+      "signature": "",
+      "specialaction": "",
+      "id": 10180,
+      "color": "blue",
+      "bounty": 2,
+      "charges": 0,
+      "effectdesc": "Active 0, 1 Mana: Choose an ally. Choose a combat target for it.",
+      "type": "imp",
+      "lore": "The holdings of Revtel are vast, and so the Merchant Kings rely on Wildwing messengers to communicate between the capital and our lands. — <i>The Brass Herald, Lover of Efficiency</i>",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "Messenger Effect",
+          "active": true,
+          "turn": 0,
+          "mana": 1,
+          "effectdesc": "Active 0, 1 Mana: Choose an ally. Choose a combat target for it."
         },
         {
           "type": "continuous",
