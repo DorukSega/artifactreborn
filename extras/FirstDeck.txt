@@ -2,42 +2,42 @@
 
 Heroes
 
-Keefe the Bold			8 1 14
-Legion Commander		8 1 11
-Luna					4   8
+Keefe the Bold            7 1 14
+Legion Commander          8 1 11
+Luna                      4   8             (maybe Deal 2 damage, not piercing)
 
-4th Zeus				5   10
-5th Crystal Maiden		3   7
-6th Timbersaw			6 1 12
+4th Zeus                  4   10
+5th Crystal Maiden        3   7
+6th Timbersaw             6 1 12            Move to another slot. Deal 2 damage to each enemy passed on the way
 
 
 Cards
 
-x1 Reckless Charge							:bond: Up to range 2
-x2 Duel										:bond: Give the winner +2 attack permanently
-x2 Thundergod's Wrath		6 mana, 		Deal 4 :bond: Deal +1 damage in Zeus' lane
-x2 Eclipse									:bond: Deal +1 damage in Luna's lane
-x1 Frostbite				3 mana			:bond: Root it
-x1 Whirling Death							:bond: Give them -3 attack instead
+x1 Reckless Charge                          :bond: Up to range 2
+x2 Duel                                     :bond: Give the winner +2 attack permanently
+x2 Thundergod's Wrath     6 mana,           Deal 4 :bond: Deal +1 damage in Zeus' lane
+x2 Eclipse                                  :bond: Deal +1 damage in Luna's lane
+x1 Frostbite              3 mana            :bond: Root it
+x1 Whirling Death                           :bond: Give them -3 attack instead
 
-x2 Bronze Legionnaire		3 mana,	4 2 3
-x2 Legion Standard Bearer	4 mana,	0   6	allied neighbors have +4 Attack.
-x1 The Omexe Arena							Enchant Lane. Aura: Nearest ally hero has rapid deployment
-x2 Cursed Satyr				3 mana
-x2 Back For More			4 mana,			random slot
-x2 Time of Triumph							+4 to all
+x2 Bronze Legionnaire     3 mana,   4 2 3
+x2 Legion Standard Bearer 4 mana,   0   6   allied neighbors have +4 Attack.
+x1 The Omexe Arena                          Enchant Lane. Aura: Nearest ally hero has rapid deployment
+x2 Cursed Satyr           3 mana
+x2 Back For More          4 mana,           random slot
+x2 Time of Triumph                          +4 to all
 
-x2 Cunning Plan				2 mana
-x2 Compel					3 mana
-x2 Tower Barrage			3 mana,         Deal 3 damage
+x2 Cunning Plan           2 mana
+x2 Compel                 3 mana
+x2 Tower Barrage          3 mana,           Deal 3 damage
 x2 Friendly Fire
-x2 Annihiation				8 mana	
+x2 Annihiation            8 mana	
 
 
 Items
 
-x2 Stonehall Cloak			12 gold			+4 Health. Increase Health by 2
-x2 Blink Dagger				25 gold			"in another lane"
-x1 Phase Boots				16 gold			+4 Health
-x1 Orchid					22 gold         -2 armor
+x2 Stonehall Cloak        12 gold           +3 Health. Increase Health by 2
+x2 Blink Dagger           25 gold           "in another lane"
+x1 Phase Boots            16 gold           +4 Health
+x1 Orchid                 22 gold           -2 armor
 
