@@ -5,8 +5,7 @@ var isshopping=false;
 var currentphase="";
 var turn=0;
 var shoplevel=0;
-//Player 0 Hand Card Slots
-var p0hslots =[];
+var p0hslots =[]; //Player 0 Hand Card Slots
 var cards;
 var handcardamount=12; //for future, different rules and so on
 var towerimps=7;
@@ -15,6 +14,7 @@ var errorcount=0;
 var jsonreq= $.getJSON("cards.json", function(result) {
     cards = result["cards"];
 });
+if (cards==undefined){
 //This here is a sync call because mozilla cant keep up
 var xmlhttp = new XMLHttpRequest();
 var url = "cards.json";
@@ -26,6 +26,8 @@ xmlhttp.onreadystatechange = function() {
 };
 xmlhttp.open("GET", url, false);
 xmlhttp.send();
+}
+
 //document.addEventListener('contextmenu', event => event.preventDefault()); //disables right click
 function error(input){
     errorcount=errorcount+1;
@@ -33,9 +35,9 @@ function error(input){
 }
 //for zoom
 $(document).ready(function() {
-    $(".c1").zoomTarget();
+    /* $(".c1").zoomTarget();
     $(".c2").zoomTarget();
-    $(".c3").zoomTarget();
+    $(".c3").zoomTarget(); */
  });
 function gofullscreen() {
     var elem = document.documentElement;
@@ -984,27 +986,6 @@ function gethandcardfromslot(slot) {
         return 0;
     }
  }
-function getemptycardslots(){
-    //this doesnt work. suppose to return emptycardslots
-    var slotnmbrs= [];
-    var combatnmbrs=[];
-    var playernmbrs=[];
-    var i;
-    $(".cardbackground:hidden").parent().each(function(i,val) {
-        slotnmbrs[i]=val.className;
-    });
-    $(".cardbackground:hidden").parent().parent().each(function(i,val) {
-        combatnmbrs[i]=val.className;
-        
-    });
-    $(".cardbackground:hidden").parent().parent().parent().each(function(i,val) {
-        playernmbrs[i]=val.className;
-        console.log(i);
-    });
-    //console.log(playernmbrs);
-    //console.log(combatnmbrs);
-    return slotnmbrs;
-}
 function getelementbycords(player,combat,slot) { 
     //returns element directly, will be user to turn variables into one quickly. 
     //var element = getelementbycords(player,combat,slot); //for other functions
@@ -1194,7 +1175,7 @@ function getcardadjent(slotnumber) {
         changearmorbycords(player,combat,slot,0)
         changehealthbycords(player,combat,slot,parseInt(gethealthbycords(player,combat,slot))-parseInt(amnt));
         if (gethealthbycords(player,combat,slot)<=0){
-            //add killcard here
+            killcard(player,combat,slot);
         }
     }
     else{
