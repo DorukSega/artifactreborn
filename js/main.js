@@ -64,15 +64,18 @@ function load(){
     drawcard("The Omexe Arena");
     drawcard("Stonehall Cloak");
     drawcard("Luna");
-    placecard(1,1,1,"Timbersaw");
-    placecard(1,1,3,"Luna");
     placecard(1,1,4,"Melee Creep");
-    placecard(1,1,5,"Legion Standard Bearer");
-    placecard(1,1,7,"Crystal Maiden");
-    placecard(0,1,3,"Keefe the Bold");
+    placecard(1,2,4,"Melee Creep");
+    //placecard(1,3,4,"Melee Creep"); (replaced by Keefe)
     placecard(0,1,4,"Melee Creep 0");
-    placecard(0,1,5,"Luna");
-    placecard(0,1,6,"Melee Creep 0");
+    placecard(0,2,4,"Melee Creep 0");
+    placecard(0,3,4,"Melee Creep 0");
+    placecard(1,1,3,"Luna");
+    placecard(1,2,5,"Legion Commander");
+    placecard(1,3,4,"Keefe the Bold");
+    placecard(0,1,5,"Keefe the Bold");
+    placecard(0,2,5,"Luna");
+    placecard(0,3,3,"Legion Commander");
     //$(".handcardbackground").attr("draggable","true");
     //$(".cardbackground").show();
     //$(".cardart").show();
@@ -92,7 +95,7 @@ function aiversusgamerules() {
     handcardamount=12;
     modifyalltowerhealth(60);
     addgold(1,3);
-    addgold(0,3);
+    addgold(0,4);
     modifyallmanapools(3,3); //mana's
  }
  function reload(){
