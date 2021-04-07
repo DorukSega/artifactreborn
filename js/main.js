@@ -6,18 +6,7 @@ var currentphase="";
 var turn=0;
 var shoplevel=0;
 //Player 0 Hand Card Slots
-var p0hslot1 ="";
-var p0hslot2="";
-var p0hslot3="";
-var p0hslot4="";
-var p0hslot5="";
-var p0hslot6="";
-var p0hslot7="";
-var p0hslot8="";
-var p0hslot9="";
-var p0hslot10="";
-var p0hslot11="";
-var p0hslot12="";
+var p0hslots =[];
 var cards;
 var handcardamount=12; //for future, different rules and so on
 var towerimps=7;
@@ -163,10 +152,11 @@ function isthereacard(player,combat,slot) {
         usemana(1,combat,getmanacostbyname(sender));
     }
     else if(gettypebyname(getnamebycords(1,combat,slot))=="hero" && gettypebyname(sender)=="item" && getmanabycombat(1,combat)>=getmanacostbyname(sender)){
-        //additem bla bla
+        //add item
         usemana(1,combat,getmanacostbyname(sender));
     }
     else if(getactivecolors(1,combat).includes(getcolorbyname(sender))==true && gettypebyname(sender)=="imp" && getmanabycombat(1,combat)>=getmanacostbyname(sender)){
+        //add towerimp 
         usemana(1,combat,getmanacostbyname(sender));
         undrawcard(senderslot);
         addtowerimp(1,combat,sender);
@@ -873,7 +863,7 @@ function gethandcardname(player,slot) {
             return $(".handslot"+slot).children(".handcardbackground").children(".handcardname").text()
         }
         if(player==0){
-            return window["p0hslot"+slot];
+            return p0hslots[parseInt(slot)-1];
         }
     }
     else{
