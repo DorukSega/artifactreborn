@@ -322,6 +322,7 @@ img{
     height: 120px;
     top: 36%;
     left: 0%;
+    z-index: 2;
 }
 .p1board{
     position: fixed;
@@ -329,6 +330,7 @@ img{
     height: 120px;
     top:52.2%;
     left: 0%;
+    z-index: 2;
 }
 .c1{
     cursor: url("gfx/cursor.png"), auto;
@@ -460,25 +462,34 @@ img{
 }
 .cardabilities{
     position: absolute;
-    top: 75px;
-    left: 1px;
+    top: 72px;
+    left: 2px;
     z-index: 1;
 }
-.cardsecondab{
+.cardab2{
     position: absolute;
-    left: 21px;
+    left: 25px;
+}
+.cardab3{
+    position: absolute;
+    left: 49px;
+}
+.cardab4{
+    position: absolute;
+    top:-25px;
+    left: 49px;
 }
 .cardabiconback{
     position: absolute;
-    width: 20px;
-    height: 20px
+    width: 23px;
+    height: 23px
 }
 .cardabicon{
     position: absolute;
     top: 1px;
     left: 1px;
-    width: 18px;
-    height: 18px
+    width: 21px;
+    height: 21px
 }
 .bottomofthecard{
     position: absolute;
@@ -540,7 +551,7 @@ img{
     position: fixed;
     bottom: 12%; /*12%*/
     left: 45%;
-    z-index: 1;
+    z-index: 3;
 }
 .handslot1{
     position: absolute;
@@ -618,7 +629,9 @@ img{
     width: 172px;
     height: 290px;
     color: black;
-    
+}
+.shine{
+    box-shadow:  0px 0px 5px 5px #96FFFF;
 }
 .handcardart{
     position: absolute;

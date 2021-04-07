@@ -33,9 +33,9 @@ function error(input){
 }
 //for zoom
 $(document).ready(function() {
-    // $(".c1").zoomTarget();
-    // $(".c2").zoomTarget();
-    // $(".c3").zoomTarget();
+    $(".c1").zoomTarget();
+    $(".c2").zoomTarget();
+    $(".c3").zoomTarget();
  });
 function gofullscreen() {
     var elem = document.documentElement;
@@ -151,9 +151,10 @@ function isthereacard(player,combat,slot) {
         //spellcodehere
         usemana(1,combat,getmanacostbyname(sender));
     }
-    else if(gettypebyname(getnamebycords(1,combat,slot))=="hero" && gettypebyname(sender)=="item" && getmanabycombat(1,combat)>=getmanacostbyname(sender)){
+    else if(gettypebyname(getnamebycords(1,combat,slot))=="hero" && gettypebyname(sender)=="item" && getmanabycombat(1,combat)>=getmanacostbyname(sender) && checkitemequiped(1,combat,slot,sender)==false && getopenabslot(1,combat,slot)!="none" && itemcount(1,combat,slot)<2){
         //add item
         usemana(1,combat,getmanacostbyname(sender));
+        additem(1,combat,slot,sender);
     }
     else if(getactivecolors(1,combat).includes(getcolorbyname(sender))==true && gettypebyname(sender)=="imp" && getmanabycombat(1,combat)>=getmanacostbyname(sender)){
         //add towerimp 
@@ -200,20 +201,23 @@ function placecard(player,combat,slot,name){
             var abilities = getabilitiesbyname(name)
             if (abilities.length==1){
                 var ab1id =abilities[0]['id'];
-                element.children(".cardabilities").children(".cardfirstab").children(".cardabicon").attr("src","css/card_art/mini_icons/"+ab1id+".png");
-                element.children(".cardabilities").children(".cardfirstab").show();
+                element.children(".cardabilities").children(".cardab1").children(".cardabiconback").attr("src","css/gfx/ability_border_passive.png");
+                element.children(".cardabilities").children(".cardab1").children(".cardabicon").attr("src","css/card_art/mini_icons/"+ab1id+".png");
+                element.children(".cardabilities").children(".cardab1").show();
             }
             else if (abilities.length==2){
                 var ab1id =abilities[0]['id'];
                 var ab2id =abilities[1]['id'];
-                element.children(".cardabilities").children(".cardfirstab").children(".cardabicon").attr("src","css/card_art/mini_icons/"+ab1id+".png");
-                element.children(".cardabilities").children(".cardsecondab").children(".cardabicon").attr("src","css/card_art/mini_icons/"+ab2id+".png");
-                element.children(".cardabilities").children(".cardfirstab").show();
-                element.children(".cardabilities").children(".cardsecondab").show();
+                element.children(".cardabilities").children(".cardab1").children(".cardabiconback").attr("src","css/gfx/ability_border_passive.png");
+                element.children(".cardabilities").children(".cardab2").children(".cardabiconback").attr("src","css/gfx/ability_border_passive.png");
+                element.children(".cardabilities").children(".cardab1").children(".cardabicon").attr("src","css/card_art/mini_icons/"+ab1id+".png");
+                element.children(".cardabilities").children(".cardab2").children(".cardabicon").attr("src","css/card_art/mini_icons/"+ab2id+".png");
+                element.children(".cardabilities").children(".cardab1").show();
+                element.children(".cardabilities").children(".cardab2").show();
             }
             else{
-                element.children(".cardabilities").children(".cardfirstab").hide();
-                element.children(".cardabilities").children(".cardsecondab").hide();
+                element.children(".cardabilities").children(".cardab1").hide();
+                element.children(".cardabilities").children(".cardab2").hide();
             } 
             //these can be used later
             if (type=="hero"){
@@ -235,12 +239,15 @@ function killcard(player,combat,slot){
     changeattackbycords(player,combat,slot,0);
     changearmorbycords(player,combat,slot,0);
     changehealthbycords(player,combat,slot,0);
-    element.children(".cardabilities").children(".cardfirstab").hide();
-    element.children(".cardabilities").children(".cardsecondab").hide();
+    element.children(".cardabilities").children(".cardab1").hide();
+    element.children(".cardabilities").children(".cardab2").hide();
+    element.children(".cardabilities").children(".cardab3").hide();
+    element.children(".cardabilities").children(".cardab4").hide();
     element.children(".cardbottomofthecard").children(".cardattackcontainer").hide();
     element.children(".cardbottomofthecard").children(".cardarmorcontainer").hide();
     element.children(".cardbottomofthecard").children(".cardhealthcontainer").hide();
 }
+
 function highlightslot(player,combat,slot){
     if (isthereacard(player,combat,slot)==false){
         var element = getelementbycords(player,combat,slot);
@@ -253,6 +260,179 @@ function unhighlightslot(player,combat,slot){
         var element = getelementbycords(player,combat,slot);
         element.hide();
         element.css("background-image","");
+    }
+}
+function shine(player,combat,slot){
+    if (isthereacard(player,combat,slot)==true){
+        var element = getelementbycords(player,combat,slot);
+        element.addClass("shine")
+    }
+}
+function unshine(player,combat,slot){
+    if (isthereacard(player,combat,slot)==true){
+        var element = getelementbycords(player,combat,slot);
+        element.removeClass("shine")
+    }
+}
+function checkitemequiped(player,combat,slot,name){
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true && $.isNumeric(slot)==true){
+        var element = getelementbycords(player,combat,slot); 
+        var abilities= element.children(".cardabilities").children("[class^=card]:visible");
+        var a=0;
+        abilities.children(".cardabicon").each(function(i,val) {
+                if (getnamebyid(parseInt(val.getAttribute('src').replace("css/card_art/mini_icons/","").replace(".png","")))==name){
+                   a=a+1;
+                }
+        });
+        if (a>0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }   
+    else {
+        error("input for checkitemequiped is wrong");
+        return false;
+    }
+}
+function itemcount(player,combat,slot) { 
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true && $.isNumeric(slot)==true){
+        var element = getelementbycords(player,combat,slot); 
+        var abilities= element.children(".cardabilities").children("[class^=card]:visible").children(".cardabiconback");
+            var a=0;
+            abilities.each(function(i,val) {
+                if (val.getAttribute("src")=="css/gfx/itemslot_border.png"){
+                    a=a+1;
+                }
+            });
+            return a;
+    }
+    else {
+        error("input for itemcount is wrong");
+        return 0;
+    }
+ }
+ function getallitemsarray(player,combat,slot){
+     var array=[];
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true && $.isNumeric(slot)==true){
+        var element = getelementbycords(player,combat,slot); 
+        var abilities= element.children(".cardabilities").children("[class^=card]:visible").children(".cardabiconback");
+        var a =0;
+            abilities.each(function(i,val) {
+                if (val.getAttribute("src")=="css/gfx/itemslot_border.png"){
+                    array[a] = getnamebyid(parseInt(val.parentElement.children[1].getAttribute("src").replace("css/card_art/mini_icons/","").replace(".png","")))
+                    a=a+1;
+                }
+            });
+            return array;
+    }
+    else {
+        error("input for getallitemsarray is wrong");
+        return 0;
+    }
+ }
+function additem(player,combat,slot,name){
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true && $.isNumeric(slot)==true){
+        if(checkitemequiped(player,combat,slot,name)==false && getopenabslot(player,combat,slot)!="none" && itemcount(player,combat,slot)<2){
+            var element = getelementbycords(player,combat,slot); 
+            element.children(".cardabilities").children(".cardab"+getopenabslot(player,combat,slot)).children(".cardabicon").attr("src","css/card_art/mini_icons/"+getidbyname(name)+".png");
+            element.children(".cardabilities").children(".cardab"+getopenabslot(player,combat,slot)).children(".cardabiconback").attr("src","css/gfx/itemslot_border.png");
+            element.children(".cardabilities").children(".cardab"+getopenabslot(player,combat,slot)).show();
+        }
+    }
+    else {
+        error("input for additem is wrong");
+        return 0;
+    }
+}
+function removeitem(player,combat,slot,name){
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true && $.isNumeric(slot)==true){
+        if(checkitemequiped(player,combat,slot,name)==true){
+            var element = getelementbycords(player,combat,slot);
+            var abilities= element.children(".cardabilities").children("[class^=card]:visible").children(".cardabicon"); 
+            abilities.each(function(i,val) {
+                if (val.getAttribute("src")=="css/card_art/mini_icons/"+getidbyname(name)+".png"){
+                    val.parentElement.style.display = "none";
+                }
+            });
+            reorgitems(player,combat,slot);
+        }
+    }
+    else {
+        error("input for removeitem is wrong");
+        return 0;
+    }
+}
+function moveitem(player,combat,slot,from,to){
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true && $.isNumeric(slot)==true && $.isNumeric(from)==true && $.isNumeric(to)==true){
+        var element = getelementbycords(player,combat,slot);
+        var item1 = element.children(".cardabilities").children(".cardab" + from);
+        var item2 = element.children(".cardabilities").children(".cardab" + to);
+        item2.html(item1.html());
+        item1.hide();
+        item2.show();
+    }
+    else {
+        error("input for moveitem is wrong");
+        return 0;
+    }
+}
+function reorgitems(player,combat,slot){
+    // it does a check and moves accordingly
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true && $.isNumeric(slot)==true){
+        var element = getelementbycords(player,combat,slot);
+        var abilities= element.children(".cardabilities").children("[class^=card]:visible");
+        ttl = countusedabslots(player,combat,slot); //total used ab sltos
+        x =  getopenabslot(player,combat,slot)-1; // one before last open slot
+        open = getopenabslot(player,combat,slot);
+        if (ttl!=x){
+            moveitem(player,combat,slot,(open+1),open);
+        }
+    }
+    else {
+        error("input for reorgitems is wrong");
+        return 0;
+    }
+}
+function countusedabslots(player,combat,slot){
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true && $.isNumeric(slot)==true){
+        var element = getelementbycords(player,combat,slot);
+        var abilities= element.children(".cardabilities").children("[class^=card]:visible");
+        var a=0;
+            abilities.each(function(i,val) {
+                    a=a+1;
+            });
+            return a;
+    }
+    else {
+        error("input for countusedabslots is wrong");
+        return 0;
+    }
+}
+function getopenabslot(player,combat,slot){
+    //gets open ab slot (which is also used for items)
+    if ($.isNumeric(player)==true && $.isNumeric(combat)==true && $.isNumeric(slot)==true){
+        var element = getelementbycords(player,combat,slot); 
+        var abilities= element.children(".cardabilities").children("[class^=card]:hidden");
+        if (abilities.length){
+            var a=4;
+            abilities.each(function(i,val) {
+                    var id = parseInt(val.className.replace("cardab", ""));
+                    //console.log(id);
+                    if (id<=a){
+                        a=id;
+                    }
+            });
+            return a;
+        }
+        else{
+            return "none";
+        }
+    }
+    else {
+        error("input for getopenabslot is wrong");
+        return 0;
     }
 }
 function getRndInteger(min, max) {
