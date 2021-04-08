@@ -1,4 +1,4 @@
-{
+﻿{
   "cards": [
     {
       "name": "Melee Creep",
@@ -734,11 +734,11 @@
         },
         {
           "type": "active",
-          "name": "Cursed Action",
-          "active": true,
+          "name": "",
+          "active": false,
           "turn": 0,
           "mana": 1,
-          "effectdesc": "Active 0 CD, 1 Mana: Choose a blocked unit. It battles the unit blocking it."
+          "effectdesc": ""
         },
         {
           "type": "continuous",

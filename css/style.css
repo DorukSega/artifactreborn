@@ -102,12 +102,16 @@
 }
 :root {
     /* Card Colors */
-    --gray:  -webkit-linear-gradient(90deg,#5D6466,#5D6466); /* Also Colorless */
-    --blue:  -webkit-linear-gradient(90deg,#0D3653,#175D87);
-    --red:   -webkit-linear-gradient(90deg,#561926,#812739);
-    --green: -webkit-linear-gradient(90deg,#3F6232,#4B733C);
-    --black: -webkit-linear-gradient(90deg,#222026,#2D2A32);
-    --gold:  -webkit-linear-gradient(90deg,#6E5D17,#6C5D1B); /*Item Cards*/
+    --blue:  -webkit-linear-gradient(90deg,#0d3855,#205579);
+    --red:   -webkit-linear-gradient(90deg,#541a27,#84293C);
+    --green: -webkit-linear-gradient(90deg,#38542b,#527b3f);
+    --black: -webkit-linear-gradient(90deg,#2c2733,#332d3b);
+    --gold:  -webkit-linear-gradient(90deg,#907024,#AD862B); /*Item Cards*/
+    --creepgray:  -webkit-linear-gradient(90deg,#4d5453,#67716f); /* Also Colorless */
+    --creepblue:  -webkit-linear-gradient(90deg,#434d54,#5a6770);
+    --creepred:   -webkit-linear-gradient(90deg,#544347,#705a5f);
+    --creepgreen: -webkit-linear-gradient(90deg,#495443,#61705a);
+    --creepblack: -webkit-linear-gradient(90deg,#4b4354,#635a70);
   }
   html{
     height: 100%;
@@ -724,11 +728,12 @@ img{
     white-space: nowrap;
     position: absolute;
     margin-right: 20px;
-    text-shadow: 0px 0px 4px black;
+    font-stretch: condensed;
+    text-shadow: 0.5px 1px 2px #141414;
     font-size: 22px;
     top: 1px;
     left: 30px;
-    color: #EAEAEA;
+    color: #e5e5e5;
     font-family: Radiance Condensed;
 }
 .handbottomofthecard{

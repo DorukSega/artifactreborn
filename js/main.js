@@ -1,8 +1,4 @@
 var gamename="Artifact_Reborn";
-var isdeploying=false;
-var iscombating=false;
-var isshopping=false;
-var currentphase="";
 var turn=0;
 var shoplevel=0;
 var p0hslots =[]; //Player 0 Hand Card Slots
@@ -34,11 +30,32 @@ function error(input){
     console.log("%c["+errorcount+"]%c["+gamename+"_Error]"+"%c > "+"%c" + input, 'color: #00128F','color: #128F00','color: #0600B2', 'color: #CF5353');
 }
 //for zoom
-$(document).ready(function() {
-    /* $(".c1").zoomTarget();
-    $(".c2").zoomTarget();
-    $(".c3").zoomTarget(); */
- });
+ function zoomtocombat(combat){
+    if (combat==1){
+        zoom.to({
+            x: 300,
+            y: 180,
+            width: 700,
+            height: 700
+          });
+    }
+    else if (combat==2){
+        zoom.to({
+            x: 625,
+            y: 180,
+            width: 700,
+            height: 700
+          });
+    }
+    else if (combat==3){
+        zoom.to({
+            x: 940,
+            y: 180,
+            width: 700,
+            height: 700
+          });
+    }
+ }
 function gofullscreen() {
     var elem = document.documentElement;
     if (elem.requestFullscreen) {
@@ -73,7 +90,7 @@ function load(){
     placecard(0,1,4,"Melee Creep 0");
     placecard(0,1,5,"Luna");
     placecard(0,1,6,"Melee Creep 0");
-    //$(".handcardbackground").attr("draggable","true");
+    $(".handcardbackground").attr("draggable","true");
     //$(".cardbackground").show();
     //$(".cardart").show();
     //$(".handcardbackground").show();
@@ -178,7 +195,6 @@ function placecard(player,combat,slot,name){
     var element = getelementbycords(player,combat,slot);
     if (checkcardexists(name)==true){
             var mainid= getidbyname(name);
-            modifycardcolor(player,combat,slot,getcolorbyname(name))
             var type= gettypebyname(name);
             element.children(".cardart").show();
             element.children(".cardart").attr("src","css/card_art/full_art/"+mainid+".png");
@@ -223,9 +239,10 @@ function placecard(player,combat,slot,name){
             } 
             //these can be used later
             if (type=="hero"){
-                
+                modifycardcolor(player,combat,slot,getcolorbyname(name));
             }
             else if(type=="creep"){
+                modifycardcolor(player,combat,slot,"creep" + getcolorbyname(name));
             }
             else{
                 error("cards.json for "+name+" has a false \"type\"");
@@ -458,7 +475,7 @@ function getactivecolors(player,combat){
     if ($.isNumeric(player)==true && $.isNumeric(combat)==true){
         $(".p"+player+"board").children(".combat"+combat).children("[class^=slot]").each(function(i,val) {
             var slot = parseInt(val.className.replace("slot", ""));
-            if(isthereacard(player,combat,slot)==true && getcolorbycords(player,combat,slot)!="gray" && colors.includes(getcolorbycords(player,combat,slot))==false){
+            if(isthereacard(player,combat,slot)==true && getcolorbycords(player,combat,slot)!="gray" && getcolorbycords(player,combat,slot).includes("creep")==false && colors.includes(getcolorbycords(player,combat,slot))==false){
                 colors[a] = getcolorbycords(player,combat,slot);
                 a = a+1;
             }
