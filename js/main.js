@@ -110,7 +110,7 @@ function load(){
 function aiversusgamerules() { 
     handcardamount=12;
     modifyalltowerhealth(60);
-    addgold(1,4);
+    addgold(1,3);
     addgold(0,4);
     modifyallmanapools(3,3); //mana's
  }
