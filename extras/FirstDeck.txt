@@ -2,11 +2,11 @@
 
 Heroes
 
-Keefe the Bold            7 1 14
-Legion Commander          8 1 11
+Keefe the Bold            7 1 13
+Legion Commander          7 1 10
 Luna                      4   8             (maybe Deal 2 damage, not piercing)
 
-4th Zeus                  4   10
+4th Zeus                  4   9
 5th Crystal Maiden        3   7
 6th Timbersaw             6 1 12            Move to another slot. Deal 2 damage to each enemy passed on the way
 
@@ -25,14 +25,14 @@ x2 Legion Standard Bearer 4 mana   0   6    allied neighbors have +4 Attack.
 x1 The Omexe Arena                          Enchant Lane. Aura: Nearest ally hero has rapid deployment
 x2 Cursed Satyr           3 mana
 x2 Back For More          4 mana            random slot
-x2 Time of Triumph                          +4 to all
+x2 Time of Triumph                          
 
 x1 Messenger Rookery      1 mana            Active 0, 1 Mana: Choose an ally. Choose a combat target for it
 x2 Cunning Plan           2 mana
 x2 Compel                 3 mana
 x2 Tower Barrage          3 mana            Deal 3 damage
 x2 Friendly Fire
-x1 Annihiation            8 mana	
+x1 Annihilation            8 mana	
 
 
 Items
