@@ -4,7 +4,8 @@ var p0hslots =[]; //Player 0 Hand Card Slots
 var handcardamount=12; //for future, different rules and so on
 var towerimps=7;
 function load(){
-    console.log("%c["+gamename+"]",'color: #128F00') //posts game name I guess
+    $(".Mversion").text(gamename+" - "+version);
+    loadnews();
     aiversusgamerules() //for now
     drawcard("Legion Standard Bearer");
     drawcard("Cursed Satyr");

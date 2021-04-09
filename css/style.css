@@ -113,10 +113,10 @@
     --creepgreen: -webkit-linear-gradient(90deg,#495443,#61705a);
     --creepblack: -webkit-linear-gradient(90deg,#4b4354,#635a70);
   }
-  html{
+html{
     height: 100%;
     width: 100%;
-  }
+}
 body{
     font-family: Radiance;
     height: 100%;
@@ -796,4 +796,194 @@ img{
     height: auto;
     top: -14px;
     left: -13px;
+}
+/* Main Menu */
+.menu{
+    cursor: url("gfx/cursor.png"), auto;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+.Mplayartifact{
+    display: inline-block;
+    background: linear-gradient(to left,#231F2E,#322B3D);
+    width: 516px;
+    height: 68px;
+    position: fixed;
+    bottom: 30%;
+    right: 0%;
+    text-align:left;
+    line-height: 68px;
+}
+.Mplayartifact:hover{  
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 55%, rgba(49, 72, 106, 0.7) 100%), linear-gradient(to left,#231F2E,#322B3D);
+    text-shadow: 0px 0px 8px #4E589A;
+}
+.Mcardcollection{
+    display: inline-block;
+    background: linear-gradient(to left,#231F2E,#322B3D);
+    width: 516px;
+    height: 56px;
+    position: fixed;
+    bottom: 24.25%;
+    right: 0%;
+    text-align:left;
+    line-height: 56px;
+}
+.Mcardcollection:hover{  
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 55%, rgba(49, 72, 106, 0.7) 100%), linear-gradient(to left,#231F2E,#322B3D);
+    text-shadow: 0px 0px 8px #4E589A;
+}
+.Mtext{
+    color: white;
+    font-size: 22px;
+    padding-left: 21px;
+}
+.Mversion{
+    position: fixed;
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+    padding-right: 60px;
+    bottom: 29px;
+    right: 7px;
+}
+.Mnews{
+    position: fixed;
+    display: inline-block;
+    top: 29px;
+    right: 126px;
+    width: 26px;
+    height: 26px;
+    opacity: 0.5;
+}
+.Mnews:hover,.Mgear:hover,.Mquit:hover,.Pclose:hover,.Sclose:hover{
+    opacity: 1;
+}
+.Mgear{
+    position: fixed;
+    display: inline-block;
+    top: 29px;
+    right: 70px;
+    width: 26px;
+    height: 26px;
+    opacity: 0.5;
+}
+.Mquit{
+    position: fixed;
+    display: inline-block;
+    top: 29px;
+    right: 14px;
+    width: 26px;
+    height: 26px;
+    opacity: 0.5;
+}
+.Mseperator{
+    background-color: white;
+    position: fixed;
+    display: inline-block;
+    top: 29px;
+    right: 52px;
+    width: 1px;
+    height: 26px;
+    opacity: 0.5;
+}
+.Mseperator2{
+    background-color: white;
+    position: fixed;
+    display: inline-block;
+    top: 29px;
+    right: 110px;
+    width: 1px;
+    height: 26px;
+    opacity: 0.5;
+}
+.Mlogo{
+    position: fixed;
+    display: inline-block;
+    top: 33px;
+    left: 33px;
+    width: 118px;
+    height: 104px;
+}
+.Blogo{
+    position: fixed;
+    display: inline-block;
+    top: 33px;
+    left: 33px;
+    width: 118px;
+    height: 104px;
+}
+.P{
+    position: relative;
+    display: block;
+    margin: auto;
+    top: 75px;
+    width: 800px;
+    height: 800px;
+    border: 4px groove #5B5B5B;
+    background-image: url("gfx/bg_profile.png");
+    background-size: cover;
+}
+.Pcommitlog{
+    overflow: auto;
+    white-space: pre-wrap;
+    width: 760px;
+    height: 755px;
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    position: fixed;
+    display: inline-flex;
+    padding: 20px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+.Pclose{
+    position: absolute;
+    display: block;
+    top: 10px;
+    right: 15px;
+    width: 26px;
+    height: 26px;
+    opacity: 0.5;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #171717; 
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #434953; 
+    border-radius: 10px;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4E5157; 
+  }
+  .S{
+    position: relative;
+    display: block;
+    margin: auto;
+    top: 75px;
+    width: 1500px;
+    height: 850px;
+    border: 4px groove #5B5B5B;
+    background-image: url("gfx/bg_profile.png");
+    background-size: cover;
+}
+.Sclose{
+    position: absolute;
+    display: block;
+    top: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    opacity: 0.5;
 }

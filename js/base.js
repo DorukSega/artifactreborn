@@ -1,5 +1,21 @@
-var gamename="Artifact_Reborn";
+var gamename="Artifact Reborn";
+var version="Latest";
 var errorcount=0;
+//gets version
+var xmlhttp = new XMLHttpRequest();
+var url = "https://api.github.com/repos/doruksega/artifactreborn/commits/master";
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var result = JSON.parse(this.responseText);
+        if(result["commit"]["message"].includes("Version")){
+          version = result["commit"]["message"].split("\n")[0];
+        } 
+    }
+};
+xmlhttp.open("GET", url, false);
+xmlhttp.send();
+console.log("%c["+gamename+"]",'color: #128F00'); //posts game name I guess
+console.log("%c"+version,'color: #128F00');
 //document.addEventListener('contextmenu', event => event.preventDefault()); //disables right click
 function error(input){
     errorcount=errorcount+1;
@@ -55,4 +71,53 @@ function zoomtocombat(combat){
 function decodedeck(input){
     var data = CArtifactDeckDecoder.ParseDeck(input);
     return data;
+}
+var commits;
+
+function loadnews(){
+  var logtext="";
+  var url = "https://api.github.com/repos/doruksega/artifactreborn/events";
+  xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var result = JSON.parse(this.responseText);
+        commits=result;
+        var i=0;
+        do {
+          try {
+            if (result[i]["payload"]["commits"][0]["message"].includes("Version")){
+              logtext=logtext+ result[i]["payload"]["commits"][0]["message"] +"\n\n"
+            }
+          } catch (error) {
+          }
+          i=i+1;
+        } while (i < commits.length-1);
+      }
+  };
+  xmlhttp.open("GET", url, false);
+  xmlhttp.send();
+  $(".Pcommitlog").text(logtext);
+}
+function news(){
+  if ($(".P").is(":hidden")==true){
+    $(".P").show();
+    $(".S").hide();
+  }
+  else {
+    $(".P").hide();
+}
+}
+function settings(){
+  if ($(".S").is(":hidden")==true){
+    $(".S").show();
+    $(".P").hide();
+  }
+  else {
+    $(".S").hide();
+}
+}
+function gamefornow(){
+  $(".P").hide();
+  $(".S").hide();
+  $(".gamearea").show();
+  $(".menu").hide();
 }

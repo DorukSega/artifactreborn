@@ -15,8 +15,29 @@
     <script src="js/base.js"></script>
     <script src="js/json_actions.js"></script>
     <script src="js/visual_actions.js"></script>
-    <div class="loading" style="display: none;"><img src="css/gfx/loading_background.png" class="boardbackground"></div> <!-- Maybe use later -->
-    <div class="gamearea" id="gamearea">
+    <div class="loading" style="display: none;"><img src="css/gfx/loading_background.png" class="boardbackground"></div>
+    <div class="menu">
+        <img src="css/gfx/temp_background.png" class="boardbackground">
+        <img class="Mlogo" src="css/gfx/artifactlogo.png">
+        <img src="css/gfx/news.png" onclick="news()" class="Mnews">
+        <img src="css/gfx/gear.png" onclick="settings()" class="Mgear">
+        <img src="css/gfx/quit.png" onclick="reload()" class="Mquit">
+        <div class="Mseperator"></div><div class="Mseperator2"></div>
+        <div class="M">
+            <div class="Mplayartifact" onclick="gamefornow()"><div class="Mtext">PLAY ARTIFACT</div></div>
+            <div class="Mcardcollection"><div class="Mtext">CARD COLLECTION</div></div>
+            <div class="Mversion"></div>
+        </div>
+        <div class="P" style="display: none;">
+            <div class="Pcommitlog">
+            </div>
+            <img src="css/gfx/x_close.png" onclick="news()" class="Pclose">
+        </div>
+        <div class="S" style="display: none;">
+            <img src="css/gfx/x_close.png" onclick="settings()" class="Sclose">
+        </div>
+    </div>
+    <div class="gamearea" id="gamearea" style="display: none;">
         <div class="hand">
             <div class="handslot1">
                 <div class="handcardbackground" draggable="false" ondragstart="drag(event)" style="display: none;">
