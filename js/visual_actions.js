@@ -6,14 +6,15 @@ var towerimps=7;
 var checksum="";
 function loadchecksum(){
     var ctx = new Checksum("bsd16", 0);
-    var string = document.documentElement.innerHTML;
+    var rx = new RegExp("<script[\\d\\D]*?\/script>", "g");
+    var string = document.getElementsByTagName('body')[0].innerHTML.replaceAll(rx,"").replace("<!-- Code injected by live-server -->","");
     var i=0;
     do {
         string= string + cards[i]["name"];
         i = i + 1;
       } while (i < cards.length);
     ctx.updateStringly(string);
-    //console.log(string)
+    console.log(string)
     checksum=ctx.result.toString(16);
     return checksum;
   }
