@@ -3,15 +3,31 @@ var shoplevel=0;
 var p0hslots =[]; //Player 0 Hand Card Slots
 var handcardamount=12; //for future, different rules and so on
 var towerimps=7;
+var checksum="";
+function loadchecksum(){
+    var ctx = new Checksum("bsd16", 0);
+    var string = document.documentElement.innerHTML;
+    var i=0;
+    do {
+        string= string + cards[i]["name"];
+        i = i + 1;
+      } while (i < cards.length);
+    ctx.updateStringly(string);
+    //console.log(string)
+    checksum=ctx.result.toString(16);
+    return checksum;
+  }
 function load(){
-    $(".Mversion").text(gamename+" - "+version);
+    loadchecksum()
     preload("css/gfx/artifactboard.png");
     preload("css/gfx/dcgstarfield.png");
     preload("css/gfx/bg_profile.png");
     preload("css/cardart/full_art/1098.png");
     preload("css/cardart/full_art/1526.png");
     console.log("%c["+gamename+"]",'color: #128F00'); //posts game name I guess
-    console.log("%c"+version,'color: #128F00');
+    console.log(version);
+    console.log("Checksum: "+ checksum)
+    $(".Mversion").text(gamename+" - "+version+"\n\n"+"Checksum: "+checksum);
 }
 function gameload() {  
     aiversusgamerules() //for now

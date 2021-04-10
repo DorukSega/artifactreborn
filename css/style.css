@@ -894,6 +894,11 @@ img{
     padding-right: 60px;
     bottom: 29px;
     right: 7px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-align: center;
 }
 .Mnews{
     position: fixed;
@@ -1018,7 +1023,6 @@ img{
 }
 .Pcommitlog{
     overflow: auto;
-    white-space: pre-wrap;
     width: 760px;
     height: 755px;
     position: absolute;
@@ -1027,6 +1031,7 @@ img{
     position: fixed;
     display: inline-flex;
     padding: 20px;
+    white-space: pre-wrap;
     word-break: break-word;
     overflow-wrap: break-word;
     word-wrap: break-word;
