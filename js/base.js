@@ -101,7 +101,7 @@ function loadnews(){
   $(".Pcommitlog").text(logtext);
 }
 function menuload(){
-  
+  $(".Mversion").text(gamename+" - "+version);
     loadnews();
     preload("css/gfx/artifactboard.png");
     preload("css/gfx/dcgstarfield.png");
@@ -190,5 +190,5 @@ function cardcollection(){
   $(".Iinnersolo").hide();
 }
 function Iplay(){
-  window.location.replace("/gameindex.html");
+  window.location.href =("/gameindex.html");
 }
