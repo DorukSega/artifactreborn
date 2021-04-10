@@ -14,8 +14,6 @@ xmlhttp.onreadystatechange = function() {
 };
 xmlhttp.open("GET", url, false);
 xmlhttp.send();
-console.log("%c["+gamename+"]",'color: #128F00'); //posts game name I guess
-console.log("%c"+version,'color: #128F00');
 //document.addEventListener('contextmenu', event => event.preventDefault()); //disables right click
 function error(input){
     errorcount=errorcount+1;
@@ -77,6 +75,15 @@ function decodedeck(input){
     return data;
 }
 var commits;
+function menuload(){
+  $(".Mversion").text(gamename+" - "+version);
+    loadnews();
+    preload("css/gfx/artifactboard.png");
+    preload("css/gfx/dcgstarfield.png");
+    preload("css/gfx/bg_profile.png");
+    preload("css/cardart/full_art/1098.png");
+    preload("css/cardart/full_art/1526.png");
+}
 function loadnews(){
   var logtext="";
   var url = "https://api.github.com/repos/doruksega/artifactreborn/events";
@@ -99,15 +106,6 @@ function loadnews(){
   xmlhttp.open("GET", url, false);
   xmlhttp.send();
   $(".Pcommitlog").text(logtext);
-}
-function menuload(){
-  $(".Mversion").text(gamename+" - "+version);
-    loadnews();
-    preload("css/gfx/artifactboard.png");
-    preload("css/gfx/dcgstarfield.png");
-    preload("css/gfx/bg_profile.png");
-    preload("css/cardart/full_art/1098.png");
-    preload("css/cardart/full_art/1526.png");
 }
 function news(){
   if ($(".P").is(":hidden")==true){
@@ -135,7 +133,7 @@ function Mlogo(){
     $(".M").removeClass("hide");
     $(".Mlogo").removeClass("Mlogoanimforw");
     $(".Mlogo").addClass("Mlogoanimback");
-    $(".menu").children(".boardbackground").attr("src","css/gfx/temp_background.png")
+    $(".menupage").children(".boardbackground").attr("src","css/gfx/temp_background.png")
   }
   else{
     $(".M").hide();
@@ -144,7 +142,7 @@ function Mlogo(){
     $(".Mlogo").addClass("Mlogoanimforw");
     $(".Mlogo").removeClass("Mlogoanimback");
     $(".M").addClass("hide");
-    $(".menu").children(".boardbackground").attr("src","css/gfx/dcgstarfield.png")
+    $(".menupage").children(".boardbackground").attr("src","css/gfx/dcgstarfield.png")
   }
 }
 function Ibutton(type){
@@ -190,5 +188,9 @@ function cardcollection(){
   $(".Iinnersolo").hide();
 }
 function Iplay(){
-  window.location.href =("/gameindex.html");
+  $(".P").hide();
+  $(".S").hide();
+  $(".gamearea").show();
+  $(".menupage").hide();
+  gameload();
 }

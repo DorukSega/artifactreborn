@@ -4,11 +4,16 @@ var p0hslots =[]; //Player 0 Hand Card Slots
 var handcardamount=12; //for future, different rules and so on
 var towerimps=7;
 function load(){
+    $(".Mversion").text(gamename+" - "+version);
     preload("css/gfx/artifactboard.png");
     preload("css/gfx/dcgstarfield.png");
     preload("css/gfx/bg_profile.png");
     preload("css/cardart/full_art/1098.png");
     preload("css/cardart/full_art/1526.png");
+    console.log("%c["+gamename+"]",'color: #128F00'); //posts game name I guess
+    console.log("%c"+version,'color: #128F00');
+}
+function gameload() {  
     aiversusgamerules() //for now
     drawcard("Legion Standard Bearer");
     drawcard("Cursed Satyr");
@@ -30,7 +35,7 @@ function load(){
     placecard(0,1,5,"Keefe the Bold");
     placecard(0,2,5,"Luna");
     placecard(0,3,3,"Legion Commander");
-    $(".handcardbackground").attr("draggable","true");
+    //$(".handcardbackground").attr("draggable","true");
     //$(".cardbackground").show();
     //$(".cardart").show();
     //$(".handcardbackground").show();
@@ -42,8 +47,6 @@ function load(){
     //$(".handhealthcontainer").show();
     //$(".handicon").show();
     //$(".impshell").hide();
-    //console.log(window.innerWidth)
-    //console.log(window.innerHeight)
 }
 function aiversusgamerules() { 
     handcardamount=12;
