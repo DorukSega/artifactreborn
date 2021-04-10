@@ -23,7 +23,7 @@ function error(input){
 }
 function preload() { 
   var img=new Image();
-  img.src="css/gfx/artifactboard.png";
+  img.src=url;
  }
 function getRndInteger(min, max) {
     var maxreal = parseInt(max) + 1  

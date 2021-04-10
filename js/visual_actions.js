@@ -6,7 +6,9 @@ var towerimps=7;
 function load(){
     $(".Mversion").text(gamename+" - "+version);
     loadnews();
-    preload()
+    preload("css/gfx/artifactboard.png");
+    preload("css/gfx/dcgstarfield.png");
+    preload("css/gfx/bg_profile.png");
     aiversusgamerules() //for now
     drawcard("Legion Standard Bearer");
     drawcard("Cursed Satyr");
