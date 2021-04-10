@@ -4,11 +4,11 @@ var p0hslots =[]; //Player 0 Hand Card Slots
 var handcardamount=12; //for future, different rules and so on
 var towerimps=7;
 function load(){
-    $(".Mversion").text(gamename+" - "+version);
-    loadnews();
     preload("css/gfx/artifactboard.png");
     preload("css/gfx/dcgstarfield.png");
     preload("css/gfx/bg_profile.png");
+    preload("css/cardart/full_art/1098.png");
+    preload("css/cardart/full_art/1526.png");
     aiversusgamerules() //for now
     drawcard("Legion Standard Bearer");
     drawcard("Cursed Satyr");

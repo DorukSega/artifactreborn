@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="Artifact Reborn, fan made remake/remaster for the Artifact.">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Artifact Reborn</title>
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body id="body" onload="menuload();">
+    <script src="js/external_libs/jquery-3.6.0.min.js"></script>
+    <script src="js/external_libs/zoom.js"></script>
+    <script src="js/external_libs/deckdecoder.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/json_actions.js"></script>
+    <!-- <div class="loading" style="display: none;"><img src="css/gfx/loading_background.png" class="boardbackground"></div> -->
+    <div class="menu">
+        <img src="css/gfx/temp_background.png" class="boardbackground">
+        <img class="Mlogo" onclick="Mlogo()" src="css/gfx/artifactlogo.png">
+        <img src="css/gfx/news.png" onclick="news()" class="Mnews">
+        <img src="css/gfx/gear.png" onclick="settings()" class="Mgear">
+        <img src="css/gfx/quit.png" onclick="reload()" class="Mquit">
+        <div class="Mseperator"></div><div class="Mseperator2"></div>
+        <div class="Mversion"></div>
+        <div class="M">
+            <div class="Mnewsburger" onclick=" window.open('https://discord.gg/U2ma9ssNFC');">
+                <div class="Minnerimage"></div>
+                <div class="Mnewstext">Join Our Discord</div>
+            </div>
+            <div class="Mplayartifact" onclick="playartifact()"><div class="Mtext">PLAY ARTIFACT</div></div>
+            <div class="Mcardcollection" onclick="cardcollection()"><div class="Mtext">CARD COLLECTION</div></div>
+        </div>
+        <div class="P" style="display: none;">
+            <div class="Pcommitlog">
+            </div>
+            <img src="css/gfx/x_close.png" onclick="news()" class="Pclose">
+        </div>
+        <div class="S" style="display: none;">
+            <img src="css/gfx/x_close.png" onclick="settings()" class="Sclose">
+        </div>
+        <div class="I" style="display: none;">
+            <div class="Itopbar">
+                <div class="Ibutton Isolo Ibuttonselected" onclick="Ibutton('solo')"><div class="Itext">SOLO PLAY</div></div>
+                <div class="Ibutton Imatchmaking" onclick="Ibutton('mm')"><div class="Itext">MATCHMAKING</div></div>
+                <div class="Ibutton Icollection" onclick="Ibutton('col')"><div class="Itext">COLLECTION</div></div>
+                <div class="Ibutton Ileadboard" onclick="Ibutton('lead')"><div class="Itext">LEADBOARD</div></div>
+            </div>
+            <div class="Iinnersolo">
+                <div class="Iinnersolobottom">
+                <div class="Iinnersoloplay" onclick="Iplay()">PLAY</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

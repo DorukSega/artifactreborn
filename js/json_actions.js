@@ -1,12 +1,12 @@
 var cards;
 //this is a json call for chrome and edge since they can keep up
-var jsonreq= $.getJSON("cards.json", function(result) {
+var jsonreq= $.getJSON("json/cards.json", function(result) {
     cards = result["cards"];
 });
 if (cards==undefined){
 //This here is a sync call because mozilla cant keep up
 var xmlhttp = new XMLHttpRequest();
-var url = "cards.json";
+var url = "json/cards.json";
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var result = JSON.parse(this.responseText);

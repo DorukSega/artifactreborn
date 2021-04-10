@@ -77,7 +77,6 @@ function decodedeck(input){
     return data;
 }
 var commits;
-
 function loadnews(){
   var logtext="";
   var url = "https://api.github.com/repos/doruksega/artifactreborn/events";
@@ -100,6 +99,15 @@ function loadnews(){
   xmlhttp.open("GET", url, false);
   xmlhttp.send();
   $(".Pcommitlog").text(logtext);
+}
+function menuload(){
+  
+    loadnews();
+    preload("css/gfx/artifactboard.png");
+    preload("css/gfx/dcgstarfield.png");
+    preload("css/gfx/bg_profile.png");
+    preload("css/cardart/full_art/1098.png");
+    preload("css/cardart/full_art/1526.png");
 }
 function news(){
   if ($(".P").is(":hidden")==true){
@@ -182,8 +190,5 @@ function cardcollection(){
   $(".Iinnersolo").hide();
 }
 function Iplay(){
-  $(".P").hide();
-  $(".S").hide();
-  $(".gamearea").show();
-  $(".menu").hide();
+  window.location.replace("/gameindex.html");
 }
