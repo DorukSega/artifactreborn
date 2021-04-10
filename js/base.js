@@ -21,6 +21,10 @@ function error(input){
     errorcount=errorcount+1;
     console.log("%c["+errorcount+"]%c["+gamename+"_Error]"+"%c > "+"%c" + input, 'color: #00128F','color: #128F00','color: #0600B2', 'color: #CF5353');
 }
+function preload() { 
+  var img=new Image();
+  img.src="css/gfx/artifactboard.png";
+ }
 function getRndInteger(min, max) {
     var maxreal = parseInt(max) + 1  
     return Math.floor(Math.random() * (maxreal - parseInt(min))) + parseInt(min);
@@ -159,10 +163,10 @@ function Ibutton(type){
     $(".Icollection").removeClass("Ibuttonselected");
   }
   if(type=="lead" & $(".Ileadboard").hasClass("Ibuttonselected")==false){
-
+    $(".Ileadboard").addClass("Ibuttonselected");
   }
   else{
-    
+    $(".Ileadboard").removeClass("Ibuttonselected");
   }
 }
 function playartifact(){
