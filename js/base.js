@@ -115,7 +115,69 @@ function settings(){
     $(".S").hide();
 }
 }
-function gamefornow(){
+function Mlogo(){
+  if ($(".Mlogo").hasClass("Mlogoanimforw")){
+    $(".M").show();
+    $(".I").hide();
+    $(".I").addClass("hide");
+    $(".M").removeClass("hide");
+    $(".Mlogo").removeClass("Mlogoanimforw");
+    $(".Mlogo").addClass("Mlogoanimback");
+    $(".menu").children(".boardbackground").attr("src","css/gfx/temp_background.png")
+  }
+  else{
+    $(".M").hide();
+    $(".I").show();
+    $(".I").removeClass("hide");
+    $(".Mlogo").addClass("Mlogoanimforw");
+    $(".Mlogo").removeClass("Mlogoanimback");
+    $(".M").addClass("hide");
+    $(".menu").children(".boardbackground").attr("src","css/gfx/dcgstarfield.png")
+  }
+}
+function Ibutton(type){
+  $(".Iinnersolo").hide();
+  $(".Ibutton").removeClass("Ibuttonselected");
+  if(type=="solo" & $(".Isolo").hasClass("Ibuttonselected")==false){
+    $(".Isolo").addClass("Ibuttonselected");
+    $(".Iinnersolo").show();
+  }
+  else{
+    $(".Isolo").removeClass("Ibuttonselected");
+    $(".Iinnersolo").hide();
+  }
+  if(type=="mm" & $(".Imatchmaking").hasClass("Ibuttonselected")==false){
+    $(".Imatchmaking").addClass("Ibuttonselected");
+  }
+  else{
+    $(".Imatchmaking").removeClass("Ibuttonselected");
+  }
+  if(type=="col" & $(".Icollection").hasClass("Ibuttonselected")==false){
+    $(".Icollection").addClass("Ibuttonselected");
+  }
+  else{
+    $(".Icollection").removeClass("Ibuttonselected");
+  }
+  if(type=="lead" & $(".Ileadboard").hasClass("Ibuttonselected")==false){
+
+  }
+  else{
+    
+  }
+}
+function playartifact(){
+  Mlogo();
+  $(".Ibutton").removeClass("Ibuttonselected");
+  $(".Isolo").addClass("Ibuttonselected");
+  $(".Iinnersolo").show();
+}
+function cardcollection(){
+  Mlogo();
+  $(".Ibutton").removeClass("Ibuttonselected");
+  $(".Icollection").addClass("Ibuttonselected");
+  $(".Iinnersolo").hide();
+}
+function Iplay(){
   $(".P").hide();
   $(".S").hide();
   $(".gamearea").show();
