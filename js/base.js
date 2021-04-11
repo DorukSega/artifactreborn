@@ -19,15 +19,6 @@ function error(input){
     errorcount=errorcount+1;
     console.log("%c["+errorcount+"]%c["+gamename+"_Error]"+"%c > "+"%c" + input, 'color: #00128F','color: #128F00','color: #0600B2', 'color: #CF5353');
 }
-
-function preload(url) { 
-  var img=new Image();
-  img.src=url;
-  img.width="0";
-  img.height=0;
-  //img.style.display="none";
-  body.appendChild(img);
- }
 function getRndInteger(min, max) {
     var maxreal = parseInt(max) + 1  
     return Math.floor(Math.random() * (maxreal - parseInt(min))) + parseInt(min);
