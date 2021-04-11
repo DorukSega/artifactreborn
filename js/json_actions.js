@@ -19,7 +19,7 @@ xmlhttp.send();
 function loadallcardart() { 
     var i =0;
     do {
-        preload("css/cardart/full_art/" + cards[i]["id"] + ".png");
+        preload("css/card_art/full_art/" + cards[i]["id"] + ".png");
         i = i + 1;
       } while (i < cards.length);
  }
