@@ -16,6 +16,13 @@ xmlhttp.onreadystatechange = function() {
 xmlhttp.open("GET", url, false);
 xmlhttp.send();
 }
+function loadallcardart() { 
+    var i =0;
+    do {
+        preload("css/cardart/full_art/" + cards[i]["id"] + ".png");
+        i = i + 1;
+      } while (i < cards.length);
+ }
 function checkcardexists(name){
    var i =0;
    var data="";

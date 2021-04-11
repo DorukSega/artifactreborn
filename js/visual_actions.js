@@ -14,12 +14,13 @@ function loadchecksum(){
         i = i + 1;
       } while (i < cards.length);
     ctx.updateStringly(string);
-    console.log(string)
+    //console.log(string)
     checksum=ctx.result.toString(16);
     return checksum;
   }
 function load(){
     loadchecksum()
+    loadnews()
     preload("css/gfx/artifactboard.png");
     preload("css/gfx/dcgstarfield.png");
     preload("css/gfx/bg_profile.png");

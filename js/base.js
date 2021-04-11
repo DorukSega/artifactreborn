@@ -81,8 +81,7 @@ function menuload(){
     preload("css/gfx/artifactboard.png");
     preload("css/gfx/dcgstarfield.png");
     preload("css/gfx/bg_profile.png");
-    preload("css/cardart/full_art/1098.png");
-    preload("css/cardart/full_art/1526.png");
+    loadallcardart();
 }
 function loadnews(){
   var logtext="";
