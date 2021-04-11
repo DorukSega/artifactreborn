@@ -24,13 +24,15 @@ function load(){
     preload("css/gfx/artifactboard.png");
     preload("css/gfx/dcgstarfield.png");
     preload("css/gfx/bg_profile.png");
-    loadallcardart();
     console.log("%c["+gamename+"]",'color: #128F00'); //posts game name I guess
     console.log(version);
     console.log("Checksum: "+ checksum)
     $(".Mversion").text(gamename+" - "+version+"\n\n"+"Checksum: "+checksum);
 }
-function gameload() {  
+async function gameload() { 
+    await loadallcardart(); 
+    $(".loading").hide();
+    $(".gamearea").show();
     aiversusgamerules() //for now
     drawcard("Legion Standard Bearer");
     drawcard("Cursed Satyr");

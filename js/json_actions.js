@@ -16,7 +16,7 @@ xmlhttp.onreadystatechange = function() {
 xmlhttp.open("GET", url, false);
 xmlhttp.send();
 }
-function loadallcardart() { 
+async function loadallcardart() { 
     var i =0;
     do {
         preload("css/card_art/full_art/" + cards[i]["id"] + ".png");

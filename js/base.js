@@ -185,7 +185,7 @@ function cardcollection(){
 function Iplay(){
   $(".P").hide();
   $(".S").hide();
-  $(".gamearea").show();
+  $(".loading").show();
   $(".menupage").hide();
   gameload();
 }
