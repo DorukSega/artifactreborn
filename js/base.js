@@ -28,28 +28,6 @@ function preload(url) {
   //img.style.display="none";
   body.appendChild(img);
  }
- function preloadall(){
-  var img_to_load = [];
-  img_to_load=img_to_load.concat(getallcardarts());
-  //console.log(img_to_load);
-  var loaded_images = 0;
-  for (var i=0; i<img_to_load.length; i++) {
-      var img = document.createElement('img');
-      img.src = img_to_load[i];
-      img.style.display = 'hidden'; // don't display preloaded images
-      img.onload = function () {
-          loaded_images ++;
-          if (loaded_images == img_to_load.length) {
-            $(".gamearea").show();
-            gameload();
-          }
-          else {
-             // console.log((100*loaded_images/img_to_load.length) + '% loaded');
-          }
-      }
-      document.body.appendChild(img);
-  }
- }
 function getRndInteger(min, max) {
     var maxreal = parseInt(max) + 1  
     return Math.floor(Math.random() * (maxreal - parseInt(min))) + parseInt(min);
@@ -209,5 +187,5 @@ function Iplay(){
   $(".P").hide();
   $(".S").hide();
   $(".menupage").hide();
-  preloadall()
+  preloadall();
 }
