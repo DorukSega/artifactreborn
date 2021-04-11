@@ -45,7 +45,7 @@ function preloadall(){
               gameload();
             }
             else {
-               // console.log((100*loaded_images/img_to_load.length) + '% loaded');
+                $(".Lpercentage").text(Math.round((100*loaded_images/img_to_load.length)) + "%")
             }
         }
         document.body.appendChild(img);

@@ -187,5 +187,6 @@ function Iplay(){
   $(".P").hide();
   $(".S").hide();
   $(".menupage").hide();
+  $(".loading").show();
   preloadall();
 }
