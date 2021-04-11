@@ -24,8 +24,7 @@ function load(){
     preload("css/gfx/artifactboard.png");
     preload("css/gfx/dcgstarfield.png");
     preload("css/gfx/bg_profile.png");
-    preload("css/cardart/full_art/1098.png");
-    preload("css/cardart/full_art/1526.png");
+    loadallcardart();
     console.log("%c["+gamename+"]",'color: #128F00'); //posts game name I guess
     console.log(version);
     console.log("Checksum: "+ checksum)

@@ -75,14 +75,6 @@ function decodedeck(input){
     return data;
 }
 var commits;
-function menuload(){
-  $(".Mversion").text(gamename+" - "+version);
-    loadnews();
-    preload("css/gfx/artifactboard.png");
-    preload("css/gfx/dcgstarfield.png");
-    preload("css/gfx/bg_profile.png");
-    loadallcardart();
-}
 function loadnews(){
   var logtext="";
   var url = "https://api.github.com/repos/doruksega/artifactreborn/events";
