@@ -29,10 +29,7 @@ function load(){
     console.log("Checksum: "+ checksum)
     $(".Mversion").text(gamename+" - "+version+"\n\n"+"Checksum: "+checksum);
 }
-async function gameload() { 
-    await loadallcardart(); 
-    $(".loading").hide();
-    $(".gamearea").show();
+function gameload() { 
     aiversusgamerules() //for now
     drawcard("Legion Standard Bearer");
     drawcard("Cursed Satyr");

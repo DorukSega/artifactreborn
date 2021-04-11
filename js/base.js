@@ -19,6 +19,7 @@ function error(input){
     errorcount=errorcount+1;
     console.log("%c["+errorcount+"]%c["+gamename+"_Error]"+"%c > "+"%c" + input, 'color: #00128F','color: #128F00','color: #0600B2', 'color: #CF5353');
 }
+
 function preload(url) { 
   var img=new Image();
   img.src=url;
@@ -26,6 +27,28 @@ function preload(url) {
   img.height=0;
   //img.style.display="none";
   body.appendChild(img);
+ }
+ function preloadall(){
+  var img_to_load = [];
+  img_to_load=img_to_load.concat(getallcardarts());
+  //console.log(img_to_load);
+  var loaded_images = 0;
+  for (var i=0; i<img_to_load.length; i++) {
+      var img = document.createElement('img');
+      img.src = img_to_load[i];
+      img.style.display = 'hidden'; // don't display preloaded images
+      img.onload = function () {
+          loaded_images ++;
+          if (loaded_images == img_to_load.length) {
+            $(".gamearea").show();
+            gameload();
+          }
+          else {
+             // console.log((100*loaded_images/img_to_load.length) + '% loaded');
+          }
+      }
+      document.body.appendChild(img);
+  }
  }
 function getRndInteger(min, max) {
     var maxreal = parseInt(max) + 1  
@@ -185,7 +208,6 @@ function cardcollection(){
 function Iplay(){
   $(".P").hide();
   $(".S").hide();
-  $(".loading").show();
   $(".menupage").hide();
-  gameload();
+  preloadall()
 }
