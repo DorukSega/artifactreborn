@@ -118,6 +118,7 @@ html{
     width: 100%;
 }
 body{
+    cursor: url("gfx/cursor.png"), auto;
     font-family: Radiance;
     height: 100%;
     width: 100%;
