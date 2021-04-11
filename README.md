@@ -13,8 +13,8 @@ We're doing this project for a few reasons; proving that a fun version of Artifa
   - Multiplayer implementation (Matchmaking).
   - Biweekly puzzles with prizes to promote the project and a puzzle maker to make your own.
   - A leadboard and unlockable cosmetics based on levels or xp
-  - adding more cards to the game by commisioning independent artists.
-  - simple deckbuilder with ability to export/import decks from Artifact Foundry
+  - Adding more cards to the game by commisioning independent artists.
+  - Simple deckbuilder with ability to export/import decks from Artifact Foundry
   - Doing general GUI puzzle/mod support mode with a lot of options, as well a card maker and a way to easly get a print ready version of cards.
   - 3 lane mode that is more close to Foundry or exactly same.
   - A 2 lane casual targeted mode.
