@@ -1,8 +1,8 @@
 ## What is Artifact Reborn?
 
 Artifact Reborn is an open source, non-profit, fan creation of [Artifact](https://playartifact.com/). 
-Started after Artifact Foundry's [end of development](https://store.steampowered.com/news/app/583950/view/3047218819080842820), it's fan passion project. 
-Its goal is to provide a moddable, expandable or even improvable alternative to Artifact Foundry. 
+Started after Artifact Foundry's [end of development](https://store.steampowered.com/news/app/583950/view/3047218819080842820), it's a fan passion project. 
+Its goal is to provide a moddable, expandable or even improvable alternative to previous Artifact games.
 
 We're doing this project for a few reasons; proving that a fun version of Artifact can be made, providing commmunity open source tools they can use to make their own versions (with highly modifiable puzzle/mod maker), and because it's a lot of fun.
 
@@ -29,4 +29,4 @@ We're doing this project for a few reasons; proving that a fun version of Artifa
 
 [Matthew Lane](https://github.com/GreyMatteOr)  - Developer
 
-Artifact Reborn is not affiliated with [Valve and Valve Software®](https://www.valvesoftware.com/).
+Artifact Reborn is **not** affiliated with [Valve Software®](https://www.valvesoftware.com/).

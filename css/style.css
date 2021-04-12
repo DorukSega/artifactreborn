@@ -154,32 +154,34 @@ img{
 .separator1{
     position: fixed;
     top: 21%;
-    left: 33.68%;
-    height: 50%;
+    left: 33.3%;
+    height: 52%;
+    width: 0.55%;
 }
 .separator2{
     position: fixed;
     top: 21%;
-    left: 66.08%;
-    height: 50%;
+    left: 66.2%;
+    height: 52%;
+    width: 0.55%;
 }
 .player1manapools{
     position: fixed;
-    bottom: 29%;
+    bottom: 30%;
     z-index: 1;
 }
 .player0manapools{
     position: fixed;
-    top: 18.5%;
+    top: 21%;
     z-index: 1;
 }
 .manapool1{
     position: fixed;
-    left: 31.58%;
+    left: 31.08%;
 }
 .manapool2{
     position: fixed;
-    left: 64.02%;
+    left: 64%;
 }
 .manapool{
     text-align:center;
@@ -195,6 +197,7 @@ img{
     font-weight:bolder;
     line-height: 95px;
     text-align: center;
+    box-shadow: -8.5px -10px 8px rgba(0, 0, 0, 0.5)
 }
 .manaamount{
     background-color: #5D6466;
@@ -205,79 +208,79 @@ img{
 }
 .p0impcontainer{
     position: fixed;
-    top: 27%;
+    top: 29.2%;
 }
 .p1impcontainer{
     position: fixed;
-    bottom: 34%;
+    bottom: 35%;
 }
 .imp1{
     position: absolute;
-    left: 258.5px;
+    left: 267px;
 }
 .imp2{
     position: absolute;
-    left: 343.5px;
+    left: 354px;
 }
 .imp3{
     position: absolute;
-    left: 173.5px;
+    left: 180px;
 }
 .imp4{
     position: absolute;
-    left: 428.5px;
+    left: 441px;
 }
 .imp5{
     position: absolute;
-    left: 88.5px;
+    left: 93px;
 }
 .imp6{
     position: absolute;
-    left: 513.5px;
+    left: 528px;
 }
 .imp7{
     position: absolute;
-    left: 3.5px;
+    left: 6px;
 }
 .impart{
     border-radius: 50%;
-    height: 51px;
-    width: 51px;
+    height: 48px;
+    width: 48px;
     top: 50%;
     left: 50%;
-    transform: translate(2px, 0.4px);
+    transform: translate(1.5px, -3px);
 }
 .impshell{
-    height: 66px;
-    width: 66px;
+    height: 62px;
+    width: 62px;
     background-color: #787671;
-    box-shadow:  -5px -6px 5px black;
+    box-shadow:  -5px -6px 5px rgba(0, 0, 0, 0.6);
     background: -webkit-linear-gradient(90deg,#56504F,#787671);
     border-radius: 50%;
     line-height: 95px;
 }
 .impshell2{
-    height: 55px;
-    width: 55px;
+    height: 51px;
+    width: 51px;
     background-color: #C4D3CC;
     box-shadow:  0px 0px 3px #56504F;
     border-radius: 50%;
     line-height: 95px;
     top: 50%;
     left: 50%;
-    transform: translate(5.75px, 5.75px);
+    transform: translate(5.5px, 5.5px);
 }
 .player1towers{
     position: fixed;
-    bottom: 26%;
+    bottom: 27.2%;
 }
 .player0towers{
     position: fixed;
-    top: 13%;
+    top: 16.95%;
 }
 .outershell{
-    height: 120px;
-    width: 120px;
+    height: 110px;
+    width: 110px;
     color: #f2f2f2;
     font-size:48px;
     background-color: #9E9E9E;
@@ -285,6 +288,7 @@ img{
     background-image:linear-gradient(90deg, transparent 50%, #2D2D2D 0);
     border-radius: 50%;
     line-height: 95px;
+    box-shadow: -10px -12px 10px rgba(0, 0, 0, 0.6)
 }
 .outershell::before {
     content: "";
@@ -299,34 +303,34 @@ img{
 .tower{
     text-align:center;
     position:inherit;
-    height: 95px;
-    width: 95px;
+    height: 90px;
+    width: 90px;
     font-size:48px;
     background-color: #2D2D2D;
     border-radius: 50%;
     display: inline-block;
     top: 50%;
     left: 50%;
-    transform: translate(12.5%, -112.5%);
+    transform: translate(11.3%, -111.3%);
 }
 .tower1{
     position: fixed;
-    left: 282.5px;
+    left: 272px;
 }
 .tower2{
     position: fixed;
-    left: 47.25%;
+    left: 47.15%;
 }
 .tower3{
     position: fixed;
-    left: 79.40%;
+    left: 80%;
 }
 
 .p0board{
     position: fixed;
     width: 100%;
     height: 120px;
-    top: 36%;
+    top: 37%;
     left: 0%;
     z-index: 2;
 }
@@ -334,7 +338,7 @@ img{
     position: fixed;
     width: 100%;
     height: 120px;
-    top:52.2%;
+    top: 51.8%;
     left: 0%;
     z-index: 2;
 }
@@ -366,42 +370,42 @@ img{
 }
 .combat1{
     position:relative;
-    left: 2.5%;
+    left: 1.5%;
 }
 .combat2{
     position: relative;
-    left: 35%;
+    left: 34.425%;
 }
 .combat3{
     position: relative;
-    left: 67.25%;
+    left: 67.35%;
 }
 .slot1{
     position: absolute;
 }
 .slot2{
     position: absolute;
-    left: 85px;
+    left: 87px;
 }
 .slot3{
     position: absolute;
-    left: 170px;
+    left: 174px;
 }
 .slot4{
     position: absolute;
-    left: 255px;
+    left: 261px;
 }
 .slot5{
     position: absolute;
-    left: 340px;
+    left: 348px;
 }
 .slot6{
     position: absolute;
-    left: 425px;
+    left: 435px;
 }
 .slot7{
     position: absolute;
-    left: 510px;
+    left: 522px;
 }
 .playerarea{
     color: white;
@@ -447,7 +451,7 @@ img{
     -webkit-text-fill-color: transparent;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-52%, -50%);
 }
 .cardbackground{
     border-radius: 2.5px;
@@ -458,7 +462,7 @@ img{
     width: 77px;
     height: 120px;
     color: black;
-    box-shadow:  -3px -4px 5px black;
+    box-shadow:  -3.6px -3.9px 3px rgba(0, 0, 0, 0.6);
 }
 .cardart{
     position: absolute;
@@ -468,7 +472,7 @@ img{
 }
 .cardabilities{
     position: absolute;
-    top: 75px;
+    top: 72px;
     left: 2px;
     z-index: 1;
 }
@@ -499,7 +503,7 @@ img{
 }
 .bottomofthecard{
     position: absolute;
-    top:98px; 
+    top:98px;
     font-size: 18px;
     left: 4px;
     font-weight:bolder;
@@ -509,27 +513,27 @@ img{
 }
 .attackcontainer{
     position: absolute;
-    top: 14px;
+    top: 12px;
     left: 7px;
     text-align: center;
 }
 .armorcontainer{
     position: absolute;
-    top: 14px;
+    top: 13px;
     left: 35px;
     text-align: center;
 }
 .healthcontainer{
     position: absolute;
-    top: 14px;
-    left: 64px;
+    top: 12px;
+    left: 62px;
     text-align: center;
 }
 .varicon{
     position: absolute;
     white-space: nowrap;
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -558,7 +562,7 @@ img{
 .hand{
     position: fixed;
     bottom: 12%; /*12%*/
-    left: 45%;
+    left: 45.4%;
     z-index: 3;
 }
 .handslot1{

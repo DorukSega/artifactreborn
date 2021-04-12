@@ -94,7 +94,7 @@ function gameload() {
     //$(".handarmorcontainer").show();
     //$(".handhealthcontainer").show();
     //$(".handicon").show();
-    //$(".impshell").hide();
+    //$(".impshell").show();
 }
 function aiversusgamerules() { 
     handcardamount=12;
