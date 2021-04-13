@@ -153,16 +153,16 @@ img{
 }
 .separator1{
     position: fixed;
-    top: 21%;
+    top: 24%;
     left: 33.3%;
-    height: 52%;
+    height: 50%;
     width: 0.55%;
 }
 .separator2{
     position: fixed;
-    top: 21%;
+    top: 24%;
     left: 66.2%;
-    height: 52%;
+    height: 50%;
     width: 0.55%;
 }
 .player1manapools{
@@ -287,7 +287,7 @@ img{
     font-family:  Artifact Numbers;
     background-image:linear-gradient(90deg, transparent 50%, #2D2D2D 0);
     border-radius: 50%;
-    line-height: 95px;
+    line-height: 91px;
     box-shadow: -10px -12px 10px rgba(0, 0, 0, 0.6)
 }
 .outershell::before {
@@ -510,6 +510,7 @@ img{
     font-family:  Artifact Numbers;
     color: #e2e2e2;
     z-index: 2;
+    text-shadow: 0.6px 0.6px 1.5px black;
 }
 .attackcontainer{
     position: absolute;
@@ -550,7 +551,7 @@ img{
     text-align:center;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-45%, -55%);
 }
 .health{
     position: absolute;

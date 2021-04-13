@@ -1221,6 +1221,45 @@
           "effectdesc": ""
         }
       ]
+    },
+    {
+      "name": "Ring of Basilius",
+      "attack": 0,
+      "armor": 0,
+      "health": 0,
+      "goldcost": 20,
+      "manacost": 1,
+      "signature": "",
+      "specialaction": "",
+      "id": 10943,
+      "color": "gold",
+      "bounty": 0,
+      "charges": 0,
+      "effectdesc": "+1 Armor Aura: Your creeps have +1 Armor and -1 Bounty.",
+      "type": "item",
+      "lore": "",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": true,
+          "name": "Basilius Aura",
+          "effectdesc": "Aura: Your creeps have +1 Armor and -1 Bounty."
+        }
+      ]
     }
   ]
 }

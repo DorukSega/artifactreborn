@@ -19,7 +19,7 @@ We're doing this project for a few reasons; proving that a fun version of Artifa
   - 3 lane mode that is more close to Foundry or exactly same.
   - A 2 lane mode for more casual play.
 
-### Follow the project, give feedback and contribute on our [discord server](https://discord.gg/feb2En4hCQ).
+### Follow the project, give feedback and contribute on our [discord server](https://discord.gg/feb2En4hCQ)
 
 ### Current Team
 
@@ -29,4 +29,4 @@ We're doing this project for a few reasons; proving that a fun version of Artifa
 
 [Matthew Lane](https://github.com/GreyMatteOr)  - Developer
 
-Artifact Reborn is **not** affiliated with [Valve Software®](https://www.valvesoftware.com/).
+Artifact Reborn is **not** affiliated with Valve Software®.

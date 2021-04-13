@@ -4,7 +4,7 @@ Heroes
 
 Keefe the Bold            7 1 13
 Legion Commander          7 1 10
-Luna                      4   8             (maybe Deal 2 damage, not piercing)
+Luna                      4   8             Deal 2 damage (not piercing)
 
 4th Zeus                  4   9
 5th Crystal Maiden        3   7
