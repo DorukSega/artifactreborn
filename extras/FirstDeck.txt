@@ -3,18 +3,18 @@
 Heroes
 
 Keefe the Bold            7 1 13
-Legion Commander          7 1 9
+Legion Commander          6 1 9             heal Legion Commander 2
 Luna                      4   8             Deal 2 damage (not piercing)
 
 4th Zeus                  4   9
 5th Crystal Maiden        3   7
-6th Timbersaw             6 1 12            Move to another slot. Deal 2 damage to each enemy passed on the way
+6th Timbersaw             5 1 12            Move to another slot. Deal 2 damage to each enemy passed on the way
 
 
 Cards
 
-x1 Reckless Charge                          :bond: Up to range 2
-x2 Duel                                     :bond: Give the winner +2 attack permanently. Duel until someone dies
+x2 Reckless Charge                          :bond: Up to range 2
+x2 Duel                                     :bond: Duel until someone dies. Give the winner +2 attack permanently
 x2 Thundergod's Wrath     6 mana            Deal 4 :bond: Deal +1 damage in Zeus' lane
 x2 Eclipse                                  :bond: Deal +1 damage in Luna's lane
 x1 Frostbite              3 mana            :bond: Root it
@@ -30,7 +30,7 @@ x1 Time of Triumph        8 mana
 x1 Messenger Rookery      1 mana            Active 0, 1 Mana: Choose an ally. Choose a combat target for it
 x2 Cunning Plan           2 mana
 x2 Compel                 3 mana
-x2 Tower Barrage          3 mana            Deal 3 damage
+x1 Tower Barrage          3 mana            Deal 3 damage
 x1 Friendly Fire
 x1 Annihilation           8 mana	
 

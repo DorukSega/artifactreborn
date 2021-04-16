@@ -199,7 +199,7 @@
     },
     {
       "name": "Legion Commander",
-      "attack": 7,
+      "attack": 6,
       "armor": 1,
       "health": 9,
       "goldcost": 0,
@@ -219,7 +219,7 @@
           "active": true,
           "id": 10520,
           "name": "MOMENT OF COURAGE",
-          "effectdesc": "Whenever Legion Commander strikes a unit and survives, heal Legion Commander 3."
+          "effectdesc": "Whenever Legion Commander strikes a unit and survives, heal Legion Commander 2."
         },
         {
           "type": "active",
@@ -320,7 +320,7 @@
     },
     {
       "name": "Timbersaw",
-      "attack": 6,
+      "attack": 5,
       "armor": 1,
       "health": 12,
       "goldcost": 0,
@@ -410,7 +410,7 @@
       "color": "red",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "Caster battles another hero. &#128279; Give the winner +2 attack permanently. Duel until someone dies.",
+      "effectdesc": "Caster battles another hero. Give the winner +1 attack permanently. &#128279; Duel until someone dies. Give the winner +2 attack permanently.",
       "type": "spell",
       "lore": "How many more of our people need to die?  Let's just end this here and now. \u2014 <i>Legion Commander, The battle of Roseleaf<\/i>",
       "abilities": [
