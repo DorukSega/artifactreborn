@@ -3,7 +3,7 @@
 Heroes
 
 Keefe the Bold            7 1 13
-Legion Commander          7 1 10
+Legion Commander          7 1 9
 Luna                      4   8             Deal 2 damage (not piercing)
 
 4th Zeus                  4   9
@@ -14,11 +14,11 @@ Luna                      4   8             Deal 2 damage (not piercing)
 Cards
 
 x1 Reckless Charge                          :bond: Up to range 2
-x2 Duel                                     :bond: Give the winner +2 attack permanently
+x2 Duel                                     :bond: Give the winner +2 attack permanently. Duel until someone dies
 x2 Thundergod's Wrath     6 mana            Deal 4 :bond: Deal +1 damage in Zeus' lane
 x2 Eclipse                                  :bond: Deal +1 damage in Luna's lane
 x1 Frostbite              3 mana            :bond: Root it
-x1 Whirling Death                           :bond: Give them -3 attack instead
+x1 Whirling Death                           :bond: Damage is piercing
 
 x2 Bronze Legionnaire     3 mana   4 2 3
 x2 Legion Standard Bearer 4 mana   0   6    allied neighbors have +4 Attack.

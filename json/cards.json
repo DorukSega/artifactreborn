@@ -201,7 +201,7 @@
       "name": "Legion Commander",
       "attack": 7,
       "armor": 1,
-      "health": 10,
+      "health": 9,
       "goldcost": 0,
       "manacost": 0,
       "signature": "",
@@ -410,7 +410,7 @@
       "color": "red",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "Caster battles another hero. &#128279; Give the winner +2 attack permanently.",
+      "effectdesc": "Caster battles another hero. &#128279; Give the winner +2 attack permanently. Duel until someone dies.",
       "type": "spell",
       "lore": "How many more of our people need to die?  Let's just end this here and now. \u2014 <i>Legion Commander, The battle of Roseleaf<\/i>",
       "abilities": [
@@ -566,7 +566,7 @@
       "color": "red",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "Deal 2 damage to the caster's adjacent enemies and give them -2 attack. &#128279; Give them -3 attack instead.",
+      "effectdesc": "Deal 2 damage to the caster's adjacent enemies and give them -2 attack. &#128279; Damage is piercing.",
       "type": "spell",
       "lore": "I was nervous about following the Society of Likeminded Keenfolk to Roseleaf... Sniper had a lot of rules.  Rules like 'we can't stop to cut down every tree'.  But when he saw the Treants marching towards us, he quickly made an exception. \u2014 <i>Timbersaw, Crazed Lumberjack<\/i>",
       "abilities": [
