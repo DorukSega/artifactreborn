@@ -4,7 +4,7 @@ Heroes
 
 Keefe the Bold            7 1 13
 Legion Commander          6 1 9             heal Legion Commander 2
-Luna                      4   8             Deal 2 damage (not piercing)
+Luna                      4   8             Deal 2 damage (not piercing) stun it for 2 actions
 
 4th Zeus                  4   9
 5th Crystal Maiden        3   7
@@ -13,8 +13,8 @@ Luna                      4   8             Deal 2 damage (not piercing)
 
 Cards
 
-x2 Reckless Charge                          :bond: Up to range 2
-x2 Duel                                     :bond: Duel until someone dies. Give the winner +2 attack permanently
+x2 Reckless Charge                          (Quickcast doesn't give initiative) :bond: Up to range 2
+x2 Duel                                     (same):bond: Duel until someone dies. Give the winner +2 attack permanently
 x2 Thundergod's Wrath     6 mana            Deal 4 :bond: Deal +1 damage in Zeus' lane
 x2 Eclipse                                  :bond: Deal +1 damage in Luna's lane
 x1 Frostbite              3 mana            :bond: Root it
@@ -22,7 +22,7 @@ x1 Whirling Death                           :bond: Damage is piercing
 
 x2 Bronze Legionnaire     3 mana   4 2 3
 x2 Legion Standard Bearer 4 mana   0   6    allied neighbors have +4 Attack.
-x2 The Omexe Arena                          Enchant Lane. Aura: Nearest ally hero has rapid deployment
+x2 The Omexe Arena                          Enchant Lane. Aura: Ally in the related slot has rapid deployment
 x2 Cursed Satyr           3 mana
 x2 Back For More          4 mana            random slot
 x1 Time of Triumph        8 mana                  

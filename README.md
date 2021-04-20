@@ -1,7 +1,7 @@
 ## What is Artifact Reborn?
 
 Artifact Reborn is an open source, non-profit, fan creation of [Artifact](https://playartifact.com/). 
-Started after Artifact Foundry's [end of development](https://store.steampowered.com/news/app/583950/view/3047218819080842820), it's a fan passion project. 
+Started after Artifact Foundry's [end of development](https://store.steampowered.com/news/app/583950/view/3047218819080842820), it's a fan passion project.
 Its goal is to provide a moddable, expandable or even improvable alternative to previous Artifact games.
 
 We're doing this project for a few reasons; proving that a fun version of Artifact can be made, providing commmunity open source tools they can use to make their own versions (with highly modifiable puzzle/mod maker), and because it's a lot of fun.
@@ -12,6 +12,7 @@ We're doing this project for a few reasons; proving that a fun version of Artifa
   - A comprehensive and engaging 3 lane mode. To begin with as 1 deck vs AI.
   - Multiplayer implementation (Matchmaking).
   - Biweekly puzzles with prizes to promote the project and a puzzle maker to make your own.
+  - An advanced 1v1 Draft mode.
   - A leaderboard and unlockable cosmetics based on levels or xp.
   - Adding more cards to the game by commissioning independent artists.
   - Simple deckbuilder with ability to export/import decks, including from Artifact Foundry.

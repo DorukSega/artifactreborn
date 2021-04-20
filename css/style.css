@@ -157,6 +157,7 @@ img{
     left: 33.3%;
     height: 50%;
     width: 0.55%;
+    box-shadow: -1.8px -2px 3px rgba(0, 0, 0, 0.5)
 }
 .separator2{
     position: fixed;
@@ -164,6 +165,7 @@ img{
     left: 66.2%;
     height: 50%;
     width: 0.55%;
+    box-shadow: -1.8px -2px 3px rgba(0, 0, 0, 0.5)
 }
 .player1manapools{
     position: fixed;

@@ -139,7 +139,7 @@
           "active": true,
           "name": "LUCENT BEAM",
           "id": 10489,
-          "effectdesc": "Round Start: Deal 2 damage to a random enemy and add a charge to your Eclipse card."
+          "effectdesc": "Round Start: Deal 2 damage to a random enemy, stun it for 2 actions and add a charge to your Eclipse card."
         },
         {
           "type": "active",

@@ -21,7 +21,7 @@ function loadchecksum(){
 function load(){
     loadchecksum()
     loadnews()
-    preload("css/gfx/artifactboard.png");
+    preload("css/gfx/artifactboard.jpg");
     preload("css/gfx/dcgstarfield.png");
     preload("css/gfx/bg_profile.png");
     console.log("%c["+gamename+"]",'color: #128F00'); //posts game name I guess
