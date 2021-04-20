@@ -11,7 +11,7 @@ UPDATED AND ADDITIONAL RULES:
 
 - Hero signature cards have additional "Bond" abilities that only triggers while their owner is in play/in that lane/is the caster. Can now include 1-2 signature cards (at least 1).
 
-- Tower HP to 60, stats increased accordingly; maybe: armor a compromise between 1.0 and 2.0 (degrades by 1 with each damage instance(source)). maybe: Ancient HP 90.
+- Tower HP to 60, stats increased accordingly; maybe: armor a compromise between 1.0 and 2.0 (degrades by 1 with each damage instance/source). maybe: Ancient HP 90.
 
 - Tower Enchantments now called Lane Enchantments and can both affect the whole lane or nearest slot(s) (so be consious where you play them!).
 
