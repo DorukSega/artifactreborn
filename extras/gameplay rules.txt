@@ -11,13 +11,13 @@ UPDATED AND ADDITIONAL RULES:
 
 - Hero signature cards have additional "Bond" abilities that only triggers while their owner is in play/in that lane/is the caster. Can now include 1-2 signature cards (at least 1).
 
-- Tower HP to 60, stats increased accordingly; maybe: armor a compromise between 1.0 and 2.0 (degrades by 1 with each damage instance/source). maybe: Ancient HP 90.
+- Tower HP to 60, stats increased accordingly; likely: Armor a compromise between 1.0 and 2.0, degrading by 1 with each damage instance/source. maybe: Ancient HP 90.
 
 - Tower Enchantments now called Lane Enchantments and can both affect the whole lane or nearest slot(s) (so be consious where you play them!).
 
 - After an enemy Tower is destroyed, instead of a Melee Creep (2 2), a Mega Creep (4 4) will start spawning for you in that lane (always, and taking priority over other rules).
-(likely: only 1 Melee Creep will spawn for the side in the lane that has fewest units. 1 will spawn for both sides if equal number of units and if the lane is empty (equal); 
-important for hero deployment; can only deploy heroes/units near allies or opposite of enemies.)
-(likely: all Melee Creeps become Mega Creeps and get +2 +2 for the Night duration. if a Mega Creep has 2 or less health at round end, it dies) 
+likely: only 1 Melee Creep will spawn in the lane for the side that has fewest units. 1 will spawn for both sides if equal number of units and if the lane is empty (equal).
+important for hero deployment; can only deploy heroes/units near allies or opposite of enemies.
+likely: all Melee Creeps become Mega Creeps and get +2 +2 for the Night duration. if a Mega Creep has 2 or less health at round end, it dies.
 
 ---work in progress---

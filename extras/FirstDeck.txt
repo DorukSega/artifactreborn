@@ -1,6 +1,6 @@
 
 
-Heroes
+Heroes (3 red, 3 blue)
 
 Keefe the Bold            7 1 13
 Legion Commander          6 1 9             heal Legion Commander 2
@@ -11,7 +11,7 @@ Luna                      4   8             Deal 2 damage (not piercing) stun it
 6th Timbersaw             5 1 12            Move to another slot. Deal 2 damage to each enemy passed on the way
 
 
-Cards
+Cards (16 red, 14 blue)
 
 x2 Reckless Charge                          (Quickcast doesn't give initiative) :bond: Up to range 2
 x2 Duel                                     (same):bond: Duel until someone dies. Give the winner +2 attack permanently
@@ -21,24 +21,25 @@ x1 Frostbite              3 mana            :bond: Root it
 x1 Whirling Death                           :bond: Damage is piercing
 
 x2 Bronze Legionnaire     3 mana   4 2 3
-x2 Legion Standard Bearer 4 mana   0   6    allied neighbors have +4 Attack.
-x2 The Omexe Arena                          Enchant Lane. Aura: Ally in the related slot has rapid deployment
+x2 The Omexe Arena                          Enchant Lane slot. Aura: Ally heroes in this slot have rapid deployment
 x2 Cursed Satyr           3 mana
+x2 Legion Standard Bearer 4 mana   0   6    allied neighbors have +4 Attack.
 x2 Back For More          4 mana            random slot
-x1 Time of Triumph        8 mana                  
+x1 Time of Triumph        8 mana
 
 x1 Messenger Rookery      1 mana            Active 0, 1 Mana: Choose an ally. Choose a combat target for it
-x2 Cunning Plan           2 mana
+x1 Cunning Plan           2 mana
 x2 Compel                 3 mana
 x1 Tower Barrage          3 mana            Deal 3 damage
+x1 Spirit of Desolation            1   1   +1AT/+1HP for each empty slot on your opponent's side
 x1 Friendly Fire
-x1 Annihilation           8 mana	
+x1 Annihilation           8 mana
 
 
-Items
+Items (6)
 
-x1 Ring of Basilius       20 gold
-x1 Stonehall Cloak        12 gold           +3 Health. Increase Health by 2
+x1 Ring of Basilius       18 gold
+x1 Stonehall Cloak        12 gold           +2 Health. Increase Health by 2
 x1 Blink Dagger           25 gold           "in another lane"
 x2 Phase Boots            16 gold           +4 Health
 x1 Orchid                 22 gold           -2 armor

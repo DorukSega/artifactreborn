@@ -603,7 +603,7 @@
       "specialaction": "",
       "id": 10104,
       "color": "red",
-      "bounty": 1,
+      "bounty": 2,
       "charges": 0,
       "effectdesc": "",
       "type": "creep",
@@ -642,7 +642,7 @@
       "specialaction": "",
       "id": 10087,
       "color": "red",
-      "bounty": 1,
+      "bounty": 2,
       "charges": 0,
       "effectdesc": "Legion Standard Bearer's allied neighbors have +4 Attack.",
       "type": "creep",
@@ -683,7 +683,7 @@
       "color": "red",
       "bounty": 2,
       "charges": 0,
-      "effectdesc": "Enchant Lane. Aura: Nearest ally hero has rapid deployment.",
+      "effectdesc": "Enchant Lane slot. Aura: Ally heroes in this slot have rapid deployment",
       "type": "imp",
       "lore": "The Omexe Arena is where I made a name for myself.  I was its champion, and no one was my equal. — <i>Bradwarden reflects on his glory days</i>",
       "abilities": [
@@ -720,7 +720,7 @@
       "specialaction": "",
       "id": 10114,
       "color": "red",
-      "bounty": 1,
+      "bounty": 2,
       "charges": 0,
       "effectdesc": "After Combat: Slay Cursed Satyr. Active 0 CD, 1 Mana: Choose a blocked unit. It battles the unit blocking it.",
       "type": "creep",
@@ -983,6 +983,45 @@
       ]
     },
     {
+      "name": "Spirit of Desolation",
+      "attack": 1,
+      "armor": 0,
+      "health": 1,
+      "goldcost": 0,
+      "manacost": 3,
+      "signature": "",
+      "specialaction": "",
+      "id": 10749,
+      "color": "blue",
+      "bounty": 2,
+      "charges": 0,
+      "effectdesc": "+1AT/+1HP for each empty slot on your opponent's side.",
+      "type": "creep",
+      "lore": "",
+      "abilities": [
+        {
+          "type": "passive",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        },
+        {
+          "type": "active",
+          "name": "",
+          "active": false,
+          "turn": 0,
+          "mana": 0,
+          "effectdesc": ""
+        },
+        {
+          "type": "continuous",
+          "active": false,
+          "name": "",
+          "effectdesc": ""
+        }
+      ]
+    },
+    {
       "name": "Friendly Fire",
       "attack": 0,
       "armor": 0,
@@ -1073,7 +1112,7 @@
       "color": "gold",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "+3 Health After Combat: Increase health by 2.",
+      "effectdesc": "+2 Health After Combat: Increase health by 2.",
       "type": "item",
       "lore": "The bullsnake is a fitting symbol for Stonehall. They conquer. They occupy. They move on. \u2014 <i>Jolixia, The Card Faun<\/i>",
       "abilities": [
@@ -1227,7 +1266,7 @@
       "attack": 0,
       "armor": 0,
       "health": 0,
-      "goldcost": 20,
+      "goldcost": 18,
       "manacost": 1,
       "signature": "",
       "specialaction": "",
