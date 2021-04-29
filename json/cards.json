@@ -683,7 +683,7 @@
       "color": "red",
       "bounty": 2,
       "charges": 0,
-      "effectdesc": "Enchant Lane slot. Aura: Ally heroes in this slot have rapid deployment",
+      "effectdesc": "Enchant Lane slot. Aura: Ally heroes in this slot have rapid deployment.",
       "type": "imp",
       "lore": "The Omexe Arena is where I made a name for myself.  I was its champion, and no one was my equal. — <i>Bradwarden reflects on his glory days</i>",
       "abilities": [

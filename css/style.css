@@ -832,6 +832,7 @@ img{
     height: 200px;
     background: linear-gradient(to left,#231F2E,#322B3D);
     color: white;
+    opacity: 80%;
 }
 .Mnewsburger:hover{
     color: #7289DA;
@@ -869,6 +870,7 @@ img{
     right: 0%;
     text-align:left;
     line-height: 68px;
+    opacity: 90%
 }
 .Mplayartifact:hover{  
     background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 55%, rgba(49, 72, 106, 0.7) 100%), linear-gradient(to left,#231F2E,#322B3D);
@@ -884,6 +886,7 @@ img{
     right: 0%;
     text-align:left;
     line-height: 56px;
+    opacity: 90%
 }
 .Mcardcollection:hover{  
     background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 55%, rgba(49, 72, 106, 0.7) 100%), linear-gradient(to left,#231F2E,#322B3D);
@@ -1048,7 +1051,7 @@ img{
     position: absolute;
     display: block;
     top: 10px;
-    right: 15px;
+    right: 26px;
     width: 26px;
     height: 26px;
     opacity: 0.5;

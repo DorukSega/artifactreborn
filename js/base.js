@@ -120,7 +120,7 @@ function Mlogo(){
     $(".M").removeClass("hide");
     $(".Mlogo").removeClass("Mlogoanimforw");
     $(".Mlogo").addClass("Mlogoanimback");
-    $(".menupage").children(".boardbackground").attr("src","css/gfx/temp_background.png")
+    $(".menupage").children(".boardbackground").attr("src","css/gfx/temp_background.jpg")
   }
   else{
     $(".M").hide();
