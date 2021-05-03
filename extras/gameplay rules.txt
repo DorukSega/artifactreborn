@@ -20,4 +20,10 @@ likely: only 1 Melee Creep will spawn in the lane for the side that has fewest u
 important for hero deployment; can only deploy heroes/units near allies or opposite of enemies.
 likely: all Melee Creeps become Mega Creeps and get +2 +2 for the Night duration. if a Mega Creep has 2 or less health at round end, it dies.
 
+- likely: If your hero targets an enemy hero, enemy neutral creeps that are your hero's neighbors, will change their target to you.
+If you stop targeting the enemy hero, enemy neutral creeps dynamically change their target to their default, if no other rules apply. Latest aggro takes priority.
+
+- likely: Game starts with 3 cards + 1 card for every new hero color entering the board throughout the game.
+So monocolor decks start with 4 cards; duocolor decks that have 2 colors on deploy start with 5 cards, aso.
+
 ---work in progress---

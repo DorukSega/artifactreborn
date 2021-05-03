@@ -348,7 +348,7 @@
           "id": 10498,
           "turn": 3,
           "mana": 1,
-          "effectdesc": "Active in 3 turns, 1 Mana: Move to another slot. Deal 2 damage to each enemy passed on the way."
+          "effectdesc": "Active in 3 turns, 1 Mana: Move to any other slot. Deal 2 damage to each enemy passed on the way."
         },
         {
           "type": "continuous",
@@ -449,7 +449,7 @@
       "color": "blue",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "Deal 4 piercing damage to each enemy hero in all lanes. &#128279; Deal +1 damage in Zeus' lane. \nCross Lane",
+      "effectdesc": "Deal 4 piercing damage to each enemy hero in all lanes. &#128279; Deal 5 damage in Zeus' lane. \nCross Lane",
       "type": "spell",
       "lore": "The full brunt of my fury is something beautiful and terrible to behold. \u2014 <i>Zeus, Angry God<\/i>",
       "abilities": [
@@ -488,7 +488,7 @@
       "color": "blue",
       "bounty": 0,
       "charges": 1,
-      "effectdesc": "Repeat one time for each charge: Deal 2 piercing damage to a random enemy. &#128279; Deal +1 damage in Luna's lane. \nCharges: 1",
+      "effectdesc": "Repeat one time for each charge: Deal 2 piercing damage to a random enemy. &#128279; Deal 3 damage in Luna's lane. \nCharges: 1",
       "type": "spell",
       "lore": "Selemene has rewarded my faith in her with terrible power, and I have taken a vow never to misuse it. \u2014 <i>Luna, Servant of Selemene<\/i>",
       "abilities": [
@@ -527,7 +527,7 @@
       "color": "blue",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "Deal 2 damage to a unit. Disarm it. &#128279; Root it.",
+      "effectdesc": "Deal 2 damage to a unit. Disarm it. &#128279; Root it and restore 1 mana.",
       "type": "spell",
       "lore": "Unlike Lina, I like to try to find solutions that don't involve killing everyone. \u2014 <i>Crystal Maiden, Less Destructive Sister<\/i>",
       "abilities": [
@@ -566,7 +566,7 @@
       "color": "red",
       "bounty": 0,
       "charges": 0,
-      "effectdesc": "Deal 2 damage to the caster's adjacent enemies and give them -2 attack. &#128279; Damage is piercing.",
+      "effectdesc": "Deal 2 damage to the caster's adjacent enemies and give them -2 attack. &#128279; Piercing. Deal 3 damage to affected green enemies.",
       "type": "spell",
       "lore": "I was nervous about following the Society of Likeminded Keenfolk to Roseleaf... Sniper had a lot of rules.  Rules like 'we can't stop to cut down every tree'.  But when he saw the Treants marching towards us, he quickly made an exception. \u2014 <i>Timbersaw, Crazed Lumberjack<\/i>",
       "abilities": [
@@ -793,7 +793,7 @@
       "armor": 0,
       "health": 0,
       "goldcost": 0,
-      "manacost": 9,
+      "manacost": 8,
       "signature": "",
       "specialaction": "",
       "id": 10425,
@@ -839,7 +839,7 @@
       "color": "blue",
       "bounty": 2,
       "charges": 0,
-      "effectdesc": "Active 0, 1 Mana: Choose an ally. Choose a combat target for it.",
+      "effectdesc": "Enchant Lane. Active 0, 1 Mana: Choose an ally. Choose a combat target for it.",
       "type": "imp",
       "lore": "The holdings of Revtel are vast, and so the Merchant Kings rely on Wildwing messengers to communicate between the capital and our lands. — <i>The Brass Herald, Lover of Efficiency</i>",
       "abilities": [
@@ -1225,7 +1225,7 @@
       "attack": 0,
       "armor": 0,
       "health": 0,
-      "goldcost": 22,
+      "goldcost": 20,
       "manacost": 1,
       "signature": "",
       "specialaction": "turn",

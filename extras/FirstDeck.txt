@@ -8,17 +8,17 @@ Luna                      4   8             Deal 2 damage (not piercing) stun it
 
 4th Zeus                  4   9
 5th Crystal Maiden        3   7
-6th Timbersaw             5 1 12            Move to another slot. Deal 2 damage to each enemy passed on the way
+6th Timbersaw             5 1 12            Move to any other slot. Deal 2 damage to each enemy passed on the way
 
 
 Cards (16 red, 14 blue)
 
 x2 Reckless Charge                          (Quickcast doesn't give initiative) :bond: Up to range 2
 x2 Duel                                     (same):bond: Duel until someone dies. Give the winner +2 attack permanently
-x1 Whirling Death                           :bond: Damage is piercing
-x1 Frostbite              3 mana            :bond: Root it
-x2 Eclipse                                  :bond: Deal +1 damage in Luna's lane
-x2 Thundergod's Wrath     6 mana            Deal 4 :bond: Deal +1 damage in Zeus' lane
+x1 Whirling Death                           :bond: Piercing. Deal 3 damage to affected green enemies
+x1 Frostbite              3 mana            :bond: Root it and restore 1 mana
+x2 Eclipse                                  :bond: Deal 3 damage in Luna's lane
+x2 Thundergod's Wrath     6 mana            Deal 4 :bond: Deal 5 damage in Zeus' lane
 
 x2 The Omexe Arena                          Enchant Lane slot. Aura: Ally heroes in this slot have rapid deployment
 x2 Bronze Legionnaire     3 mana   4 2 3

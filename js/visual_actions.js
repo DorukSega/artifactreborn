@@ -63,15 +63,15 @@ function preloadall(){
    }
 function gameload() { 
     aiversusgamerules() //for now
-    drawcard("Legion Standard Bearer");
-    drawcard("Cursed Satyr");
-    drawcard("Back For More");
-    drawcard("Keefe the Bold");
-    drawcard("Timbersaw");
-    drawcard("Crystal Maiden");
     drawcard("The Omexe Arena");
+    drawcard("Legion Standard Bearer");
+    drawcard("Compel");
+    drawcard("Back For More");
+    drawcard("Spirit of Desolation");
+    drawcard("Annihilation");
+    drawcard("Messenger Rookery");
+    drawcard("Time of Triumph");
     drawcard("Stonehall Cloak");
-    drawcard("Luna");
     placecard(1,1,4,"Melee Creep");
     placecard(1,2,4,"Melee Creep");
     placecard(0,1,4,"Melee Creep 0");
