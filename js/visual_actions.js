@@ -77,12 +77,12 @@ function gameload() {
     placecard(0,1,4,"Melee Creep 0");
     placecard(0,2,4,"Melee Creep 0");
     placecard(0,3,4,"Melee Creep 0");
-    placecard(1,1,3,"Luna");
+    placecard(1,1,3,"Zeus");
     placecard(1,2,5,"Legion Commander");
     placecard(1,3,4,"Keefe the Bold");
-    placecard(0,1,5,"Keefe the Bold");
+    placecard(0,1,5,"Legion Commander");
     placecard(0,2,5,"Luna");
-    placecard(0,3,3,"Legion Commander");
+    placecard(0,3,3,"Timbersaw");
     //$(".handcardbackground").attr("draggable","true");
     //$(".cardbackground").show();
     //$(".cardart").show();
